@@ -7,11 +7,15 @@
   Comma-separated: cursor, antigravity, claude, opencode, generic, all
 .PARAMETER Team
   Optional team id under teams/ (your own id from teams/_template). If set, only that team's skills/roles install.
+.PARAMETER Mcp
+  Optional MCP packages to wire: none (default), blender, all, or comma-list
 #>
 param(
   [string]$Target = ".",
   [string]$Hosts = "all",
-  [string]$Team = ""
+  [string]$Team = "",
+  # string[] so PowerShell comma lists are not space-joined
+  [string[]]$Mcp = @("none")
 )
 
 $ErrorActionPreference = "Stop"
@@ -272,7 +276,7 @@ function Install-CatalogShared {
   # Keep verify tooling with the catalog copy
   $scriptsDst = Join-Path $bundle "scripts"
   Ensure-Dir $scriptsDst
-  foreach ($s in @("verify-attribution.ps1", "verify-official-upstream.ps1", "check-github-entitlement.ps1", "_attribution-crypto.ps1", "stamp-attribution.ps1", "generate-attribution-seal.ps1")) {
+  foreach ($s in @("verify-attribution.ps1", "verify-official-upstream.ps1", "check-github-entitlement.ps1", "_attribution-crypto.ps1", "stamp-attribution.ps1", "generate-attribution-seal.ps1", "install-mcp.ps1")) {
     $src = Join-Path $CatalogRoot "scripts\$s"
     if (Test-Path $src) { Copy-Item $src (Join-Path $scriptsDst $s) -Force }
   }
@@ -434,6 +438,22 @@ foreach ($h in $requested) {
     "opencode" { Install-OpenCode }
     "generic" { Install-Generic }
     default { Write-Warning "Unknown host '$h' - skip" }
+  }
+}
+
+$mcpParts = @()
+foreach ($s in @($Mcp)) {
+  if ($null -eq $s) { continue }
+  $mcpParts += @("$s".Split(",") | ForEach-Object { $_.Trim() } | Where-Object { $_ })
+}
+if ($mcpParts.Count -gt 0 -and -not ($mcpParts.Count -eq 1 -and $mcpParts[0].ToLowerInvariant() -eq "none")) {
+  $mcpScript = Join-Path $PSScriptRoot "install-mcp.ps1"
+  if (-not (Test-Path -LiteralPath $mcpScript)) {
+    Write-Warning "install-mcp.ps1 missing; skip MCP"
+  } else {
+    $mcpHosts = ($requested -join ",")
+    & $mcpScript -Target $TargetRoot.Path -Mcp $mcpParts -Hosts $mcpHosts -CatalogRoot $CatalogRoot.Path -SkipGates
+    if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
   }
 }
 

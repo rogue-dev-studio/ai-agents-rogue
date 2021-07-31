@@ -1,0 +1,14 @@
+{
+  "id": "illustrator",
+  "skill": "illustrator",
+  "description": "Adobe Illustrator via npx illustrator-mcp-server",
+  "runtime": {
+    "requires": ["illustrator-desktop", "nodejs"]
+  },
+  "source": {
+    "upstream": "https://github.com/ie3jp/illustrator-mcp-server",
+    "package": "illustrator-mcp-server"
+  },
+  "cursorFragment": "cursor.mcp.fragment.json",
+  "status": "ready"
+}
