@@ -1,12 +1,30 @@
 # MCP package: comfyui (partial)
 
-Run [ComfyUI](https://github.com/comfyanonymous/ComfyUI) locally (GPU recommended), then add an MCP server entry when you have a ComfyUI MCP implementation to point at.
+Status: **partial** — belum auto-wire (`-Mcp all` melewatkan paket ini).
 
-## Steps
+Jalankan [ComfyUI](https://github.com/comfyanonymous/ComfyUI) lokal (GPU disarankan), lalu tambah entry MCP manual bila Anda punya server MCP ComfyUI.
 
-1. Install/run ComfyUI with GPU
-2. Place or install a ComfyUI MCP server locally
-3. Add a `command`/`args` entry to `.cursor/mcp.json` (or use `install-mcp` once a fragment exists)
-4. Restart the AI host
+## Prerequisites
 
-Status: **partial** — not auto-merged by `install-mcp -Mcp all` until a fragment is added.
+1. GPU + driver yang didukung ComfyUI
+2. ComfyUI terpasang dan bisa dijalankan
+3. Implementasi MCP server ComfyUI (belum di-vendor di katalog Rogue)
+
+## Setup aplikasi
+
+1. Clone/install ComfyUI mengikuti upstream
+2. Jalankan UI/server ComfyUI sampai reachable
+3. Place MCP server lokal (path Anda sendiri)
+4. Tambah `command`/`args` ke `.cursor/mcp.json` (atau host lain)
+
+## Wire (nanti, setelah fragment ada)
+
+```powershell
+# Belum tersedia sebagai -Mcp comfyui sampai fragment ditambahkan
+```
+
+Sementara: edit MCP config host secara manual. Skill playbook: `skills/comfyui`.
+
+## Smoke
+
+Generate image uji di ComfyUI; pastikan MCP tool terlihat di host jika sudah di-wire.
