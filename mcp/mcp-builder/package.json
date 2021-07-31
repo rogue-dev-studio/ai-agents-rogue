@@ -1,0 +1,13 @@
+{
+    "skill":  "skill-authoring",
+    "cursorFragment":  null,
+    "id":  "mcp-builder",
+    "runtime":  {
+                    "requires":  [
+                                     "nodejs"
+                                 ]
+                },
+    "description":  "Scaffold new MCP servers (partial)",
+    "status":  "partial",
+    "notes":  "Host app + optional vendored MCP server not fully bundled; follow README"
+}

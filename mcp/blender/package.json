@@ -1,0 +1,15 @@
+{
+    "id":  "blender",
+    "skill":  "blender",
+    "description":  "Blender 3D via BlenderMCP addon + blender-mcp (uvx/pip)",
+    "runtime":  {
+                    "requires":  [
+                                     "blender",
+                                     "uvx-or-pip-blender-mcp"
+                                 ]
+                },
+    "cursorFragment":  "cursor.mcp.fragment.json",
+    "source":  {
+                   "upstreamMcp":  "https://github.com/ahujasid/blender-mcp"
+               }
+}

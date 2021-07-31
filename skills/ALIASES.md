@@ -22,4 +22,4 @@ Nama/tool lama di kolom kanan **tidak** punya folder sendiri — pakai nama kano
 
 Di dalam skill kanonik, **tool map** menjelaskan kapan memakai runtime/CLI mana (jika terpasang).
 
-Yang tetap terpisah: language runtimes, cloud CLIs, specialized tools (`blender`, `comfyui`, `kicad`, …), `e2e-delivery`, local team skills.
+Yang tetap terpisah: language runtimes, cloud CLIs, specialized tools (`blender`, `photoshop`, `illustrator`, `comfyui`, `kicad`, …), `e2e-delivery`, local team skills.
