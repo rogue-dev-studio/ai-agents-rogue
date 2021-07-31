@@ -1,28 +1,42 @@
 # MCP package: photoshop
 
-Control **Adobe Photoshop** from AI hosts via `photoshop-mcp-server` (`uvx`).
+Status: **ready** (auto-wire)
 
-Rogue owns this package (fragment + docs + skill). Engine runtime is public PyPI/`uvx` — hybrid model (see [`../README.md`](../README.md#model-runtime-hybrid)).
+Control **Adobe Photoshop** via `uvx photoshop-mcp-server`.
 
 ## Prerequisites
 
-1. Adobe Photoshop desktop installed (set `PS_VERSION`, default `2024`)
-2. [uv](https://github.com/astral-sh/uv) / `uvx`
-3. Photoshop running when you invoke tools (Windows COM / API path per upstream)
+1. Adobe Photoshop desktop terpasang (lisensi valid)
+2. [uv](https://github.com/astral-sh/uv) / `uvx` di PATH
+3. Photoshop **sedang berjalan** saat tool dipanggil (Windows COM/API)
 
-## Wire
+## Setup aplikasi
+
+1. Install Photoshop dari Adobe Creative Cloud (versi sesuai `PS_VERSION`, default **2024**)
+2. Buka Photoshop sekali dan biarkan running
+3. Install `uv` jika belum: https://github.com/astral-sh/uv
+
+Tidak ada “Install from Disk” di Photoshop — runtime MCP diunduh on-demand oleh `uvx`.
+
+## Wire host MCP
 
 ```powershell
-.\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp photoshop
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp photoshop
 ```
 
-Optional: change `PS_VERSION` in the host MCP config (`2025`, `2023`, …).
+Opsional: ubah `PS_VERSION` di `.cursor/mcp.json` (atau host lain) ke `2025` / `2023` sesuai install Anda.
 
-Restart the AI host after config changes.
+Restart host AI.
+
+## Smoke
+
+1. Photoshop terbuka  
+2. MCP `photoshop` connected  
+3. Minta agent: info dokumen / buat layer uji  
 
 ## Upstream runtime
 
-- Package: `photoshop-mcp-server`
-- Project: https://github.com/loonghao/photoshop-python-api-mcp-server
+- Package: `photoshop-mcp-server`  
+- https://github.com/loonghao/photoshop-python-api-mcp-server  
 
 Catalog: Rogue Development — `NOTICE` / `LICENSE`.

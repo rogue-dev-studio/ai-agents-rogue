@@ -14,3 +14,5 @@ stack:
 
 # Path dokumentasi relatif ke folder project ini
 docs_root: docs
+# Deliverable non-doc (kode/gambar/3d/media) relatif ke folder project ini
+artifacts_root: artifacts

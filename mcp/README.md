@@ -47,6 +47,20 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\in
 
 Paket **partial** tidak di-wire oleh `-Mcp all`. Lihat [CATALOG.md](./CATALOG.md).
 
+## Panduan setup per paket
+
+Tiap folder `mcp/<id>/README.md` berisi prerequisites, setup app/addon, wire, dan smoke.
+
+| Id | Setup khas |
+|----|------------|
+| [`blender`](./blender/README.md) | **Install from Disk** addon + Start Server `:9876` |
+| [`photoshop`](./photoshop/README.md) | Photoshop running + `uvx` + `PS_VERSION` |
+| [`illustrator`](./illustrator/README.md) | Illustrator running + Node/`npx` |
+| [`context7`](./context7/README.md) / [`atlassian`](./atlassian/README.md) / [`linear`](./linear/README.md) | Remote + OAuth/API |
+| [`chrome-devtools`](./chrome-devtools/README.md) / [`playwright`](./playwright/README.md) | Node + browser |
+| [`pal`](./pal/README.md) | `uvx` + API keys |
+| Partial (`comfyui`, `kicad`, …) | Docs only — lihat README masing-masing |
+
 ## Attribution
 
 Detail di README tiap paket. Credit catalog: Rogue Development (`NOTICE` / `LICENSE`).
