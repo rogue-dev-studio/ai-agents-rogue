@@ -34,6 +34,9 @@ UI/UX Designer tidak mengimplementasikan kode frontend.
 - Interaction design
 - Usability consideration
 - Accessibility guideline
+- **Theme/brand alignment** terhadap project aktif (wajib sebelum handoff)
+
+Skill wajib: **`ui-ux-design`**. Hard rule: `rules/ui.md`.
 
 ---
 
@@ -45,7 +48,8 @@ UI/UX Designer tidak mengimplementasikan kode frontend.
 - Membuat mockup high-fidelity.
 - Mendefinisikan interaction pattern (hover, click, loading, error).
 - Memastikan desain dapat diimplementasikan oleh Frontend Developer.
-- Menyelaraskan desain dengan design system.
+- Menyelaraskan desain dengan design system **dan tema visual project yang sedang/akan dibuat**.
+- Menjalankan theme gate (lihat skill `ui-ux-design` / `reference.md`) sebelum handoff ke Frontend.
 - Mendokumentasikan UI specification per halaman/komponen.
 
 ---

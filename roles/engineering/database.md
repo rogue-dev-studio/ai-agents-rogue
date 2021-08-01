@@ -36,6 +36,8 @@ Database Engineer bertanggung jawab terhadap data layer, bukan business logic.
 - Seeder design
 - Query efficiency
 
+Skill wajib (level max): **`database-engineering`** (`skills/database-engineering/`). Hard rule: `rules/database.md`.
+
 ---
 
 # 4. Tanggung Jawab
