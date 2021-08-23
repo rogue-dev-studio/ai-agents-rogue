@@ -1,0 +1,20 @@
+{
+  "id": "blender-lab",
+  "skill": "blender",
+  "description": "Official Blender Lab MCP (Blender 5.1+ extension + uvx from lab/blender_mcp)",
+  "status": "ready",
+  "runtime": {
+    "requires": [
+      "blender-5.1+",
+      "uvx",
+      "blender-lab-mcp-extension"
+    ]
+  },
+  "cursorFragment": "cursor.mcp.fragment.json",
+  "source": {
+    "upstream": "https://projects.blender.org/lab/blender_mcp",
+    "docs": "https://www.blender.org/lab/mcp-server/",
+    "install": "git+https://projects.blender.org/lab/blender_mcp.git#subdirectory=mcp"
+  },
+  "notes": "Distinct from mcp/blender (community ahujasid). Do not run both stacks on the same port."
+}
