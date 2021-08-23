@@ -6,7 +6,9 @@ Minta user (atau ambil dari argumen chat):
 
 - `id` (lowercase-hyphen), contoh: `my-app`
 - `name` (opsional)
-- `team` (opsional; hanya jika `teams/<id>/` sudah ada)
+- `team` (opsional; id pack domain untuk metadata `PROJECT.md`, mis. `simrs`, `hr` — **bukan** `install -Team`)
+
+Untuk sync skill domain ke host sebelum project, gunakan `/bootstrap-domain` (lihat `commands/bootstrap-domain.md`).
 
 Lalu jalankan:
 
