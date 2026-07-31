@@ -1,26 +1,40 @@
 # MCP package: illustrator
 
-Control **Adobe Illustrator** from AI hosts via `illustrator-mcp-server` (`npx`).
+Status: **ready** (auto-wire)
 
-Rogue owns this package (fragment + docs + skill). Engine runtime is public npm/`npx` — hybrid model (see [`../README.md`](../README.md#model-runtime-hybrid)).
+Control **Adobe Illustrator** via `npx illustrator-mcp-server`.
 
 ## Prerequisites
 
-1. Adobe Illustrator desktop installed (ideally running)
-2. Node.js 18+
-3. macOS/Windows per upstream bridge (ExtendScript / OS automation)
+1. Adobe Illustrator desktop terpasang (lisensi valid)
+2. Node.js 18+ (`npx`)
+3. Illustrator idealnya **running** (ExtendScript / OS automation)
 
-## Wire
+## Setup aplikasi
+
+1. Install Illustrator dari Adobe Creative Cloud
+2. Buka Illustrator
+3. Pastikan Node.js: `node -v` (18+)
+
+Tidak ada addon “Install from Disk” di paket Rogue — bridge mengikuti upstream npm.
+
+## Wire host MCP
 
 ```powershell
-.\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp illustrator
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp illustrator
 ```
 
-Restart the AI host after config changes.
+Restart host AI. First run `npx` akan unduh paket.
+
+## Smoke
+
+1. Illustrator terbuka  
+2. MCP `illustrator` connected  
+3. Minta agent: baca dokumen / export uji  
 
 ## Upstream runtime
 
-- Package: `illustrator-mcp-server`
-- Project: https://github.com/ie3jp/illustrator-mcp-server
+- Package: `illustrator-mcp-server`  
+- https://github.com/ie3jp/illustrator-mcp-server  
 
 Catalog: Rogue Development — `NOTICE` / `LICENSE`.

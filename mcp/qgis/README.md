@@ -1,5 +1,18 @@
 # MCP package: qgis (partial)
 
-Install QGIS (desktop), then wire a QGIS MCP server when available.
+Status: **partial** — docs only.
 
-Status: **partial** — no auto-wire fragment yet.
+## Prerequisites
+
+1. QGIS desktop
+2. (Opsional) MCP server QGIS
+
+## Setup aplikasi
+
+1. Install QGIS dari https://qgis.org/
+2. Buka project uji
+3. Wire MCP manual jika ada server
+
+## Wire
+
+Belum auto-wire. Skill: `skills/qgis`.
