@@ -1,51 +1,73 @@
 # MCP package: blender
 
-Control Blender from Cursor via [BlenderMCP](https://github.com/ahujasid/blender-mcp) (addon socket + `blender-mcp` MCP server).
+Status: **ready** (auto-wire)
 
-## Source
-
-- MCP protocol package: `blender-mcp` / ahujasid — install via `uvx` or pip (not vendored as binary here).
-- Addon + launcher in this package: Rogue Development — see repo `NOTICE` / `LICENSE`.
+Control **Blender** from AI hosts via BlenderMCP (addon socket **9876** + `blender-mcp` / node launcher).
 
 ## Prerequisites
 
-1. **Blender** 3.0+ (4.x recommended) installed on the machine  
-2. **`uv`** (provides `uvx`) **or** `pip install blender-mcp`  
-3. Enable the addon and start its server (port **9876**)
+1. Blender 3.0+ (4.x recommended)
+2. `uv` / `uvx` **or** Node.js 18+ (fallback launcher `mcp-server/server.js`)
+3. Addon **Blender MCP** installed and **Start Server** running
 
-## Install addon
+## Setup aplikasi (wajib — bukan bawaan Blender)
+
+Blender MCP **tidak** ikut install Blender. Pasang addon dari katalog:
+
+### A. Install from Disk (disarankan)
+
+1. Blender → **Edit → Preferences → Add-ons**
+2. **Install…** / **Install from Disk**
+3. Pilih file:
+
+   `ai-agents-rogue/mcp/blender/addon/blender_mcp_addon.py`
+
+4. Enable / centang **Blender MCP**
+5. Di 3D View tekan **N** → panel **Blender MCP** → **Start Server**
+6. Pastikan server listen di port **9876**
+
+### B. Script installer
 
 ```powershell
-# From catalog root or after install-mcp
-python ai-agents-rogue\mcp\blender\addon\install-addon.py
+python .\ai-agents-rogue\mcp\blender\addon\install-addon.py
 ```
 
-Or Blender UI: Preferences → Add-ons → Install → select `addon/blender_mcp_addon.py` → enable **Blender MCP** → sidebar (N) → **Start Server**.
+Sesuaikan versi Blender jika perlu (`--blender-version 4.2`, dll.).
 
-Windows manual copy example (adjust version):
+### C. Copy manual (Windows)
+
+Sesuaikan folder versi (`4.2`, `4.3`, …):
 
 ```powershell
-copy ai-agents-rogue\mcp\blender\addon\blender_mcp_addon.py "$env:APPDATA\Blender Foundation\Blender\4.2\scripts\addons\"
+copy .\ai-agents-rogue\mcp\blender\addon\blender_mcp_addon.py "$env:APPDATA\Blender Foundation\Blender\4.2\scripts\addons\"
 ```
 
-## Wire Cursor MCP
+Lalu enable di Preferences → Add-ons → **Blender MCP** → **Start Server**.
+
+## Wire host MCP
 
 ```powershell
-.\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp blender
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp blender
 ```
 
-Merges `cursor.mcp.fragment.json` into `.cursor/mcp.json` (prefers `uvx blender-mcp`).  
-If `uvx` is missing, use the node launcher fragment manually or install uv.
+Restart Cursor / host AI.
 
-Restart Cursor after changing `mcp.json`.
+## Cek port 9876
+
+```powershell
+Get-NetTCPConnection -LocalPort 9876 -State Listen
+# atau: netstat -ano | findstr ":9876"
+```
+
+Kosong = server belum Start di Blender.
 
 ## Smoke
 
-1. Open Blender → Start Server (9876)  
-2. Cursor MCP shows `blender` connected  
-3. Ask agent to get scene info / create a cube  
+1. Blender: Start Server  
+2. Host: MCP `blender` connected  
+3. Minta agent: scene info / buat cube / model sederhana  
 
-## Optional tools
+## Upstream runtime
 
-- `tools/blender-mcp-proxy.js` — Docker/GUI proxy; not required for local desktop  
-- `mcp-server/server.js` — Windows-friendly launcher if Cursor should call `node` instead of `uvx`
+- `blender-mcp` / [ahujasid/blender-mcp](https://github.com/ahujasid/blender-mcp)  
+- Addon + launcher di paket ini: Rogue Development — `NOTICE` / `LICENSE`

@@ -20,6 +20,12 @@ Semua dokumentasi pengembangan per project hidup di:
 project/{id-namaproject}/docs/
 ```
 
+Deliverable non-dokumentasi (program generate, gambar, 3D, desain, media, data) hidup di:
+
+```text
+project/{id-namaproject}/artifacts/{kategori}/
+```
+
 | Jenis | Analogi | Format | Lokasi |
 |-------|---------|--------|--------|
 | SRS | PDF formal | Markdown terstruktur | `project/{id}/docs/srs/` |
@@ -30,9 +36,17 @@ project/{id-namaproject}/docs/
 | QA | Test report | Markdown | `project/{id}/docs/qa/` |
 | Review | Review notes | Markdown | `project/{id}/docs/review/` |
 | Release | Checklist | Markdown | `project/{id}/docs/release/` |
-| Code | Aplikasi | Source code | `backend/`, `frontend/`, `database/` (di repo app) |
+| Code (app besar) | Aplikasi | Source code | `backend/`, `frontend/`, `database/` di root repo **jika** struktur itu sudah ada; prototype/generate → `project/{id}/artifacts/code/` |
+| Images | Aset raster | PNG/JPG/… | `project/{id}/artifacts/images/` |
+| 3D | Model/render | `.blend`, GLB, render | `project/{id}/artifacts/3d/` |
+| Design exports | Vektor/UI export | AI/SVG/PDF | `project/{id}/artifacts/design/` |
+| Media | AV | video/audio | `project/{id}/artifacts/media/` |
+| Data | Dataset/out | CSV, notebook out | `project/{id}/artifacts/data/` |
+| Other | Catch-all | — | `project/{id}/artifacts/other/` |
 
-Project baru: `scripts/new-project.ps1` / `/new-project`.
+Project baru: `scripts/new-project.ps1` / `/new-project` (template sudah berisi `artifacts/`).
+
+**Aturan:** roles/skills yang menghasilkan file **harus** memakai path di atas berdasarkan **nama project (`{id}`)** dan **kategori**. Baca `PROJECT.md` aktif. Jangan simpan output generate di root catalog atau folder acak.
 
 ---
 

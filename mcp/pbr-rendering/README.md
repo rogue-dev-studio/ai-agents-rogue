@@ -1,5 +1,21 @@
 # MCP package: pbr-rendering (partial)
 
-Depends on Blender MCP (`mcp/blender`) + GPU. Add a material/PBR MCP server once Blender MCP works, then wire it into your host MCP config.
+Status: **partial** — docs only.
 
-Status: **partial** — no auto-wire fragment yet.
+Bergantung pada **Blender MCP** (`mcp/blender`) + GPU.
+
+## Prerequisites
+
+1. Selesaikan setup `mcp/blender` (addon + Start Server :9876)
+2. GPU / driver untuk material/render
+3. (Opsional) MCP material/PBR tambahan bila Anda punya
+
+## Setup
+
+1. Ikuti panduan [blender/README.md](../blender/README.md) sampai smoke lolos
+2. Wire Blender MCP ke host
+3. Tambah MCP PBR terpisah secara manual jika tersedia
+
+## Wire
+
+Belum auto-wire. Skill: `skills/pbr-rendering`.
