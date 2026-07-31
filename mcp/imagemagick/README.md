@@ -1,7 +1,33 @@
 # MCP package: imagemagick (partial)
 
-Install ImageMagick on the OS. When you have an ImageMagick MCP server locally, wire it manually to `.cursor/mcp.json` (or `.agents/mcp.json` / `.mcp.json`).
+Status: **partial** — docs only.
 
-Skill playbook: `skills/imagemagick`.
+## Prerequisites
 
-Status: **partial** — no auto-wire fragment yet.
+1. ImageMagick terpasang di OS (`magick -version`)
+2. (Opsional) MCP server ImageMagick lokal bila Anda punya
+
+## Setup aplikasi
+
+### Windows
+
+Install dari https://imagemagick.org/ (centang “Add to PATH” bila ada).
+
+### Linux / macOS
+
+```bash
+# contoh
+sudo apt install imagemagick   # Debian/Ubuntu
+brew install imagemagick       # macOS
+```
+
+## Wire
+
+Belum ada fragment auto-wire. Skill playbook CLI: `skills/imagemagick`.  
+Jika ada MCP server lokal, tambahkan manual ke config host.
+
+## Smoke
+
+```powershell
+magick -version
+```

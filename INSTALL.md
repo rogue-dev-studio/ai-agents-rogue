@@ -189,7 +189,9 @@ pwsh -File ./ai-agents-rogue/scripts/install-mcp.ps1 -Target . -Mcp all -Hosts a
 
 Target file: `.cursor/mcp.json`, `.mcp.json` (Claude), `opencode.json`, `.agents/mcp.json`.  
 `-Mcp`: `none` (default), id, daftar koma, atau `all` (paket **ready**). Lihat [`mcp/CATALOG.md`](./mcp/CATALOG.md).  
-Blender: enable addon + Start Server, lalu restart host.
+
+**Setup per paket (app/addon):** baca README di `mcp/<id>/` — indeks di [`mcp/README.md`](./mcp/README.md#panduan-setup-per-paket).  
+Contoh Blender: Preferences → Add-ons → **Install from Disk** → `mcp/blender/addon/blender_mcp_addon.py` → enable → sidebar **N** → **Start Server** (`:9876`) → restart host.
 
 ### Hosts yang didukung
 
