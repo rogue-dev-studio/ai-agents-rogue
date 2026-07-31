@@ -115,7 +115,8 @@ cd /path/to/project-anda
 git clone https://github.com/<username-anda>/ai-agents-rogue.git ai-agents-rogue
 ```
 
-Pakainya **branch `master` terbaru** (setelah clone: `git -C ai-agents-rogue pull`).
+Pakainya **branch `master` terbaru** (setelah clone: `git -C ai-agents-rogue pull`).  
+Update berkala: lihat **§5 Update**.
 
 ---
 
@@ -212,7 +213,53 @@ Gagal di salah satu → install **berhenti**.
 
 ---
 
-## 5. Cek manual (opsional)
+## 5. Update (sudah pernah install)
+
+Jika catalog di project Anda sudah ada dan Rogue merilis update di `master`:
+
+### Langkah
+
+1. **Pull catalog terbaru** (dari project root):
+
+```powershell
+git -C ai-agents-rogue pull origin master
+```
+
+```bash
+git -C ai-agents-rogue pull origin master
+```
+
+Jika Anda clone dari **fork** sendiri, merge/rebase dulu dari upstream `rogue-dev-studio/ai-agents-rogue` ke fork, lalu `pull` fork tersebut.
+
+2. **Install ulang** ke host AI (wajib — `pull` saja tidak menyalin skill/rules ke `.cursor/` / `.agents/` / dll.):
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
+```
+
+Dengan MCP:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all -Mcp all
+```
+
+```bash
+./ai-agents-rogue/scripts/install.sh . all
+# opsional MCP:
+pwsh -File ./ai-agents-rogue/scripts/install-mcp.ps1 -Target . -Mcp all -Hosts all
+```
+
+3. **Restart** Cursor / Claude Code / OpenCode / host lain agar skill & MCP config terbaca.
+
+### Catatan
+
+- Star + fork + `gh auth` / `GITHUB_TOKEN` tetap berlaku di setiap install.
+- Jangan re-seal; jangan edit file yang di-hash di `ATTRIBUTION.seal`.
+- Jangan andalkan ZIP lama — selalu `git pull` dari repo/fork yang sync ke `master` resmi.
+
+---
+
+## 6. Cek manual (opsional)
 
 ```powershell
 cd ai-agents-rogue
@@ -232,7 +279,7 @@ Exit code `0` = OK.
 
 ---
 
-## 6. Setelah install
+## 7. Setelah install
 
 1. **Restart** host AI (Cursor / Claude Code / dll.) agar skills & rules ter-load.  
 2. Pastikan muncul (contoh Cursor):  
@@ -267,7 +314,7 @@ atau command `/new-project`.
 | `gh` / `pwsh` not found | Install GitHub CLI / PowerShell 7; buka terminal baru |
 | Entitlement failed / not starred | Star + Fork repo resmi, tunggu sebentar, `gh auth status`, retry |
 | Cannot read `/user` | `gh auth login` ulang atau `GITHUB_TOKEN` valid |
-| Seal / signature INVALID / hash mismatch | `git -C ai-agents-rogue pull origin master` (jangan ubah skill manual); jangan pakai ZIP lama |
+| Seal / signature INVALID / hash mismatch | `git -C ai-agents-rogue pull origin master` lalu install ulang (§5); jangan ubah skill manual; jangan pakai ZIP lama |
 | Upstream key unreachable | Jaringan OK + repo resmi dapat diakses |
 | Fork belum terdeteksi | Fork harus dari `rogue-dev-studio/ai-agents-rogue`, bukan copy folder manual |
 | Skills tidak muncul di Cursor | Restart Cursor; cek path install `-Target` benar (project root) |

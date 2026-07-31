@@ -63,7 +63,7 @@ Command: `/new-project`. Active project ditandai di project root `PROJECT.md` (f
 
 ## Install
 
-Panduan lengkap (prasyarat → Star/Fork → auth → clone → install → Cursor → troubleshoot): **[INSTALL.md](./INSTALL.md)**
+Panduan lengkap (prasyarat → Star/Fork → auth → clone → install → **update** → Cursor → troubleshoot): **[INSTALL.md](./INSTALL.md)**
 
 Ringkas — dari project root setelah catalog ada di `ai-agents-rogue/`:
 
@@ -75,6 +75,16 @@ gh auth login
 ```bash
 ./ai-agents-rogue/scripts/install.sh . all
 ```
+
+### Update (sudah pernah install)
+
+```powershell
+git -C ai-agents-rogue pull origin master
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
+# opsional MCP: tambah -Mcp all
+```
+
+Lalu restart host AI. Detail: [INSTALL.md §5](./INSTALL.md#5-update-sudah-pernah-install).
 
 Opsional, setelah Anda membuat tim sendiri:
 
