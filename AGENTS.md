@@ -57,13 +57,13 @@ Untuk pertanyaan informasional saja: jawab langsung, tanpa E2E.
 | `container-docker-ops` | Docker/Compose |
 | `mcp-integrations` | MCP servers |
 | `ai-coding-assistants` | Claude/Kilo/Goose/OpenCode toolkits |
-| Lainnya | `skills/ALIASES.md` + `CATALOG.md` |
+| Lainnya | `INDEX.md` + `skills/ALIASES.md` + `skills/CATALOG.md` |
 
-Install `-Team <id>` (opsional) hanya skills di `TEAM.yaml` (+ local). Default = katalog penuh. Lihat `skills/ALIASES.md`.
+Install `-Team <id>` (opsional) hanya skills di `TEAM.yaml` (+ local). Default = katalog penuh. Lihat `INDEX.md` / `skills/ALIASES.md`.
 
 ## Hard rules
 
-Lihat `rules/` — `global.md`, `author.md`, `security.md`, `coding.md`, `commit.md`, `ui.md`.
+Lihat `rules/` — `global.md`, `author.md`, `security.md`, `coding.md`, `commit.md`, `ui.md` (ringkas di `INDEX.md`).
 
 Author: [Rogue Development](https://github.com/rogue-dev-studio) — lihat `LICENSE` + `NOTICE`. Atribusi wajib.
 

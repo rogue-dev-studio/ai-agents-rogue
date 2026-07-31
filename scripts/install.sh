@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # Install AI Agents Rogue.
-# Usage: ./install.sh [target_dir] [hosts] [team_id]
+# Usage: ./install.sh [target_dir] [hosts] [team_id] [mcp]
 # hosts: cursor,antigravity,claude,opencode,generic,all
 # team_id: optional (only if you created teams/<id>/)
+# mcp: optional none|blender|all (default none)
 set -euo pipefail
 
 TARGET="${1:-.}"
 HOSTS="${2:-all}"
 TEAM_ID="${3:-}"
+MCP="${4:-none}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CATALOG_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 TARGET_ROOT="$(cd "$TARGET" && pwd)"
@@ -260,5 +262,20 @@ for h in "${REQ[@]}"; do
     *) echo "Unknown host '$h' - skip" >&2 ;;
   esac
 done
+
+if [[ -n "${MCP}" && "${MCP}" != "none" ]]; then
+  MCP_HOSTS="$HOSTS"
+  if [[ "$HOSTS" == "all" ]]; then
+    MCP_HOSTS="cursor,antigravity,claude,opencode,generic"
+  fi
+  if command -v pwsh >/dev/null 2>&1; then
+    pwsh -NoProfile -File "$CATALOG_ROOT/scripts/install-mcp.ps1" -Target "$TARGET_ROOT" -Mcp "$MCP" -Hosts "$MCP_HOSTS" -CatalogRoot "$CATALOG_ROOT" -SkipGates || exit 1
+  elif command -v powershell >/dev/null 2>&1; then
+    powershell -NoProfile -ExecutionPolicy Bypass -File "$CATALOG_ROOT/scripts/install-mcp.ps1" -Target "$TARGET_ROOT" -Mcp "$MCP" -Hosts "$MCP_HOSTS" -CatalogRoot "$CATALOG_ROOT" -SkipGates || exit 1
+  else
+    echo "PowerShell required for MCP install" >&2
+    exit 1
+  fi
+fi
 
 echo "Done."

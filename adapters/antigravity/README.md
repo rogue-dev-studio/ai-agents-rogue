@@ -1,9 +1,14 @@
-# AI Agents Rogue — Antigravity
+# AI Agents Rogue — Antigravity / generic `.agents`
 
 Install menempatkan:
 
-- `AGENTS.md` di root target
-- Skills → `.agents/skills/{clarity,agentic-flow,agentic-qe}/`
-- Role → `.agents/roles/ai-orchestrator.md`
+- Skills → `.agents/skills/`
+- Commands → `.agents/commands/`
+- Roles → `.agents/roles/`
+- Opsional MCP → **`.agents/mcp.json`** (`mcpServers`) bila `-Mcp` / `install-mcp.ps1 -Hosts antigravity` (atau `generic`)
 
-Antigravity Skills: [docs](https://antigravity.google/docs/skills).
+```powershell
+.\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp all -Hosts antigravity
+```
+
+Host yang membaca `.agents/mcp.json` secara native bervariasi; file ini juga sebagai salinan portable dari fragment Cursor.

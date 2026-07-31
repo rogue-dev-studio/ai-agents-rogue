@@ -1,0 +1,9 @@
+{
+  "id": "__ID__",
+  "skill": "__SKILL__",
+  "description": "Replace with package description",
+  "runtime": {
+    "requires": []
+  },
+  "cursorFragment": "cursor.mcp.fragment.json"
+}

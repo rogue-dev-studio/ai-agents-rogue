@@ -1,0 +1,16 @@
+{
+    "id":  "atlassian",
+    "skill":  "mcp-integrations",
+    "runtime":  {
+                    "requires":  [
+                                     "network",
+                                     "oauth"
+                                 ]
+                },
+    "source":  {
+                   "upstream":  "https://mcp.atlassian.com"
+               },
+    "description":  "Atlassian/Jira MCP (remote SSE, OAuth)",
+    "cursorFragment":  "cursor.mcp.fragment.json",
+    "status":  "ready"
+}
