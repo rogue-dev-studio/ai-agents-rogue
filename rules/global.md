@@ -27,6 +27,7 @@ Baca yang relevan sebelum fase terkait. Work modes: `WORKMODES.md`.
 - Hormati struktur repo yang sudah ada; jangan refactor liar
 - Jangan commit / push / deploy kecuali user meminta
 - Tulis dokumentasi pengembangan ke `project/{id}/docs/` jika project aktif (e2e; di manual hanya jika user minta draft docs)
+- Simpan **deliverable generate** (kode prototype, gambar, 3D, desain, media, data) ke `project/{id}/artifacts/{kategori}/` — lihat `project-template/artifacts/README.md`. Jika belum ada project aktif: buat dengan `/new-project` / `new-project.ps1` (atau minta id sekali) lalu tulis ke situ. Jangan dump file generate di root workspace tanpa kategori.
 
 ## Must never
 

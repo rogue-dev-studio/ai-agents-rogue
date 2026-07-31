@@ -79,15 +79,21 @@ Default: **full catalog**. Opsional buat tim dari `teams/_template/` lalu `-Team
 
 ## Projects
 
-Setiap produk/kerjaan punya folder `project/{id}/` berisi `docs/` pengembangan.
+Setiap produk/kerjaan punya folder `project/{id}/`:
+
+| Area | Path |
+|------|------|
+| Docs E2E | `project/{id}/docs/…` |
+| Deliverable (kode / gambar / 3D / desain / media / data) | `project/{id}/artifacts/{kategori}/` |
 
 ```powershell
 .\scripts\new-project.ps1 -Id my-app -Name "My App"
 ```
 
-Active project: root `PROJECT.md`. E2E menulis ke `project/{id}/docs/`.
+Active project: root `PROJECT.md`.  
+Orchestrator & roles **wajib** menulis output ke project aktif (docs + artifacts), bukan menghambur file di root.
 
-Lihat `teams/README.md` dan `project-template/`.
+Lihat `teams/README.md`, `project-template/`, dan `core/artifact-system.md`.
 
 ---
 # 1. Tujuan

@@ -58,9 +58,9 @@ See `mcp/blender/README.md`.
 1. **Context** — Confirm `WORKMODE.md` / project; read `mcp/blender/README.md` if needed.
 2. **Tooling** — Confirm MCP `blender` in host config; Blender running with addon on **9876**.
 3. **Plan** — Brief goal (e.g. fish mesh), outputs (`.blend` / render), keep it short.
-4. **Execute** — Call Blender MCP tools (scene info, create/modify objects, materials, Python in Blender). Save under the project tree when useful.
+4. **Execute** — Use MCP tools (scene info, create/modify objects, materials, Python in Blender). Save `.blend` / exports / renders under `project/{id}/artifacts/3d/` (active `PROJECT.md`). Create project with `/new-project` if missing.
 5. **Verify** — Scene info / screenshot / object list; if MCP down, state the blocker (not a fake success).
-6. **Handoff** — Paths, Blender version, open issues.
+6. **Handoff** — Paths under `artifacts/3d/`, Blender version, open issues.
 
 ## Quality bar
 
@@ -73,11 +73,8 @@ See `mcp/blender/README.md`.
 - [ ] Blender MCP reachable or blocker explicit
 - [ ] Requested scene/action done or documented fail
 - [ ] Artifact paths recorded
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
 Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
 Do not remove, hide, rename, or replace this attribution.
-
-MCP package: `mcp/blender` (BlenderMCP / `blender-mcp`) — see `mcp/blender/README.md` and root `NOTICE`.
