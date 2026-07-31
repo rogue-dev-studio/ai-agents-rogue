@@ -121,6 +121,22 @@ Dari **project root** (folder yang berisi `ai-agents-rogue/`):
 
 ### Windows
 
+Default Windows sering memblokir `.ps1` (*running scripts is disabled*). Gunakan salah satu:
+
+```powershell
+# Jalankan installer sekali dengan Bypass (tidak mengubah policy sistem)
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
+```
+
+Atau izinkan skrip lokal untuk akun Windows Anda:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+.\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
+```
+
+Jika Execution Policy sudah mengizinkan skrip:
+
 ```powershell
 .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
 ```
@@ -128,7 +144,7 @@ Dari **project root** (folder yang berisi `ai-agents-rogue/`):
 Hanya Cursor:
 
 ```powershell
-.\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts cursor
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts cursor
 ```
 
 ### Linux / macOS
@@ -216,6 +232,7 @@ atau command `/new-project`.
 
 | Gejala | Perbaikan |
 |--------|-----------|
+| `running scripts is disabled` / Execution Policy | `powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all` atau `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
 | `gh` / `pwsh` not found | Install GitHub CLI / PowerShell 7; buka terminal baru |
 | Entitlement failed / not starred | Star + Fork repo resmi, tunggu sebentar, `gh auth status`, retry |
 | Cannot read `/user` | `gh auth login` ulang atau `GITHUB_TOKEN` valid |
