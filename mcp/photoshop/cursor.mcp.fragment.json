@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "photoshop": {
+      "command": "uvx",
+      "args": ["--python", "3.10", "photoshop-mcp-server"],
+      "env": {
+        "PS_VERSION": "2024"
+      }
+    }
+  }
+}

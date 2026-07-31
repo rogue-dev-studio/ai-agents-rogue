@@ -1,0 +1,16 @@
+{
+    "id":  "pal",
+    "skill":  "mcp-integrations",
+    "runtime":  {
+                    "requires":  [
+                                     "uvx-or-pip",
+                                     "api-keys"
+                                 ]
+                },
+    "source":  {
+                   "upstream":  "https://github.com/BeehiveInnovations/pal-mcp-server"
+               },
+    "description":  "PAL multi-model orchestration MCP",
+    "cursorFragment":  "cursor.mcp.fragment.json",
+    "status":  "ready"
+}

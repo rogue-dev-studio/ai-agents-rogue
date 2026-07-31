@@ -1,0 +1,16 @@
+{
+    "id":  "chrome-devtools",
+    "skill":  "browser-automation",
+    "runtime":  {
+                    "requires":  [
+                                     "nodejs",
+                                     "chrome-or-edge"
+                                 ]
+                },
+    "source":  {
+                   "upstream":  "npm:chrome-devtools-mcp"
+               },
+    "description":  "Chrome DevTools MCP via npx",
+    "cursorFragment":  "cursor.mcp.fragment.json",
+    "status":  "ready"
+}

@@ -1,0 +1,16 @@
+{
+    "id":  "linear",
+    "skill":  "mcp-integrations",
+    "runtime":  {
+                    "requires":  [
+                                     "network",
+                                     "oauth"
+                                 ]
+                },
+    "source":  {
+                   "upstream":  "https://linear.app/docs/mcp"
+               },
+    "description":  "Linear MCP (remote HTTP, OAuth)",
+    "cursorFragment":  "cursor.mcp.fragment.json",
+    "status":  "ready"
+}
