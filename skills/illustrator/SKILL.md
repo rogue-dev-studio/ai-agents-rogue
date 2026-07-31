@@ -46,9 +46,9 @@ See `mcp/illustrator/README.md`.
 1. **Context** — Confirm project / `WORKMODE.md`; read `mcp/illustrator/README.md`.
 2. **Tooling** — Illustrator reachable; MCP `illustrator` connected.
 3. **Plan** — Inputs (AI/SVG), outputs (export), print vs screen constraints.
-4. **Execute** — Use MCP tools (read/manipulate/export); keep artifacts in the project tree.
+4. **Execute** — Use MCP tools (read/manipulate/export); save under `project/{id}/artifacts/design/` (SVG/PDF/AI exports). Create project if missing.
 5. **Verify** — Export or document state check; note blockers if bridge fails.
-6. **Handoff** — Paths, AI version, open issues.
+6. **Handoff** — Paths under `artifacts/design/`, AI version, open issues.
 
 ## Quality bar
 

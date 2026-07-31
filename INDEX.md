@@ -107,7 +107,7 @@ Runtime hybrid: fragment Rogue + engine `npx`/`uvx`/URL remote. Lihat [`mcp/READ
 | `author` (`rules/author.md`) | Hard rule. Berlaku untuk semua host, roles, dan skills. |
 | `coding` (`rules/coding.md`) | Ikuti struktur & konvensi repo yang sudah ada (jangan ganti stack diam-diam). |
 | `commit` (`rules/commit.md`) | Commit / push / PR hanya jika user meminta. |
-| `global` (`rules/global.md`) | Hard constraints untuk semua host. Orchestrator dan skills wajib menghormati ini. |
+| `global` (`rules/global.md`) | Work modes + larangan umum; docs → `project/{id}/docs/`; generate → `project/{id}/artifacts/{kategori}/` |
 | `security` (`rules/security.md`) | Auth, secret, PII; tim boleh menambah skill lokal, bukan mengabaikan rule ini. |
 | `ui` (`rules/ui.md`) | Mobile-first bila mobile; responsive bila web. |
 

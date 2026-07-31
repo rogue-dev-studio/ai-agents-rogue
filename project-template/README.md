@@ -15,7 +15,7 @@ Skills/roles mengikuti `TEAM.yaml` tim tersebut.
 
 ## Dokumentasi pengembangan
 
-Semua artifact E2E ada di `docs/`:
+Semua artifact **dokumen** E2E ada di `docs/`:
 
 | Folder | Isi |
 |--------|-----|
@@ -28,8 +28,24 @@ Semua artifact E2E ada di `docs/`:
 | `docs/review/` | Code review notes |
 | `docs/release/` | Checklist release |
 
+## Deliverable (kode / gambar / 3D / media)
+
+Simpan di `artifacts/{kategori}/` — lihat `artifacts/README.md`.
+
+| Folder | Isi |
+|--------|-----|
+| `artifacts/code/` | Program / prototype / generated source |
+| `artifacts/images/` | Gambar / raster |
+| `artifacts/3d/` | Model & render 3D |
+| `artifacts/design/` | Vektor / export desain |
+| `artifacts/media/` | Video / audio |
+| `artifacts/data/` | Data / output notebook |
+| `artifacts/other/` | Lainnya |
+
+Kode aplikasi produksi besar boleh di root repo (`backend/`, `frontend/`, …) **jika** struktur itu sudah ada; tetap catat path di docs project. File generate sekali-pakai / aset kreatif → **wajib** di `artifacts/`.
+
 ## Cara kerja AI
 
 1. Baca `PROJECT.yaml` + file ini
 2. Baca team aktif bila ada
-3. Jalankan `e2e-delivery` — tulis artifact ke **folder docs di project ini**
+3. Jalankan `e2e-delivery` — tulis docs ke **`docs/`**, aset generate ke **`artifacts/{kategori}/`**

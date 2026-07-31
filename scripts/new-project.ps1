@@ -60,6 +60,8 @@ function Replace-Tokens([string]$Path) {
 
 Replace-Tokens (Join-Path $ProjectDir "PROJECT.yaml")
 Replace-Tokens (Join-Path $ProjectDir "README.md")
+$artReadme = Join-Path $ProjectDir "artifacts\README.md"
+if (Test-Path -LiteralPath $artReadme) { Replace-Tokens $artReadme }
 
 # Seed starter docs from house templates
 $tpl = Join-Path $CatalogRoot "templates"

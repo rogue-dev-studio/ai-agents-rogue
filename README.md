@@ -49,13 +49,17 @@ Buat tim sendiri bila perlu subset skills/roles, lalu `install.ps1 -Team <id>`.
 
 ## Projects
 
-Di **project root** (bukan di dalam repo catalog): `project/{id}/` berisi dokumentasi pengembangan (`docs/srs`, `planning`, …).
+Di **project root** (bukan di dalam repo catalog): `project/{id}/` berisi:
+
+- `docs/` — dokumentasi pengembangan (SRS, planning, …)
+- `artifacts/{kategori}/` — kode/gambar/3D/desain/media/data yang di-generate agent
 
 ```powershell
 .\ai-agents-rogue\scripts\new-project.ps1 -Id my-app -Name "My App"
 ```
 
-Command: `/new-project`. Active project ditandai di project root `PROJECT.md` (file lokal).
+Command: `/new-project`. Active project ditandai di project root `PROJECT.md` (file lokal).  
+Aturan penempatan: `rules/global.md`, `core/artifact-system.md`.
 
 ## Roles
 

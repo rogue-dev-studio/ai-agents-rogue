@@ -29,9 +29,9 @@ ComfyUI image generation (GPU). Runtime guidance: **`mcp/comfyui`** (status part
 1. **Context** - Read `PROJECT.md`, `TEAM.md`, and related rules (`security`, `coding`).
 2. **Confirm tooling** - Verify `comfyui` runtime/CLI/MCP is available; document install if missing.
 3. **Plan** - Write a short approach (inputs, outputs, risks) before edits.
-4. **Execute** - Implement or operate with project conventions; small focused diffs.
+4. **Execute** - Generate / operate ComfyUI; save image outputs under `project/{id}/artifacts/images/`. Create project if missing.
 5. **Verify** - Run relevant tests/smoke; capture evidence under `project/{id}/docs/` when documenting.
-6. **Handoff** - Status, paths, blockers, next steps.
+6. **Handoff** - Status, paths under `artifacts/images/`, blockers, next steps.
 
 ## Quality bar
 

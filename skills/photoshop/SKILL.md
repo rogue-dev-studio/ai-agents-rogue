@@ -46,9 +46,9 @@ See `mcp/photoshop/README.md`.
 1. **Context** — Confirm project / `WORKMODE.md`; read `mcp/photoshop/README.md`.
 2. **Tooling** — Photoshop running; MCP `photoshop` connected; adjust `PS_VERSION` if needed.
 3. **Plan** — Inputs (PSD/assets), outputs (export paths), risks (license, COM/API, long ops).
-4. **Execute** — Use MCP tools for document/layer/session ops; keep artifacts in the project tree.
+4. **Execute** — Use MCP tools for document/layer/session ops; save exports under `project/{id}/artifacts/images/` (or `design/` if vector-from-PS workflow). Create project if missing.
 5. **Verify** — Open/export check or explicit blocker if MCP cannot reach Photoshop.
-6. **Handoff** — Paths, PS version, open issues.
+6. **Handoff** — Paths under `artifacts/`, PS version, open issues.
 
 ## Quality bar
 

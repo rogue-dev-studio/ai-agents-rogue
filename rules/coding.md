@@ -9,6 +9,7 @@ Version: 0.1.0
 - Type-safe sejauh stack mendukung; handle error di boundary
 - Nama yang jelas; hindari magic number tanpa konstanta bermakna
 - Tulis tes untuk perilaku baru yang kritis (lihat skill `agentic-qe`)
+- Kode/prototype **generate** → `project/{id}/artifacts/code/` kecuali monorepo app (`backend/`/`frontend/`/…) sudah menjadi target yang jelas
 
 ## Must never
 

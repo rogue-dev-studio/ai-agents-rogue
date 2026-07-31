@@ -67,9 +67,20 @@ project/{id}/docs/tasks/
 project/{id}/docs/qa/
 project/{id}/docs/review/
 project/{id}/docs/release/
+project/{id}/artifacts/code/
+project/{id}/artifacts/images/
+project/{id}/artifacts/3d/
+project/{id}/artifacts/design/
+project/{id}/artifacts/media/
+project/{id}/artifacts/data/
+project/{id}/artifacts/other/
 ```
 
-Jika belum ada project folder: buat dulu dengan `scripts/new-project.ps1` / command `/new-project`, **jangan** menulis ke `docs/` global.
+- **Docs** → `docs/…`
+- **Generate** (program kecil, gambar, 3D, vektor, media, data) → `artifacts/{kategori}/`
+- App monorepo besar yang sudah ada (`backend/`, `frontend/`, …) boleh di root; catat path di docs.
+
+Jika belum ada project folder: buat dulu dengan `scripts/new-project.ps1` / command `/new-project`, **jangan** menulis ke `docs/` global atau root acak.
 
 ## Pipeline (wajib berurutan)
 
@@ -87,7 +98,7 @@ Ikuti `core/delivery-flow.md`. Untuk setiap fase:
 | 4 | Architecture | Solution Architect | `project/{id}/docs/architecture/` |
 | 5 | Design | UI/UX + Design System | `project/{id}/docs/design/` (skip UI jika pure backend) |
 | 6 | Task breakdown | Tech Lead + PM | `project/{id}/docs/tasks/` |
-| 7 | Development | DB → Backend → Frontend (+ DevOps/Security sesuai need) | code di tree aplikasi |
+| 7 | Development | DB → Backend → Frontend (+ DevOps/Security sesuai need) | code app di tree yang ada **atau** `project/{id}/artifacts/code/` untuk prototype/generate |
 | 8 | Testing | QA (+ skill `agentic-qe`) | `project/{id}/docs/qa/` + tests |
 | 9 | Review | Code Reviewer | `project/{id}/docs/review/` |
 | 10 | Documentation | Technical Writer | docs di project + API/user guide bila relevan |
