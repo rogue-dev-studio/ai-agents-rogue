@@ -7,13 +7,19 @@
 $script:AttributionMarker = "ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE"
 
 function Get-FileSha256Hex([string]$Path) {
+  # Hash UTF-8 text with LF newlines only so Windows/Linux verify the same way.
+  # (Raw byte hash breaks when Git checks out CRLF vs LF.)
+  $raw = [System.IO.File]::ReadAllBytes($Path)
+  $text = [System.Text.Encoding]::UTF8.GetString($raw)
+  if ($text.Length -gt 0 -and [int][char]$text[0] -eq 0xFEFF) {
+    $text = $text.Substring(1)
+  }
+  $normalized = ($text -replace "`r`n", "`n") -replace "`r", "`n"
+  $data = [System.Text.Encoding]::UTF8.GetBytes($normalized)
   $sha = [System.Security.Cryptography.SHA256]::Create()
   try {
-    $fs = [System.IO.File]::OpenRead($Path)
-    try {
-      $hash = $sha.ComputeHash($fs)
-      return ([BitConverter]::ToString($hash) -replace '-', '').ToLowerInvariant()
-    } finally { $fs.Dispose() }
+    $hash = $sha.ComputeHash($data)
+    return ([BitConverter]::ToString($hash) -replace '-', '').ToLowerInvariant()
   } finally { $sha.Dispose() }
 }
 
@@ -31,6 +37,7 @@ function Get-AttributionFileMap([string]$CatalogRoot) {
     "templates\WORKMODE.md",
     "ATTRIBUTION.public.xml",
     "GITHUB_ENTITLEMENT.json",
+    ".gitattributes",
     "scripts\verify-official-upstream.ps1",
     "scripts\check-github-entitlement.ps1",
     "scripts\verify-attribution.ps1",
