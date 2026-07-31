@@ -60,7 +60,7 @@ Command: `/new-project`. Active project ditandai di project root `PROJECT.md` (f
 
 ## Install
 
-Panduan lengkap (Star → Fork → auth → clone → install → troubleshoot): **[INSTALL.md](./INSTALL.md)**
+Panduan lengkap (prasyarat → Star/Fork → auth → clone → install → Cursor → troubleshoot): **[INSTALL.md](./INSTALL.md)**
 
 Ringkas — dari project root setelah catalog ada di `ai-agents-rogue/`:
 
