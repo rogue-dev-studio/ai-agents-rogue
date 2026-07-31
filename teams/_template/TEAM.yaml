@@ -1,0 +1,24 @@
+id: my-team
+name: Nama Tim
+description: Satu kalimat tujuan tim
+version: 0.1.0
+
+# Skills dari katalog global (ai-agents-rogue/skills)
+skills:
+  - e2e-delivery
+  - clarity
+
+# Roles dari katalog (path relatif ke roles/)
+roles:
+  - management/ai-orchestrator
+  - management/product-owner
+  - engineering/tech-lead
+  - quality/qa
+
+# Command yang di-install
+commands:
+  - start-feature
+  - new-project
+
+# Skill lokal di teams/<id>/skills/ (nama folder) — opsional
+local_skills: []

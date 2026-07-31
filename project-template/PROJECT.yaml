@@ -1,0 +1,16 @@
+id: __PROJECT_ID__
+name: __PROJECT_NAME__
+team: __TEAM_ID__
+version: 0.1.0
+status: discovery
+created: __DATE__
+
+# Stack (sesuaikan)
+stack:
+  backend: ""
+  frontend: ""
+  database: ""
+  mobile: ""
+
+# Path dokumentasi relatif ke folder project ini
+docs_root: docs

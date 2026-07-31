@@ -1,0 +1,44 @@
+# AI Agents Rogue — catalog publish ignores
+# Use this file when this folder is the GitHub repo root.
+
+# NEVER commit / share the signing private key
+.attribution-private.xml
+.attribution-private.pem
+.attribution-private.*
+**/.attribution-private.*
+
+# Machine-local install state
+active-team/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+**/secrets/
+id_rsa
+id_rsa.pub
+
+# Host adapters if someone installs into the catalog itself
+.cursor/
+.claude/
+.agents/
+.opencode/
+
+# OS / editor / build noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+node_modules/
+dist/
+build/
+coverage/
+*.log
+*.tmp
+*.bak

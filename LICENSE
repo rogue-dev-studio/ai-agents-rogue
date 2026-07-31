@@ -1,0 +1,42 @@
+MIT License
+
+Copyright (c) 2026 Rogue Development (Rogue Dev Studio)
+https://github.com/rogue-dev-studio
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+ADDITIONAL ATTRIBUTION REQUIREMENT
+----------------------------------
+Redistributions (modified or unmodified) of AI Agents Rogue must retain clear
+credit to Rogue Development and a link to https://github.com/rogue-dev-studio
+in README.md, AGENTS.md, and NOTICE. Removing, renaming, hiding, or replacing
+the author attribution is not permitted under this project's distribution terms.
+
+PERMITTED USE (GITHUB ENTITLEMENT)
+----------------------------------
+Use and installation of AI Agents Rogue is permitted only for GitHub users who
+have BOTH:
+  (1) starred the official repository, and
+  (2) forked the official repository
+at https://github.com/rogue-dev-studio/ai-agents-rogue
+
+Downloading a ZIP / copying files without a fork and star does not grant a
+license to install or use this catalog. Installers verify entitlement via the
+GitHub API (see GITHUB_ENTITLEMENT.json and scripts/check-github-entitlement.ps1).
+Maintainer allowlist accounts are exempt as listed in GITHUB_ENTITLEMENT.json.

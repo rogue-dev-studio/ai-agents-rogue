@@ -1,0 +1,12 @@
+{
+  "officialOwner": "rogue-dev-studio",
+  "officialRepo": "ai-agents-rogue",
+  "officialUrl": "https://github.com/rogue-dev-studio/ai-agents-rogue",
+  "officialPublicKeySha256": "567ed3522d44b689bbe4f64aa85ffe6a7a1e78ecbab2f1ee36ef2c48e98044cb",
+  "requireStar": true,
+  "requireFork": true,
+  "allowLogins": [
+    "rogue-dev-studio"
+  ],
+  "notes": "Install/use only if starred+forked. Public key must match officialPublicKeySha256 and GitHub upstream ATTRIBUTION.public.xml. Auth: gh auth login or GITHUB_TOKEN."
+}
