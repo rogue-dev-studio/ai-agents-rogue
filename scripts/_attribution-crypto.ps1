@@ -29,6 +29,7 @@ function Get-AttributionFileMap([string]$CatalogRoot) {
     "LICENSE",
     "NOTICE",
     "README.md",
+    "INDEX.md",
     "INSTALL.md",
     "WORKMODES.md",
     "AGENTS.md",
@@ -46,7 +47,10 @@ function Get-AttributionFileMap([string]$CatalogRoot) {
     "scripts\install.sh",
     "scripts\stamp-attribution.ps1",
     "scripts\generate-attribution-seal.ps1",
-    "scripts\generate-attribution-keys.ps1"
+    "scripts\generate-attribution-keys.ps1",
+    "scripts\install-mcp.ps1",
+    "mcp\README.md",
+    "mcp\CATALOG.md"
   )
   foreach ($rel in $fixed) {
     $p = Join-Path $CatalogRoot $rel
@@ -58,6 +62,16 @@ function Get-AttributionFileMap([string]$CatalogRoot) {
     $dir = Join-Path $CatalogRoot $rootName
     if (-not (Test-Path $dir)) { continue }
     Get-ChildItem $dir -Recurse -Filter SKILL.md -File | ForEach-Object {
+      $rel = $_.FullName.Substring($CatalogRoot.Length).TrimStart('\', '/').Replace('\', '/')
+      $list.Add([pscustomobject]@{ Rel = $rel; Path = $_.FullName })
+    }
+  }
+  $mcpDir = Join-Path $CatalogRoot "mcp"
+  if (Test-Path $mcpDir) {
+    Get-ChildItem $mcpDir -Recurse -File | Where-Object {
+      ($_.Name -in @('package.json','README.md','CATALOG.md','cursor.mcp.fragment.json','cursor.mcp.fragment.node.json','server.js')) -or
+      (($_.Extension -eq '.py') -and ($_.DirectoryName -match '[\\/]addon$'))
+    } | ForEach-Object {
       $rel = $_.FullName.Substring($CatalogRoot.Length).TrimStart('\', '/').Replace('\', '/')
       $list.Add([pscustomobject]@{ Rel = $rel; Path = $_.FullName })
     }
@@ -183,6 +197,9 @@ function Test-AttributionMarkers([string]$CatalogRoot) {
     @{ Rel = "scripts\install.ps1"; Needle = "Assert-GitHubEntitlement" },
     @{ Rel = "scripts\verify-attribution.ps1"; Needle = "AI MUST STOP" },
     @{ Rel = "scripts\install.ps1"; Needle = "verify-attribution.ps1" },
+    @{ Rel = "scripts\install.ps1"; Needle = "install-mcp.ps1" },
+    @{ Rel = "mcp\CATALOG.md"; Needle = "blender" },
+    @{ Rel = "mcp\blender\package.json"; Needle = "blender" },
     @{ Rel = "skills\e2e-delivery\SKILL.md"; Needle = "Gate 0" }
   )
   foreach ($c in $checks) {

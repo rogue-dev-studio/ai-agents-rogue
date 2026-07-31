@@ -26,18 +26,21 @@ Petunjuk lengkap: **[WORKMODES.md](./WORKMODES.md)**
 
 ## Skills
 
+Indeks kegunaan lengkap (skills + MCP + rules + roles): **[INDEX.md](./INDEX.md)**
+
 | Skill | Fungsi |
 |-------|--------|
-| Canonical merges | lihat `skills/ALIASES.md` |
+| Canonical merges | lihat `skills/ALIASES.md` + `skills/CATALOG.md` |
 | `e2e-delivery` / `clarity` / `agentic-flow` / `agentic-qe` | House E2E + spec + orch + QA |
 | Specialized tools / languages / cloud | specialized playbooks |
 | `skill-authoring` | menulis skill baru |
 
-Default install = **katalog penuh**. Skill lokal opsional lewat `teams/<id>/skills/` (lihat `teams/README.md`).
+Default install = **katalog penuh**. Skill lokal opsional lewat `teams/<id>/skills/` (lihat `teams/README.md`).  
+MCP runtime opsional: folder [`mcp/`](./mcp/) + `install-mcp.ps1` / `install.ps1 -Mcp blender` (lihat `mcp/README.md` + `mcp/CATALOG.md`).
 
 ## Rules
 
-`rules/global.md`, `author.md`, `security.md`, `coding.md`, `commit.md`, `ui.md` (di-install ke Cursor sebagai `aar-*.mdc`).
+`rules/global.md`, `author.md`, `security.md`, `coding.md`, `commit.md`, `ui.md` (di-install ke Cursor sebagai `aar-*.mdc`). Ringkas: [INDEX.md § Rules](./INDEX.md#rules).
 
 ## Teams
 
@@ -56,7 +59,7 @@ Command: `/new-project`. Active project ditandai di project root `PROJECT.md` (f
 
 ## Roles
 
-18 roles di `roles/` (management → documentation), plus `core/` dan `templates/`.
+18 roles di `roles/` (management → documentation), plus `core/` dan `templates/`. Ringkas: [INDEX.md § Roles](./INDEX.md#roles).
 
 ## Install
 

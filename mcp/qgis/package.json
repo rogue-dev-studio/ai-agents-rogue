@@ -1,0 +1,14 @@
+{
+    "skill":  "qgis",
+    "cursorFragment":  null,
+    "id":  "qgis",
+    "runtime":  {
+                    "requires":  [
+                                     "qgis",
+                                     "desktop"
+                                 ]
+                },
+    "description":  "QGIS MCP (partial)",
+    "status":  "partial",
+    "notes":  "Host app + optional vendored MCP server not fully bundled; follow README"
+}

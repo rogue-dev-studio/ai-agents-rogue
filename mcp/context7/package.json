@@ -1,0 +1,15 @@
+{
+    "id":  "context7",
+    "skill":  "mcp-integrations",
+    "runtime":  {
+                    "requires":  [
+                                     "network"
+                                 ]
+                },
+    "source":  {
+                   "upstream":  "https://github.com/upstash/context7"
+               },
+    "description":  "Context7 library docs MCP (remote HTTP)",
+    "cursorFragment":  "cursor.mcp.fragment.json",
+    "status":  "ready"
+}

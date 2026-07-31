@@ -1,0 +1,14 @@
+{
+    "skill":  "kicad",
+    "cursorFragment":  null,
+    "id":  "kicad",
+    "runtime":  {
+                    "requires":  [
+                                     "kicad",
+                                     "desktop"
+                                 ]
+                },
+    "description":  "KiCad PCB MCP (partial)",
+    "status":  "partial",
+    "notes":  "Host app + optional vendored MCP server not fully bundled; follow README"
+}

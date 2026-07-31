@@ -21,8 +21,14 @@ description: >-
 |---------|--------|
 | Tes otomatis di repo (default) | Playwright (project runner) |
 | Agent explorasi cepat | `agent-browser` / snapshot CLI |
-| MCP / CDP remote | Chrome DevTools Protocol / browser MCP |
+| MCP / CDP remote | `mcp/chrome-devtools` atau `mcp/playwright` (`install-mcp.ps1`) |
 | Suite QA web app | Playwright project + matrix P0 |
+
+Wire MCP:
+
+```powershell
+.\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp playwright,chrome-devtools
+```
 
 ## Procedure
 

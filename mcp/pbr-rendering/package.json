@@ -1,0 +1,15 @@
+{
+    "skill":  "pbr-rendering",
+    "cursorFragment":  null,
+    "id":  "pbr-rendering",
+    "runtime":  {
+                    "requires":  [
+                                     "gpu",
+                                     "blender",
+                                     "mcp/blender"
+                                 ]
+                },
+    "description":  "PBR materials MCP (partial, GPU, needs Blender)",
+    "status":  "partial",
+    "notes":  "Host app + optional vendored MCP server not fully bundled; follow README"
+}

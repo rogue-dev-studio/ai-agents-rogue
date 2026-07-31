@@ -1,0 +1,15 @@
+{
+    "id":  "playwright",
+    "skill":  "browser-automation",
+    "runtime":  {
+                    "requires":  [
+                                     "nodejs"
+                                 ]
+                },
+    "source":  {
+                   "upstream":  "npm:@playwright/mcp"
+               },
+    "description":  "Playwright MCP via npx",
+    "cursorFragment":  "cursor.mcp.fragment.json",
+    "status":  "ready"
+}

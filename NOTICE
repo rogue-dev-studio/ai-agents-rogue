@@ -12,3 +12,13 @@ Do not remove, rename, hide, or replace the author credit above.
 Official source:
   Publish and verify against the author's GitHub organization.
   Forks or copies without this attribution are unofficial.
+
+Third-party (MCP packages)
+--------------------------
+Selected MCP packages under mcp/ wire public upstream runtimes, including:
+  Context7 (upstash/context7), Atlassian MCP, Linear MCP,
+  chrome-devtools-mcp, @playwright/mcp, blender-mcp (ahujasid),
+  photoshop-mcp-server (loonghao), illustrator-mcp-server (ie3jp),
+  pal-mcp-server (BeehiveInnovations)
+
+Retain upstream notices where present in those packages.

@@ -1,0 +1,13 @@
+{
+    "skill":  "imagemagick",
+    "cursorFragment":  null,
+    "id":  "imagemagick",
+    "runtime":  {
+                    "requires":  [
+                                     "imagemagick"
+                                 ]
+                },
+    "description":  "ImageMagick + MCP (partial)",
+    "status":  "partial",
+    "notes":  "Host app + optional vendored MCP server not fully bundled; follow README"
+}

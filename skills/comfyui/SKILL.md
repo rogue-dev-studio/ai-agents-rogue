@@ -11,7 +11,7 @@ experience_level: max
 
 ## Summary
 
-ComfyUI image generation MCP server (GPU required). Use when the project needs this capability or the user / team manifest asks for it.
+ComfyUI image generation (GPU). Runtime guidance: **`mcp/comfyui`** (status partial — see that README). Skill alone does not install ComfyUI or GPU drivers.
 
 ## When to use
 
