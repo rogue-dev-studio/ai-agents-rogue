@@ -1,0 +1,14 @@
+{
+  "id": "photoshop",
+  "skill": "photoshop",
+  "description": "Adobe Photoshop via uvx photoshop-mcp-server",
+  "runtime": {
+    "requires": ["photoshop-desktop", "uvx"]
+  },
+  "source": {
+    "upstream": "https://github.com/loonghao/photoshop-python-api-mcp-server",
+    "package": "photoshop-mcp-server"
+  },
+  "cursorFragment": "cursor.mcp.fragment.json",
+  "status": "ready"
+}

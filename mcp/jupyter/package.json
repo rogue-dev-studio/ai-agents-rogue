@@ -1,0 +1,14 @@
+{
+    "skill":  "jupyter-notebooks",
+    "cursorFragment":  null,
+    "id":  "jupyter",
+    "runtime":  {
+                    "requires":  [
+                                     "python",
+                                     "jupyter"
+                                 ]
+                },
+    "description":  "Jupyter notebook MCP (partial)",
+    "status":  "partial",
+    "notes":  "Host app + optional vendored MCP server not fully bundled; follow README"
+}

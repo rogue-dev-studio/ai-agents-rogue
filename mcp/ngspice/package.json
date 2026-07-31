@@ -1,0 +1,13 @@
+{
+    "skill":  "ngspice",
+    "cursorFragment":  null,
+    "id":  "ngspice",
+    "runtime":  {
+                    "requires":  [
+                                     "ngspice"
+                                 ]
+                },
+    "description":  "NGSpice MCP (partial)",
+    "status":  "partial",
+    "notes":  "Host app + optional vendored MCP server not fully bundled; follow README"
+}

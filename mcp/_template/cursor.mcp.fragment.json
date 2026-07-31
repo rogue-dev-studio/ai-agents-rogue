@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "__ID__": {
+      "command": "echo",
+      "args": ["Replace with real MCP command"]
+    }
+  }
+}

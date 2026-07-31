@@ -1,0 +1,15 @@
+{
+    "skill":  "comfyui",
+    "cursorFragment":  null,
+    "id":  "comfyui",
+    "runtime":  {
+                    "requires":  [
+                                     "gpu",
+                                     "comfyui",
+                                     "python"
+                                 ]
+                },
+    "description":  "ComfyUI image gen MCP (GPU)",
+    "status":  "partial",
+    "notes":  "Host app + optional vendored MCP server not fully bundled; follow README"
+}

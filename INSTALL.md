@@ -19,6 +19,10 @@ Pasang dulu alat berikut (semua OS):
 | [GitHub CLI `gh`](https://cli.github.com/) | Ya (disarankan) | Entitlement star/fork + auth API |
 | PowerShell | Ya | Windows: Windows PowerShell 5.1+ atau **PowerShell 7**. Linux/macOS: **`pwsh`** (PowerShell 7) |
 | Editor AI host | Ya | Cursor / Claude Code / OpenCode / dll. |
+| [uv](https://github.com/astral-sh/uv) / `uvx` | Opsional | MCP Blender / Photoshop (`uvx …`) |
+| Blender 3+ | Opsional | Hanya jika memakai paket `mcp/blender` |
+| Adobe Photoshop / Illustrator | Opsional | Hanya jika memakai `mcp/photoshop` atau `mcp/illustrator` |
+| Node.js 18+ | Opsional | `npx` MCP (Playwright, Illustrator, chrome-devtools, …) |
 
 ### Cek cepat
 
@@ -121,6 +125,22 @@ Dari **project root** (folder yang berisi `ai-agents-rogue/`):
 
 ### Windows
 
+Default Windows sering memblokir `.ps1` (*running scripts is disabled*). Gunakan salah satu:
+
+```powershell
+# Jalankan installer sekali dengan Bypass (tidak mengubah policy sistem)
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
+```
+
+Atau izinkan skrip lokal untuk akun Windows Anda:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+.\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
+```
+
+Jika Execution Policy sudah mengizinkan skrip:
+
 ```powershell
 .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
 ```
@@ -128,7 +148,7 @@ Dari **project root** (folder yang berisi `ai-agents-rogue/`):
 Hanya Cursor:
 
 ```powershell
-.\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts cursor
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts cursor
 ```
 
 ### Linux / macOS
@@ -143,6 +163,32 @@ Atau langsung PowerShell:
 ```bash
 pwsh -File ./ai-agents-rogue/scripts/install.ps1 -Target . -Hosts all
 ```
+
+### MCP (opsional)
+
+Skill teks saja **tidak** mengaktifkan MCP. Wire paket dari `mcp/` ke host AI.
+
+**Model runtime (hybrid):** katalog memasang fragment + playbook Rogue. Engine MCP biasanya **unduh saat dipakai** (`npx` / `uvx`) atau **remote URL** (Context7, Atlassian, Linear). Hanya sebagian aset lokal (mis. addon Blender) yang ikut di repo. Detail: [`mcp/README.md`](./mcp/README.md#model-runtime-hybrid).
+
+```powershell
+# Bersama install (MCP di-wire ke host yang sama dengan -Hosts)
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all -Mcp all
+
+# MCP saja ke semua host adapter
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp all -Hosts all
+
+# Hanya Cursor + Claude
+powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp blender,playwright -Hosts cursor,claude
+```
+
+```bash
+./ai-agents-rogue/scripts/install.sh . all "" all
+pwsh -File ./ai-agents-rogue/scripts/install-mcp.ps1 -Target . -Mcp all -Hosts all
+```
+
+Target file: `.cursor/mcp.json`, `.mcp.json` (Claude), `opencode.json`, `.agents/mcp.json`.  
+`-Mcp`: `none` (default), id, daftar koma, atau `all` (paket **ready**). Lihat [`mcp/CATALOG.md`](./mcp/CATALOG.md).  
+Blender: enable addon + Start Server, lalu restart host.
 
 ### Hosts yang didukung
 
@@ -193,6 +239,7 @@ Exit code `0` = OK.
    - `.cursor/skills/` (termasuk `e2e-delivery`)  
    - `.cursor/rules/aar-*.mdc` dan `ai-agents-rogue.mdc`  
    - Commands: `/start-feature`, `/assist`, `/set-mode`, `/new-project`  
+   - Bila `-Mcp` dipakai: `.cursor/mcp.json` berisi server terkait  
 3. Baca `AGENTS.md` di project root.  
 4. Mode kerja: `WORKMODE.md` (default **`e2e`**) + panduan `ai-agents-rogue/WORKMODES.md`.  
 5. Project baru:  
@@ -216,6 +263,7 @@ atau command `/new-project`.
 
 | Gejala | Perbaikan |
 |--------|-----------|
+| `running scripts is disabled` / Execution Policy | `powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all` atau `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
 | `gh` / `pwsh` not found | Install GitHub CLI / PowerShell 7; buka terminal baru |
 | Entitlement failed / not starred | Star + Fork repo resmi, tunggu sebentar, `gh auth status`, retry |
 | Cannot read `/user` | `gh auth login` ulang atau `GITHUB_TOKEN` valid |
@@ -223,6 +271,8 @@ atau command `/new-project`.
 | Upstream key unreachable | Jaringan OK + repo resmi dapat diakses |
 | Fork belum terdeteksi | Fork harus dari `rogue-dev-studio/ai-agents-rogue`, bukan copy folder manual |
 | Skills tidak muncul di Cursor | Restart Cursor; cek path install `-Target` benar (project root) |
+| MCP Blender tidak connect | Install addon + Start Server di Blender; `uvx`/`pip install blender-mcp`; cek `.cursor/mcp.json`; restart Cursor |
+| MCP Photoshop / Illustrator tidak connect | App Adobe harus terpasang + running; `uvx`/`npx` OK; sesuaikan `PS_VERSION`; restart host |
 | Permission denied `install.sh` | `chmod +x ai-agents-rogue/scripts/install.sh` |
 
 ---
