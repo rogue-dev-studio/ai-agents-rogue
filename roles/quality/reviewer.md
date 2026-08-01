@@ -105,6 +105,26 @@ Tidak boleh:
 - Maintainability
 - Reusability
 - Duplication check
+- Wajib menegakkan **seluruh** `rules/coding.md` (lihat skill `code-review`)
+
+### Checklist coding.md (wajib)
+
+- Readable, maintainable, scalable, efficient, secure, robust; high performance & security
+- Tidak ada komentar tidak perlu / narasi fungsional berlebih
+- Tidak ada duplicate / dead code
+- Error ditangani di boundary; bersih SonarQube (atau setara)
+- Maksimal satu baris kosong beruntun
+- Modal tidak merusak layout/performa
+- Header `@Author` / `@Date` / `@Last Modified` = identitas saja → **di luar scope review** (bukan kriteria approve/reject)
+
+### Larangan query (blocker)
+
+- Tidak ada **raw SQL / string query** di kode aplikasi
+- Tidak ada query DB dari UI/frontend atau controller di luar lapisan persistence
+- Akses data hanya ORM / query builder / repository–model
+- Pelanggaran = **tolak** sampai diperbaiki (kecuali waiver tertulis Tech Lead)
+
+Skill wajib saat review: **`code-review`**.
 
 ---
 
@@ -114,7 +134,8 @@ Tidak boleh:
 - Service layer digunakan dengan benar
 - DTO digunakan dengan benar
 - Validation sesuai standard
-- Query efisien
+- **Tidak** menaruh query/SQL di controller atau service sembarangan — persistence layer saja
+- Query (via ORM) efisien; tidak ada N+1 sadar
 
 ---
 
@@ -143,7 +164,7 @@ Tidak boleh:
 - Input validation aman
 - Tidak ada exposure data sensitif
 - Authentication & authorization benar
-- Tidak ada unsafe query
+- Tidak ada unsafe query / raw SQL di application code
 
 ---
 
@@ -228,6 +249,7 @@ Kode dianggap lulus reviewer jika:
 ✓ Tidak ada duplication critical
 ✓ Sesuai architecture
 ✓ Clean dan maintainable
+✓ Lolos checklist `rules/coding.md` termasuk **larangan query** di kode aplikasi
 
 ---
 

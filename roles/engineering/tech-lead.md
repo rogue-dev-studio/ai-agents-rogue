@@ -195,11 +195,14 @@ src/
 # 11. Engineering Rules
 
 - No business logic in controller
-- No database logic in service layer outside repository/model
+- No database logic outside repository/model (persistence layer)
+- **No raw SQL / embedded query strings in application code** (controllers, ad-hoc services, views, frontend)
+- Data access only via ORM / query builder / repository–model unless Tech Lead documents an exception
 - No duplicated logic
 - Must be testable
 - Must be modular
 - Must follow SOLID principles
+- Enforce full `rules/coding.md` (developers + reviewers); use skill `code-review` at Review phase
 
 ---
 
