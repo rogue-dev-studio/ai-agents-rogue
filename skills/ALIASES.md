@@ -14,9 +14,17 @@ Nama/tool lama di kolom kanan **tidak** punya folder sendiri — pakai nama kano
 | `vector-knowledge-tools` | ruvector-cli, rvf-cli, gitnexus |
 | `llm-gateway-routing` | claude-code-mux, rtk, zai-service |
 | `clarity` | spec-kit, mdflow |
+| `code-review` | review, code-reviewer, pr-review |
+| `ui-ux-design` | ui-ux, ux, ui-design, usability |
 | `research-and-local-llm` | ollama, deepseek-reasoning, perplexity, web-summary, ruvnet-research, notebooklm-mcp-cli |
 | `office-document-tools` | docx, pdf, pptx, xlsx, latex-documents |
 | `container-docker-ops` | docker |
+| `database-engineering` | database, postgresql, sql, migrations, dba, schema-design |
+| `api-engineering` | api, rest-api, openapi, http-api |
+| `backend-engineering` | backend, server-side, laravel-backend |
+| `frontend-engineering` | frontend, spa, react-ui |
+| `auth-access-control` | auth, rbac, authorization, access-control |
+| `observability-engineering` | observability, logging, metrics, tracing, healthchecks |
 | `agentic-qe` | shannon |
 | `mcp-integrations` | context7-mcp, jira-mcp, linear-mcp, excalidraw-mcp, pal-mcp-server, mcp-builder |
 
