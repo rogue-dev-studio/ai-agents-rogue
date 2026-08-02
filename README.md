@@ -82,13 +82,17 @@ gh auth login
 
 ### Update (sudah pernah install)
 
+**Clone resmi:** `git -C ai-agents-rogue pull origin master`  
+**Clone dari fork:** sync fork ke upstream dulu (`git fetch upstream` + `git merge upstream/master`, atau tombol **Sync fork** di GitHub), lalu `pull` lokal.
+
+Setelah itu **install ulang** (wajib) + restart host:
+
 ```powershell
-git -C ai-agents-rogue pull origin master
 powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
 # opsional MCP: tambah -Mcp all
 ```
 
-Lalu restart host AI. Detail: [INSTALL.md §5](./INSTALL.md#5-update-sudah-pernah-install).
+Petunjuk lengkap (fork vs resmi): [INSTALL.md §5](./INSTALL.md#5-update-sudah-pernah-install).
 
 Opsional, setelah Anda membuat tim sendiri:
 
