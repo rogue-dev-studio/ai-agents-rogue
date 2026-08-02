@@ -30,6 +30,20 @@ function Get-Sha256File([string]$Path) {
   } finally { $sha.Dispose() }
 }
 
+function Get-AarTempDirectory {
+  foreach ($candidate in @(
+      $env:TEMP,
+      $env:TMP,
+      $env:TMPDIR,
+      [System.IO.Path]::GetTempPath()
+    )) {
+    if ([string]::IsNullOrWhiteSpace($candidate)) { continue }
+    $normalized = $candidate.TrimEnd('\', '/')
+    if (Test-Path -LiteralPath $normalized) { return $normalized }
+  }
+  return "/tmp"
+}
+
 $failed = New-Object System.Collections.Generic.List[string]
 $pubPath = Join-Path $CatalogRoot "ATTRIBUTION.public.xml"
 if (-not (Test-Path -LiteralPath $pubPath)) {
@@ -97,7 +111,7 @@ if ($null -eq $remote) {
     $failed.Add("Cannot fetch official ATTRIBUTION.public.xml from GitHub $Owner/$Repo. Publish the repo and ensure network access. (Rogue packaging only: AAR_OFFLINE_DEV=1)")
   }
 } else {
-  $tmp = Join-Path $env:TEMP ("aar-official-pub-" + [guid]::NewGuid().ToString("n") + ".xml")
+  $tmp = Join-Path (Get-AarTempDirectory) ("aar-official-pub-" + [guid]::NewGuid().ToString("n") + ".xml")
   [System.IO.File]::WriteAllText($tmp, $remote)
   $remoteFp = Get-Sha256File -Path $tmp
   Remove-Item $tmp -Force -ErrorAction SilentlyContinue
