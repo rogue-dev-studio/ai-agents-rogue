@@ -217,13 +217,11 @@ Gagal di salah satu → install **berhenti**.
 
 ## 5. Update (sudah pernah install)
 
-Jika catalog di project Anda sudah ada dan Rogue merilis update di `master`, ikuti **satu** jalur sesuai cara Anda clone, lalu **install ulang** + restart host.
+Jika catalog di project Anda sudah ada dan Rogue merilis update di `master`:
 
-`pull` / sync git **saja tidak cukup** — installer harus dijalankan lagi agar skill/rules tersalin ke `.cursor/` / `.agents/` / dll.
+### Langkah
 
-### 5a. Clone dari repo resmi (`rogue-dev-studio/ai-agents-rogue`)
-
-Dari **project root**:
+1. **Pull catalog terbaru** (dari project root):
 
 ```powershell
 git -C ai-agents-rogue pull origin master
@@ -233,46 +231,9 @@ git -C ai-agents-rogue pull origin master
 git -C ai-agents-rogue pull origin master
 ```
 
-### 5b. Clone dari **fork** Anda (setelah Star + Fork)
+Jika Anda clone dari **fork** sendiri, merge/rebase dulu dari upstream `rogue-dev-studio/ai-agents-rogue` ke fork, lalu `pull` fork tersebut.
 
-Fork tidak otomatis ikut `master` resmi. Sync dulu dari upstream, lalu pull lokal.
-
-**Sekali saja** — daftarkan remote upstream (dari dalam folder `ai-agents-rogue/`):
-
-```powershell
-cd ai-agents-rogue
-git remote add upstream https://github.com/rogue-dev-studio/ai-agents-rogue.git
-# jika sudah ada: git remote -v  (pastikan upstream mengarah ke repo resmi)
-```
-
-**Setiap ada update resmi:**
-
-```powershell
-cd ai-agents-rogue
-git fetch upstream
-git checkout master
-git merge upstream/master
-# opsional: dorong ke fork Anda agar GitHub fork ikut terbaru
-git push origin master
-cd ..
-```
-
-```bash
-cd ai-agents-rogue
-git fetch upstream
-git checkout master
-git merge upstream/master
-git push origin master   # opsional
-cd ..
-```
-
-Alternatif di UI GitHub: buka fork → **Sync fork** / **Fetch upstream** → lalu di lokal:
-
-```powershell
-git -C ai-agents-rogue pull origin master
-```
-
-### 5c. Install ulang (wajib setelah 5a atau 5b)
+2. **Install ulang** ke host AI (wajib — `pull` saja tidak menyalin skill/rules ke `.cursor/` / `.agents/` / dll.):
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
@@ -290,13 +251,13 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\in
 pwsh -File ./ai-agents-rogue/scripts/install-mcp.ps1 -Target . -Mcp all -Hosts all
 ```
 
-Lalu **restart** Cursor / Claude Code / OpenCode / host lain.
+3. **Restart** Cursor / Claude Code / OpenCode / host lain agar skill & MCP config terbaca.
 
 ### Catatan
 
 - Star + fork + `gh auth` / `GITHUB_TOKEN` tetap berlaku di setiap install.
 - Jangan re-seal; jangan edit file yang di-hash di `ATTRIBUTION.seal`.
-- Jangan andalkan ZIP lama — selalu sync ke `master` resmi (§5a / §5b).
+- Jangan andalkan ZIP lama — selalu `git pull` dari repo/fork yang sync ke `master` resmi.
 
 ---
 
@@ -355,10 +316,9 @@ atau command `/new-project`.
 | `gh` / `pwsh` not found | Install GitHub CLI / PowerShell 7; buka terminal baru |
 | Entitlement failed / not starred | Star + Fork repo resmi, tunggu sebentar, `gh auth status`, retry |
 | Cannot read `/user` | `gh auth login` ulang atau `GITHUB_TOKEN` valid |
-| Seal / signature INVALID / hash mismatch | Sync ke `master` resmi (§5a / §5b) lalu install ulang (§5c); jangan ubah skill manual; jangan pakai ZIP lama |
+| Seal / signature INVALID / hash mismatch | `git -C ai-agents-rogue pull origin master` lalu install ulang (§5); jangan ubah skill manual; jangan pakai ZIP lama |
 | Upstream key unreachable | Jaringan OK + repo resmi dapat diakses |
 | Fork belum terdeteksi | Fork harus dari `rogue-dev-studio/ai-agents-rogue`, bukan copy folder manual |
-| Fork tidak punya update terbaru | Sync upstream (§5b) atau tombol **Sync fork** di GitHub, lalu `pull` + install ulang |
 | Skills tidak muncul di Cursor | Restart Cursor; cek path install `-Target` benar (project root) |
 | MCP Blender tidak connect | Install addon + Start Server di Blender; `uvx`/`pip install blender-mcp`; cek `.cursor/mcp.json`; restart Cursor |
 | MCP Photoshop / Illustrator tidak connect | App Adobe harus terpasang + running; `uvx`/`npx` OK; sesuaikan `PS_VERSION`; restart host |
