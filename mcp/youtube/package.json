@@ -1,0 +1,15 @@
+{
+  "id": "youtube",
+  "skill": "youtube-publishing",
+  "runtime": {
+    "requires": ["nodejs", "youtube-local-api"]
+  },
+  "description": "YouTube Data API v3 via local proxy — manual upload only",
+  "cursorFragment": "cursor.mcp.fragment.json",
+  "status": "ready",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0"
+  }
+}

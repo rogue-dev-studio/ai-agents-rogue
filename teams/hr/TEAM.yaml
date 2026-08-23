@@ -1,0 +1,27 @@
+id: hr
+name: People Operations / HR
+description: Pack lokal prompt-first (CV, screening, onboarding, cuti, kinerja). Pakai skill dari prompt; -Team hr opsional/berbahaya di full-catalog
+version: 0.1.0
+
+# Skills katalog yang relevan jika install -Team hr (opsional; full catalog tetap default)
+skills:
+  - e2e-delivery
+  - clarity
+  - agentic-flow
+  - office-document-tools
+  - auth-access-control
+  - code-review
+
+roles:
+  - management/ai-orchestrator
+  - management/product-owner
+  - analysis/business-analyst
+  - quality/qa
+
+commands:
+  - start-feature
+  - new-project
+
+local_skills:
+  - hr-cv-lifecycle
+  - hr-employee-ops
