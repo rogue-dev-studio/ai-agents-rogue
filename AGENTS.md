@@ -1,6 +1,6 @@
 # AI Agents Rogue
 
-Version: 1.3.0  
+Version: 1.4.0  
 Author: [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`)
 
 > Katalog AI agents & skills untuk Cursor, Antigravity, Claude Code, OpenCode, dan host lain.  
