@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "youtube": {
+      "command": "node",
+      "args": ["server.mjs"],
+      "cwd": "${workspaceFolder}/ai-agents-rogue/mcp/youtube",
+      "env": {
+        "YOUTUBE_API_URL": "http://127.0.0.1:8787"
+      }
+    }
+  }
+}

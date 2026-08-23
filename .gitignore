@@ -9,6 +9,12 @@
 
 # Machine-local install state
 active-team/
+active-mcp/
+active-domain/
+
+# Local-only / machine-specific helpers (not catalog defaults)
+scripts/restore-project-photos.ps1
+teams/hr/examples/cv-arishadisopiyan-ats.html
 
 # Secrets
 .env

@@ -1,0 +1,37 @@
+id: simrs
+name: SIMRS / Hospital Operations
+description: Pack lokal prompt-first (SIMRS, alur RS, review klinis, regulasi, mapping data). Pakai skill dari prompt; -Team simrs opsional/berbahaya di full-catalog
+version: 0.1.0
+
+# Skills katalog yang relevan jika install -Team simrs (opsional; full catalog tetap default)
+skills:
+  - e2e-delivery
+  - clarity
+  - agentic-flow
+  - agentic-qe
+  - code-review
+  - auth-access-control
+  - api-engineering
+  - database-engineering
+  - security
+
+roles:
+  - management/ai-orchestrator
+  - management/product-owner
+  - analysis/business-analyst
+  - analysis/system-analyst
+  - quality/qa
+  - quality/reviewer
+  - engineering/security
+
+commands:
+  - start-feature
+  - new-project
+
+local_skills:
+  - simrs-hospital-ops
+  - simrs-clinical-review
+  - simrs-regulatory-id
+  - simrs-data-mapping
+  - simrs-patient-data
+  - simrs-clinical-modules

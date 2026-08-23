@@ -11,4 +11,5 @@ Jalankan **AI Agents Rogue end-to-end** untuk permintaan user di chat ini (overr
 7. Akhiri dengan status board + asumsi + next step.
 
 Jika project belum ada, jalankan `/new-project` dulu.
+Jika prompt menyentuh domain pack (**SIMRS**, **HR**, dll.) dan skill belum tersync, jalankan `/bootstrap-domain` dulu (lihat `core/domain-bootstrap.md`).
 Mode persisten tidak wajib diubah; untuk ganti default pakai `/set-mode`.

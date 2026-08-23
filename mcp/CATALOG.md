@@ -10,6 +10,7 @@ Indeks kegunaan: [`../INDEX.md`](../INDEX.md#mcp-packages).
 | Id | Skill terkait | Runtime |
 |----|---------------|---------|
 | `blender` | `blender` | Blender + addon + `uvx blender-mcp` |
+| `blender-lab` | `blender` | Blender 5.1+ Lab extension + `uvx` from projects.blender.org |
 | `photoshop` | `photoshop` | Photoshop desktop + `uvx photoshop-mcp-server` |
 | `illustrator` | `illustrator` | Illustrator desktop + `npx illustrator-mcp-server` |
 | `context7` | `mcp-integrations` | Remote HTTP Context7 |
@@ -18,6 +19,7 @@ Indeks kegunaan: [`../INDEX.md`](../INDEX.md#mcp-packages).
 | `chrome-devtools` | `browser-automation` | `npx chrome-devtools-mcp` |
 | `playwright` | `browser-automation` | `npx @playwright/mcp` |
 | `pal` | `mcp-integrations` | `uvx pal-mcp-server` + API keys |
+| `youtube` | `youtube-publishing` | Node MCP proxy → local YouTube OAuth API |
 
 ## Partial (docs only — no fragment yet)
 
@@ -37,4 +39,5 @@ Contoh:
 ```powershell
 .\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp all
 .\ai-agents-rogue\scripts\install-mcp.ps1 -Target . -Mcp blender,playwright,context7
+.\ai-agents-rogue\scripts\install-blender-mcp-auto.ps1 -Target .
 ```
