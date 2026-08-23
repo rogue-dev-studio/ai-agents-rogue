@@ -1,0 +1,6 @@
+# Optional deps for -Mode by-face / organize-by-face.py
+# Install: pip install -r ai-agents-rogue/scripts/organize-by-face.requirements.txt
+deepface>=0.0.93
+opencv-python-headless>=4.8.0
+numpy>=1.24.0
+tf-keras>=2.15.0
