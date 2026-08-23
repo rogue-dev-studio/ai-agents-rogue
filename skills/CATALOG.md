@@ -21,6 +21,7 @@ Indeks gabungan (skills + MCP + rules + roles): [`../INDEX.md`](../INDEX.md).
 | `browser-automation` | canonical-merge | Canonical browser automation and web UI verification: Playwright, agent browser CLIs, and CDP-based tooling in one pl... |
 | `canvas-design` | specialized | Design system framework. Use when the project needs this capability or the user / team manifest asks for it. Use for ... |
 | `clarity` | canonical-merge | Canonical spec and requirements skill: 5-phase clarity workflow plus Spec-Kit / markdown-agent spec patterns. Use for... |
+| `clipper-ops` | specialized | Creator-approved video clipper/repurposing: consent, highlights, Shorts/Reels cuts, attribution, publish handoff... |
 | `cloud-tools` | canonical-merge | AWS, Azure, GCP CLIs. Use when the project needs this capability or the user / team manifest asks for it. Use for spe... |
 | `code-review` | canonical-merge | Expert code review: coding standards, layering, Sonar-equivalent cleanliness, ban on raw SQL/queries outside persistence... |
 | `comfyui` | specialized | ComfyUI image generation MCP server (GPU required). Use when the project needs this capability or the user / team man... |
@@ -74,4 +75,6 @@ Indeks gabungan (skills + MCP + rules + roles): [`../INDEX.md`](../INDEX.md).
 | `ui-ux-design` | canonical-merge | Expert UI/UX design with mandatory theme/brand alignment gate against the active project before frontend handoff... |
 | `vector-knowledge-tools` | canonical-merge | Canonical vector DB / knowledge-graph tooling for code and embeddings: RuVector CLI, RVF format, and GitNexus-style k... |
 | `wardley-maps` | specialized | Strategic mapping visualization. Use when the project needs this capability or the user / team manifest asks for it. ... |
+| `workspace-hygiene` | specialized | Organize personal folders by file type or face clusters; opt-in only when user asks to tidy/organize a folder... |
+| `youtube-publishing` | specialized | Manual YouTube upload via local OAuth API + MCP; explicit confirm gate — never auto-upload... |
 
