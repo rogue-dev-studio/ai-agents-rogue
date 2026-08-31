@@ -35,3 +35,4 @@ local_skills:
   - simrs-data-mapping
   - simrs-patient-data
   - simrs-clinical-modules
+  - simrs-technical-assessment

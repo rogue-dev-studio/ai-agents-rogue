@@ -25,3 +25,5 @@ commands:
 local_skills:
   - hr-cv-lifecycle
   - hr-employee-ops
+  - hr-psychometric
+  - hr-technical-interview

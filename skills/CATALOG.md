@@ -31,6 +31,7 @@ Indeks gabungan (skills + MCP + rules + roles): [`../INDEX.md`](../INDEX.md).
 | `dotnet` | canonical-merge | .NET development environment. Use when the project needs this capability or the user / team manifest asks for it. Use... |
 | `draupnir` | canonical-merge | Instance agent for mimir fleet management. Use when the project needs this capability or the user / team manifest ask... |
 | `e2e-delivery` | house | End-to-end software house delivery. Use whenever the user asks to build a feature, fix a non-trivial bug, start a pro... |
+| `engineering-technical-interview` | canonical-merge | General engineering technical interviews: backend, frontend, fullstack tracks, live coding, take-home rubrics, candida... |
 | `ffmpeg-processing` | specialized | FFmpeg media processing. Use when the project needs this capability or the user / team manifest asks for it. Use for ... |
 | `frontend-engineering` | canonical-merge | Expert frontend application engineering: accessible UI, state/data-fetching, forms, responsive performance, API UX... |
 | `github-cli` | canonical-merge | GitHub CLI authentication and workflow configuration. Use when the project needs this capability or the user / team m... |
