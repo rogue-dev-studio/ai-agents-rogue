@@ -47,6 +47,7 @@ Utama dari **prompt** (tidak perlu aktifkan tim):
 - `simrs-regulatory-id`
 - `simrs-patient-data`
 - `simrs-clinical-review` (jika diminta review aplikasi)
+- `simrs-technical-assessment` (technical test kandidat IT SIMRS)
 - `clarity` (SRS / AC)
 
 ## Input / Output

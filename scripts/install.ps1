@@ -7,6 +7,9 @@
   Comma-separated: cursor, antigravity, claude, opencode, generic, all
 .PARAMETER Team
   Optional team id under teams/ (your own id from teams/_template). If set, only that team's skills/roles install.
+.PARAMETER IncludeDomains
+  Full-catalog only: sync local domain packs (teams/<id>/ local_skills) without trimming catalog.
+  Comma list or array: hr, simrs, all, or none to skip. Default when -Team omitted: hr.
 .PARAMETER Mcp
   Optional MCP packages to wire: none (default), blender, all, or comma-list
 #>
@@ -14,6 +17,7 @@ param(
   [string]$Target = ".",
   [string]$Hosts = "all",
   [string]$Team = "",
+  [string[]]$IncludeDomains = @(),
   # string[] so PowerShell comma lists are not space-joined
   [string[]]$Mcp = @("none")
 )
@@ -406,6 +410,68 @@ function Install-Generic {
   Copy-Roles (Join-Path $TargetRoot ".agents\roles")
 }
 
+function Get-AllDomainPackIds {
+  Get-ChildItem (Join-Path $CatalogRoot "teams") -Directory |
+    Where-Object {
+      $_.Name -ne "_template" -and (Test-Path (Join-Path $_.FullName "TEAM.yaml"))
+    } |
+    ForEach-Object { $_.Name }
+}
+
+function Map-InstallHostsToBootstrap([string[]]$InstallHosts) {
+  $mapped = New-Object System.Collections.Generic.List[string]
+  foreach ($h in $InstallHosts) {
+    switch ($h.ToLowerInvariant()) {
+      "cursor" { [void]$mapped.Add("cursor") }
+      "claude" { [void]$mapped.Add("claude") }
+      "opencode" { [void]$mapped.Add("opencode") }
+      "generic" { [void]$mapped.Add("agents") }
+      "antigravity" { [void]$mapped.Add("agents") }
+    }
+  }
+  if ($mapped.Count -eq 0) { return "all" }
+  return (($mapped | Select-Object -Unique) -join ",")
+}
+
+function Resolve-DomainPackIds([string[]]$Raw) {
+  $ids = New-Object System.Collections.Generic.List[string]
+  foreach ($entry in $Raw) {
+    if ([string]::IsNullOrWhiteSpace($entry)) { continue }
+    foreach ($part in ($entry -split '[,\s]+')) {
+      $id = $part.Trim().ToLowerInvariant()
+      if (-not $id) { continue }
+      switch ($id) {
+        "all" {
+          foreach ($pack in (Get-AllDomainPackIds)) { [void]$ids.Add($pack) }
+        }
+        "none" {
+          return @()
+        }
+        default {
+          [void]$ids.Add($id)
+        }
+      }
+    }
+  }
+  return ($ids | Select-Object -Unique)
+}
+
+function Sync-DomainPacks([string[]]$DomainIds, [string[]]$InstallHosts) {
+  if ($DomainIds.Count -eq 0) { return }
+  $bootstrap = Join-Path $PSScriptRoot "bootstrap-domain.ps1"
+  if (-not (Test-Path -LiteralPath $bootstrap)) {
+    Write-Warning "bootstrap-domain.ps1 missing; skip domain packs"
+    return
+  }
+  $hostArg = Map-InstallHostsToBootstrap $InstallHosts
+  Write-Host "Domain packs: $($DomainIds -join ', ')"
+  foreach ($id in $DomainIds) {
+    Write-Host "Sync domain pack: $id"
+    & $bootstrap -Domain $id -Target $TargetRoot.Path -SkillHosts $hostArg -Force
+    if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+  }
+}
+
 if ($Team) { Load-Team $Team }
 
 $requested = $Hosts.ToLowerInvariant().Split(",") | ForEach-Object { $_.Trim() } | Where-Object { $_ }
@@ -413,9 +479,24 @@ if ($requested -contains "all") {
   $requested = @("cursor", "antigravity", "claude", "opencode", "generic")
 }
 
+$domainPackIds = @()
+if (-not $Team) {
+  if ($IncludeDomains.Count -eq 0) {
+    $IncludeDomains = @("hr")
+  }
+  $domainPackIds = @(Resolve-DomainPackIds $IncludeDomains)
+}
+
 Write-Host "Catalog: $CatalogRoot"
 Write-Host "Target:  $TargetRoot"
 Write-Host "Hosts:   $($requested -join ', ')"
+if (-not $Team) {
+  if ($domainPackIds.Count -gt 0) {
+    Write-Host "Domains: $($domainPackIds -join ', ') (full catalog + local packs)"
+  } else {
+    Write-Host "Domains: none"
+  }
+}
 
 function Ensure-WorkModeFile {
   $wm = Join-Path $TargetRoot "WORKMODE.md"
@@ -440,6 +521,8 @@ foreach ($h in $requested) {
     default { Write-Warning "Unknown host '$h' - skip" }
   }
 }
+
+Sync-DomainPacks $domainPackIds $requested
 
 $mcpParts = @()
 foreach ($s in @($Mcp)) {
