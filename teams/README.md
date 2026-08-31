@@ -11,8 +11,8 @@ Catalog publik default = **full install** (tanpa `-Team`).
 
 | Domain | Prompt contoh | Skill (setelah salin ke host) |
 |--------|---------------|-------------------------------|
-| HR | review CV, screening JD, onboarding | `hr-cv-lifecycle`, `hr-employee-ops` |
-| SIMRS | review modul SIMRS, alur IGD/ranap, mapping Permenkes, PHI pasien | `simrs-hospital-ops`, `simrs-clinical-review`, `simrs-regulatory-id`, `simrs-data-mapping`, `simrs-patient-data` |
+| HR | review CV, screening JD, technical test engineer, onboarding | `hr-cv-lifecycle`, `hr-technical-interview`, `hr-employee-ops` |
+| SIMRS | review modul SIMRS, technical assessment IT RS, mapping Permenkes | `simrs-hospital-ops`, `simrs-technical-assessment`, `simrs-clinical-review` |
 
 `teams/<id>` = sumber file, bukan gerbang runtime.
 
@@ -28,6 +28,13 @@ teams/<team-id>/
 
 Install dengan `-Team <id>` → hanya skills/roles di `TEAM.yaml` (+ `local_skills`).  
 Jangan `install.ps1 -Team <id>` pada workspace full-catalog (akan memangkas skill).
+
+Full catalog + pack domain (disarankan untuk HR/SIMRS):
+
+```powershell
+.\scripts\install.ps1 -Target . -Hosts all
+# default -IncludeDomains hr; tambah simrs: -IncludeDomains hr,simrs; semua pack: all; tanpa pack: none
+```
 
 ## Pack bawaan (lokal)
 

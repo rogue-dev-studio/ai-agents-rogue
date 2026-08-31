@@ -13,6 +13,7 @@ Skill, rule, dan role **SIMRS / operasi rumah sakit**. Tidak masuk skill katalog
 | kepatuhan UU/Permenkes/SPO, consent, SATUSEHAT, BPJS | `simrs-regulatory-id` |
 | mapping data regulasi → tabel/API/UI | `simrs-data-mapping` |
 | PII/PHI, RM, NIK, resep, log, seed, export | `simrs-patient-data` |
+| technical assessment developer SIMRS, tes teknis IT RS | `simrs-technical-assessment` |
 
 Agent membaca skill dari deskripsi + trigger di atas. Role opsional jika user minta peran eksplisit.
 
@@ -22,9 +23,9 @@ Folder `teams/simrs` = **sumber paket** (bukan gerbang wajib). Alias `simrs-clin
 
 | Jenis | Path |
 |-------|------|
-| Skill | `simrs-hospital-ops`, `simrs-clinical-review`, `simrs-regulatory-id`, `simrs-data-mapping`, `simrs-patient-data`, alias `simrs-clinical-modules` |
+| Skill | `simrs-hospital-ops`, `simrs-clinical-review`, `simrs-regulatory-id`, `simrs-data-mapping`, `simrs-patient-data`, alias `simrs-clinical-modules`, `simrs-technical-assessment` |
 | Rule | `patient-health-data.md`, `hospital-regulatory-id.md`, `data-mapping.md` → `.cursor/rules/simrs-*.mdc` |
-| Role | `roles/simrs-domain-specialist.md`, `roles/simrs-clinical-reviewer.md` → `*/agents/roles/clinical/` |
+| Role | `roles/simrs-domain-specialist.md`, `roles/simrs-clinical-reviewer.md`, `roles/simrs-technical-assessor.md` → `*/agents/roles/clinical/` |
 
 ## Pasang ke host (full catalog tetap utuh)
 

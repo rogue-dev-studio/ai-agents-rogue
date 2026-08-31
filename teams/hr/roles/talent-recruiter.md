@@ -39,6 +39,8 @@ Tidak boleh:
 Utama dari **prompt** (tidak perlu aktifkan tim):
 
 - `hr-cv-lifecycle` (utama)
+- `hr-psychometric` (psikotest & rubrik perilaku)
+- `hr-technical-interview` (technical test & live coding)
 - `office-document-tools` jika export CV
 
 ## Quality gate

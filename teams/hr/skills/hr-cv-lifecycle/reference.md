@@ -25,6 +25,10 @@ Panjang: 1 halaman (IC/early), 2 halaman (senior) kecuali user minta lain.
 
 ## Interview questions
 
-- 4 teknis terikat JD
+- 4 teknis terikat JD (backend / frontend / fullstack — skill `hr-technical-interview` atau `examples/engineer-recruitment-pack.md`)
 - 2 perilaku (situasi nyata)
 - 1 klarifikasi gap CV
+
+## Psikotest (opsional, tahap terpisah)
+
+Gunakan skill `hr-psychometric` — modul kognitif + gaya kerja + integritas; bukan pengganti wawancara teknis.
