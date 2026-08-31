@@ -146,6 +146,17 @@ Jika Execution Policy sudah mengizinkan skrip:
 .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
 ```
 
+**Pack domain lokal** (HR interview, SIMRS, dll.) ikut otomatis pada full catalog: default `-IncludeDomains hr` (`hr-cv-lifecycle`, `hr-psychometric`, `hr-employee-ops`). Opsional:
+
+```powershell
+# HR + SIMRS
+.\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all -IncludeDomains hr,simrs
+# Semua pack di teams/
+.\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all -IncludeDomains all
+# Hanya katalog tersegel (tanpa pack lokal)
+.\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all -IncludeDomains none
+```
+
 Hanya Cursor:
 
 ```powershell

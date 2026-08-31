@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 # Install AI Agents Rogue.
-# Usage: ./install.sh [target_dir] [hosts] [team_id] [mcp]
+# Usage: ./install.sh [target_dir] [hosts] [team_id] [mcp] [include_domains]
 # hosts: cursor,antigravity,claude,opencode,generic,all
 # team_id: optional (only if you created teams/<id>/)
 # mcp: optional none|blender|all (default none)
+# include_domains: full-catalog only — hr,simrs,all,none (default hr when team_id empty)
 set -euo pipefail
 
 TARGET="${1:-.}"
 HOSTS="${2:-all}"
 TEAM_ID="${3:-}"
 MCP="${4:-none}"
+INCLUDE_DOMAINS="${5:-}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CATALOG_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 TARGET_ROOT="$(cd "$TARGET" && pwd)"
@@ -233,11 +235,104 @@ install_generic() {
   copy_roles "$TARGET_ROOT/.agents/roles"
 }
 
+map_hosts_for_bootstrap() {
+  local hosts_csv="$1"
+  local mapped=()
+  local h
+  IFS=',' read -ra PARTS <<< "$hosts_csv"
+  for h in "${PARTS[@]}"; do
+    h="$(echo "$h" | tr '[:upper:]' '[:lower:]' | xargs)"
+    case "$h" in
+      cursor) mapped+=("cursor") ;;
+      claude) mapped+=("claude") ;;
+      opencode) mapped+=("opencode") ;;
+      generic|antigravity) mapped+=("agents") ;;
+    esac
+  done
+  if [[ ${#mapped[@]} -eq 0 ]]; then
+    echo "all"
+    return
+  fi
+  printf '%s\n' "${mapped[@]}" | sort -u | paste -sd, -
+}
+
+sync_domain_packs() {
+  local domains_csv="$1"
+  local hosts_csv="$2"
+  [[ -n "$domains_csv" ]] || return 0
+  local bootstrap="$CATALOG_ROOT/scripts/bootstrap-domain.ps1"
+  [[ -f "$bootstrap" ]] || { echo "bootstrap-domain.ps1 missing; skip domain packs" >&2; return 0; }
+  local host_arg
+  host_arg="$(map_hosts_for_bootstrap "$hosts_csv")"
+  local id
+  IFS=',' read -ra IDS <<< "$domains_csv"
+  for id in "${IDS[@]}"; do
+    id="$(echo "$id" | tr '[:upper:]' '[:lower:]' | xargs)"
+    [[ -n "$id" ]] || continue
+    echo "Sync domain pack: $id"
+    if command -v pwsh >/dev/null 2>&1; then
+      pwsh -NoProfile -File "$bootstrap" -Domain "$id" -Target "$TARGET_ROOT" -SkillHosts "$host_arg" -Force || exit 1
+    elif command -v powershell >/dev/null 2>&1; then
+      powershell -NoProfile -ExecutionPolicy Bypass -File "$bootstrap" -Domain "$id" -Target "$TARGET_ROOT" -SkillHosts "$host_arg" -Force || exit 1
+    else
+      echo "PowerShell required for domain pack sync" >&2
+      exit 1
+    fi
+  done
+}
+
+resolve_domain_packs() {
+  local raw="$1"
+  local ids=()
+  local part id
+  if [[ -z "$raw" ]]; then
+    return 0
+  fi
+  IFS=',' read -ra PARTS <<< "$raw"
+  for part in "${PARTS[@]}"; do
+    part="$(echo "$part" | tr '[:upper:]' '[:lower:]' | xargs)"
+    [[ -n "$part" ]] || continue
+    if [[ "$part" == "none" ]]; then
+      DOMAIN_PACK_IDS=()
+      return 0
+    fi
+    if [[ "$part" == "all" ]]; then
+      for id in "$CATALOG_ROOT"/teams/*/; do
+        id="$(basename "$id")"
+        [[ "$id" == "_template" ]] && continue
+        [[ -f "$CATALOG_ROOT/teams/$id/TEAM.yaml" ]] && ids+=("$id")
+      done
+      continue
+    fi
+    ids+=("$part")
+  done
+  if [[ ${#ids[@]} -eq 0 ]]; then
+    DOMAIN_PACK_IDS=()
+  else
+    DOMAIN_PACK_IDS=($(printf '%s\n' "${ids[@]}" | sort -u))
+  fi
+}
+
 [[ -n "$TEAM_ID" ]] && load_team "$TEAM_ID"
+
+DOMAIN_PACK_IDS=()
+if [[ -z "$TEAM_ID" ]]; then
+  if [[ -z "$INCLUDE_DOMAINS" ]]; then
+    INCLUDE_DOMAINS="hr"
+  fi
+  resolve_domain_packs "$INCLUDE_DOMAINS"
+fi
 
 echo "Catalog: $CATALOG_ROOT"
 echo "Target:  $TARGET_ROOT"
 echo "Hosts:   $HOSTS"
+if [[ -z "$TEAM_ID" ]]; then
+  if [[ ${#DOMAIN_PACK_IDS[@]} -gt 0 ]]; then
+    echo "Domains: ${DOMAIN_PACK_IDS[*]} (full catalog + local packs)"
+  else
+    echo "Domains: none"
+  fi
+fi
 
 if [[ ! -f "$TARGET_ROOT/WORKMODE.md" && -f "$CATALOG_ROOT/templates/WORKMODE.md" ]]; then
   cp "$CATALOG_ROOT/templates/WORKMODE.md" "$TARGET_ROOT/WORKMODE.md"
@@ -262,6 +357,14 @@ for h in "${REQ[@]}"; do
     *) echo "Unknown host '$h' - skip" >&2 ;;
   esac
 done
+
+if [[ ${#DOMAIN_PACK_IDS[@]} -gt 0 ]]; then
+  MCP_HOSTS_FOR_BOOT="$HOSTS"
+  if [[ "$HOSTS" == "all" ]]; then
+    MCP_HOSTS_FOR_BOOT="cursor,antigravity,claude,opencode,generic"
+  fi
+  sync_domain_packs "$(IFS=,; echo "${DOMAIN_PACK_IDS[*]}")" "$MCP_HOSTS_FOR_BOOT"
+fi
 
 if [[ -n "${MCP}" && "${MCP}" != "none" ]]; then
   MCP_HOSTS="$HOSTS"
