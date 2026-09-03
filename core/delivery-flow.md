@@ -250,6 +250,31 @@ SRS output
 Stop (belum masuk Planning/Code)
 ```
 
+## 5.5 Dev Shift (Continuous Autonomous Loop)
+
+Trigger: prompt natural language **atau** command `/dev-shift` + skill `continuous-dev-shift`.
+
+```
+User / Command (durasi, scope)
+    ↓
+AI Orchestrator (manifest docs/shift/current.md)
+    ↓
+┌── Tick loop (until time / max-tasks / stop rule) ──┐
+│ PO+PM auto-pick task (backlog, QA, roadmap)        │
+│ Impact note → route variant (§5.1–5.4)             │
+│ Execute (e2e-delivery scoped) → QA → Review        │
+│ Update task board + shift log + impact-log         │
+└────────────────────────────────────────────────────┘
+    ↓
+Shift summary → manifest completed
+```
+
+Artifact wajib: `docs/shift/`, `docs/planning/impact-log.md`, task/QA/review docs per tick.
+
+Host panjang: skill host `loop` (interval) — lihat `skills/continuous-dev-shift/SKILL.md`.
+
+**Maintenance prompt** (`maintenance aplikasi`, dll.): tick 0 baseline audit (kode, fungsi, UI/UX, performa, relevansi, konsistensi) → `MAINT-xxx` → fix ticks dengan full gates.
+
 ---
 
 # 6. Parallel Execution Rules

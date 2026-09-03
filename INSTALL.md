@@ -298,7 +298,7 @@ Exit code `0` = OK.
 2. Pastikan muncul (contoh Cursor):  
    - `.cursor/skills/` (termasuk `e2e-delivery`)  
    - `.cursor/rules/aar-*.mdc` dan `ai-agents-rogue.mdc`  
-   - Commands: `/start-feature`, `/assist`, `/set-mode`, `/new-project`  
+   - Commands: `/start-feature`, `/dev-shift`, `/assist`, `/set-mode`, `/new-project`  
    - Bila `-Mcp` dipakai: `.cursor/mcp.json` berisi server terkait  
 3. Baca `AGENTS.md` di project root.  
 4. Mode kerja: `WORKMODE.md` (default **`e2e`**) + panduan `ai-agents-rogue/WORKMODES.md`.  
