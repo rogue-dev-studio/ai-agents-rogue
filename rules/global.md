@@ -14,8 +14,9 @@ Hard constraints untuk semua host. Orchestrator dan skills wajib menghormati ini
 | `coding.md` | Kualitas kode & layering |
 | `commit.md` | Git / PR |
 | `ui.md` | UI/UX |
+| `shift.md` | Dev shift otonom (`/dev-shift`, `continuous-dev-shift`) |
 
-Baca yang relevan sebelum fase terkait. Work modes: `WORKMODES.md`.
+Baca yang relevan sebelum fase terkait. Work modes: `WORKMODES.md`. Dev shift: baca `shift.md`.
 
 ## Must always
 

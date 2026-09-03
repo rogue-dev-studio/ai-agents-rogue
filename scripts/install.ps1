@@ -63,7 +63,7 @@ Assert-GitHubEntitlement
 
 $script:SkillNames = @()  # empty = all skills under skills/
 $script:RolePaths = @()  # empty = all roles
-$script:CommandNames = @("start-feature", "assist", "set-mode", "new-project")
+$script:CommandNames = @("start-feature", "assist", "set-mode", "new-project", "dev-shift")
 $script:LocalSkillNames = @()
 $script:TeamId = $null
 $script:TeamDir = $null
@@ -354,7 +354,8 @@ Default: AI Orchestrator + ``e2e-delivery`` when building.
 Skills installed: $(SkillListText).
 Rules: ``.cursor/rules/aar-*.mdc`` (includes ``aar-author.mdc``).
 Work modes: ``e2e`` (default) or ``manual`` — see ``WORKMODE.md`` / ``$catalogRel/WORKMODES.md``.
-Commands: ``/start-feature``, ``/assist``, ``/set-mode``, ``/new-project``.
+Commands: ``/start-feature``, ``/dev-shift``, ``/assist``, ``/set-mode``, ``/new-project``.
+Shift panjang: skill host ``loop`` + manifest ``docs/shift/current.md`` (lihat ``continuous-dev-shift``).
 No commit/push/deploy unless asked.
 "@
   Set-Content -Path (Join-Path $TargetRoot ".cursor\rules\ai-agents-rogue.mdc") -Value $rule -Encoding UTF8
