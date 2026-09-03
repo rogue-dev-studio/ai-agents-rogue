@@ -27,6 +27,7 @@ Indeks gabungan (skills + MCP + rules + roles): [`../INDEX.md`](../INDEX.md).
 | `comfyui` | specialized | ComfyUI image generation MCP server (GPU required). Use when the project needs this capability or the user / team man... |
 | `compahook` | canonical-merge | Persistent memory layer for Claude Code's /compact command. Use when the project needs this capability or the user / ... |
 | `container-docker-ops` | canonical-merge | Canonical container workflows: Docker/Compose development plus MCP-style container management patterns. |
+| `continuous-dev-shift` | house | Autonomous timed dev shift: auto-pick backlog, maintenance, impact, QA, review loop until duration ends. Prompt or /dev-shift. |
 | `database-engineering` | canonical-merge | Expert database engineering: schema/ERD, relations, indexing, performance gates, views/triggers/functions, mapping... |
 | `dotnet` | canonical-merge | .NET development environment. Use when the project needs this capability or the user / team manifest asks for it. Use... |
 | `draupnir` | canonical-merge | Instance agent for mimir fleet management. Use when the project needs this capability or the user / team manifest ask... |

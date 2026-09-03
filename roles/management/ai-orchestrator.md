@@ -201,6 +201,14 @@ Jika user meminta analisis:
 
 Jalankan workflow Analysis.
 
+Jika user meminta **dev shift**, **continuous improvement**, atau kerja otonom berdurama (jam/menit/sampai jam X):
+
+Jalankan workflow **Dev Shift** — skill `continuous-dev-shift`, rule `rules/shift.md`, delegasi ke **Shift Coordinator**.
+
+Jika user meminta **maintenance aplikasi**, **perawatan aplikasi**, **audit aplikasi**, atau cek **tampilan/fungsi/kode lama + konsistensi + performa**:
+
+Jalankan workflow **Dev Shift (maintenance)** — `shift_type: maintenance+improvement`, tick 0 baseline audit, full gates (QA, UI/UX, performance, code review) setiap tick.
+
 ---
 
 # 10. Validasi Awal

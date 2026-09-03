@@ -50,6 +50,7 @@ Untuk pertanyaan informasional saja: jawab langsung, tanpa E2E.
 | Skill | Kapan |
 |-------|--------|
 | `e2e-delivery` | Build/change saat mode `e2e` |
+| `continuous-dev-shift` | Shift dev otonom berdurama (prompt atau `/dev-shift`) |
 | `clarity` | Spec / SRS / AC (canonical) |
 | `agentic-flow` | Multi-agent / parallel (canonical) |
 | `agentic-qe` | QA / tests (canonical) |
@@ -262,7 +263,7 @@ Definisi agent per folder:
 
 | Folder | Agent |
 |--------|-------|
-| `roles/management/` | AI Orchestrator, Product Owner, Project Manager, Delivery Manager |
+| `roles/management/` | AI Orchestrator, Shift Coordinator, Product Owner, Project Manager, Delivery Manager |
 | `roles/analysis/` | Business Analyst, System Analyst, Solution Architect |
 | `roles/design/` | UI/UX Designer, Design System Specialist |
 | `roles/engineering/` | Tech Lead, Backend, Frontend, Database, DevOps, Security |

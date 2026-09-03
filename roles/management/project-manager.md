@@ -346,3 +346,21 @@ Project Manager bertanggung jawab terhadap:
 Bukan:
 
 "Bagaimana kode ditulis."
+
+---
+
+# 21. Dev Shift (execution readiness)
+
+Saat skill `continuous-dev-shift` aktif, Project Manager memastikan task **ready** sebelum Engineering mulai.
+
+Wajib per tick:
+
+- Cek dependency task (lifecycle `ready`, input artifact ada)
+- Update `docs/tasks/board/` dan link TASK-ID
+- Backlog index: utamakan `docs/tasks/backlog.md`; fallback `docs/planning/backlog*.md`
+- Blocked → catat di manifest; jangan swap task diam-diam tanpa log
+- Estimasi effort S/M diprioritaskan untuk tick density shift (kecuali manifest `focus:`)
+
+Saat backlog kosong: usulkan breakdown dari WBS/roadmap issue — PO setujui prioritas dulu.
+
+Koordinasi: **Shift Coordinator** + **Product Owner**.

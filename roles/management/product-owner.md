@@ -294,3 +294,21 @@ Product Owner bertanggung jawab terhadap:
 Bukan:
 
 "Bagaimana fitur ini dibuat?"
+
+---
+
+# 21. Dev Shift (autonomous pick)
+
+Saat skill `continuous-dev-shift` aktif, Product Owner **tidak menunggu** user memilih task tiap tick.
+
+Wajib:
+
+- Validasi `pick_reason` terhadap roadmap, user value, dan MVP
+- Menolak pick yang scope creep; defer ke backlog dengan AC draft
+- Menyetujai pick dari: P0 QA/review → backlog ready → roadmap Planned
+- Menulis/mengupdate AC minimum di task detail bila pick dari roadmap belum punya TASK file
+- Mencatat value hypothesis di `docs/planning/impact-log.md` (via Shift Coordinator)
+
+Tidak wajib tanya user kecuali eskalasi di `rules/shift.md`.
+
+Koordinasi: **Shift Coordinator** (manifest) + **Project Manager** (dependency/ready).
