@@ -33,9 +33,11 @@ Atau bilang di chat: **“mode e2e”** / **“mode manual”** — AI boleh men
 | Command / chat | Efek |
 |----------------|------|
 | `/start-feature` | Paksa **e2e** untuk tugas ini |
+| `/dev-shift` | Shift dev otonom berdurama (skill `continuous-dev-shift`) |
 | `/assist` | Paksa **manual** untuk tugas ini |
 | `/set-mode` | Set mode persisten di `WORKMODE.md` |
 | “kerjakan / bangun / implement E2E” | e2e |
+| “shift dev / continuous improvement / kerja otonom N jam” | `continuous-dev-shift` (prompt, tanpa wajib command) |
 | “rencanakan saja / jangan coding dulu” | manual |
 
 Prioritas: **instruksi eksplisit di chat** → command → `WORKMODE.md` → default `e2e`.
@@ -60,6 +62,6 @@ Prioritas: **instruksi eksplisit di chat** → command → `WORKMODE.md` → def
 .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
 ```
 
-Installer membuat `WORKMODE.md` (default `e2e`) bila belum ada, dan memasang commands `/start-feature`, `/assist`, `/set-mode`, `/new-project`.
+Installer membuat `WORKMODE.md` (default `e2e`) bila belum ada, dan memasang commands `/start-feature`, `/dev-shift`, `/assist`, `/set-mode`, `/new-project`.
 
 Lihat juga `README.md` dan `INSTALL.md`.

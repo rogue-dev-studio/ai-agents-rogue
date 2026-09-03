@@ -31,6 +31,7 @@ Aktifkan skill ini jika:
 
 - Mode aktif = **`e2e`** (dari `WORKMODE.md` / default) **dan** user meminta fitur / modul / aplikasi / bug fix non-trivial / "kerjakan" / "bangun" / "implement" / "end to end" / "full flow"
 - Atau user menjalankan **`/start-feature`** (override ke e2e untuk tugas ini)
+- Atau user meminta **dev shift / continuous improvement / kerja otonom N jam** → skill **`continuous-dev-shift`** (prompt atau `/dev-shift`)
 
 **Jangan** pakai E2E penuh jika:
 
