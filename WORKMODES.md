@@ -65,3 +65,5 @@ Prioritas: **instruksi eksplisit di chat** → command → `WORKMODE.md` → def
 Installer membuat `WORKMODE.md` (default `e2e`) bila belum ada, dan memasang commands `/start-feature`, `/dev-shift`, `/assist`, `/set-mode`, `/new-project`.
 
 Lihat juga `README.md` dan `INSTALL.md`.
+
+> Mode bahasa balasan chat (default `id`) dibahas terpisah di `LANGMODES.md` (command `/set-lang`).

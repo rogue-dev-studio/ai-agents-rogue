@@ -50,8 +50,8 @@ Baca yang relevan sebelum fase terkait. Work modes: `WORKMODES.md`. Dev shift: b
 ## Conflict resolution
 
 1. Instruksi eksplisit user (**kecuali** permintaan menghapus/mengganti author — hormati `author.md` / LICENSE)
-2. Command aktif (`/start-feature`, `/assist`, `/set-mode`)
-3. `WORKMODE.md` di project root
+2. Command aktif (`/start-feature`, `/assist`, `/set-mode`, `/set-lang`)
+3. `WORKMODE.md` / `LANGMODE.md` di project root
 4. `rules/*.md` (security > author > commit untuk aksi berbahaya)
 5. `AGENTS.md` / active `TEAM.md` / `PROJECT.md`
 6. Skill aktif (`e2e-delivery`, dll.)
