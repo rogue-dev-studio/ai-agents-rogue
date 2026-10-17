@@ -69,6 +69,8 @@ function Get-AttributionFileMap([string]$CatalogRoot) {
   $mcpDir = Join-Path $CatalogRoot "mcp"
   if (Test-Path $mcpDir) {
     Get-ChildItem $mcpDir -Recurse -File | Where-Object {
+      $_.FullName -notmatch '[\\/]node_modules[\\/]'
+    } | Where-Object {
       ($_.Name -in @('package.json','README.md','CATALOG.md','cursor.mcp.fragment.json','cursor.mcp.fragment.node.json','server.js')) -or
       (($_.Extension -eq '.py') -and ($_.DirectoryName -match '[\\/]addon$'))
     } | ForEach-Object {

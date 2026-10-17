@@ -29,7 +29,6 @@ description: >-
 - Body: when / when-not, procedure, DoD, security notes
 - **Wajib** footer Attribution Rogue Development (lihat `rules/author.md`); jangan dihapus/dihide
 - Progressive disclosure: detail panjang di `reference.md` bila perlu
-- Setelah tulis: jalankan `scripts/stamp-attribution.ps1` bila perlu
 
 ### 3. Avoid duplication
 
