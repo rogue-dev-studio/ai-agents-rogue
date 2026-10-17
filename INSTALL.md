@@ -39,7 +39,34 @@ pwsh --version
 Install PowerShell 7 (Linux/macOS): https://learn.microsoft.com/powershell/scripting/install/installing-powershell  
 Install `gh`: https://cli.github.com/
 
-`install.sh` **memerlukan** `pwsh` atau `powershell` karena gate atribusi/entitlement ditulis di PowerShell.
+### Cara install `gh` (Windows)
+
+`gh` dipakai gate entitlement (star/fork), jadi sebaiknya dipasang.
+
+**A. winget (jika tersedia):**
+
+```powershell
+winget install --id GitHub.cli
+```
+
+**B. MSI resmi via PowerShell (jika `winget` tidak ada / `command not found`):**
+
+Beberapa edisi Windows (Enterprise / Server / LTSC, atau image tanpa Microsoft Store) tidak menyertakan `winget`. Pasang dari rilis resmi:
+
+```powershell
+$rel = Invoke-RestMethod https://api.github.com/repos/cli/cli/releases/latest
+$asset = $rel.assets | Where-Object { $_.name -like "*windows_amd64.msi" }
+$out = "$env:TEMP\gh.msi"
+Invoke-WebRequest $asset.browser_download_url -OutFile $out
+Start-Process msiexec.exe -ArgumentList "/i",$out,"/qn","/norestart" -Wait
+# terpasang di: C:\Program Files\GitHub CLI\gh.exe
+```
+
+**C. Manual:** unduh `gh_*_windows_amd64.msi` dari https://github.com/cli/cli/releases/latest lalu jalankan.
+
+Setelah install, **tutup dan buka lagi** terminal agar PATH ter-update. Jika `gh` masih tidak dikenali, panggil lewat path lengkap `"C:\Program Files\GitHub CLI\gh.exe"`.
+
+`install.sh` **memerlukan** `pwsh` atau `powershell` karena gate atribusi/entitlement ditulis di PowerShell. Di Windows, Windows PowerShell 5.1 bawaan sudah cukup.
 
 ---
 
@@ -126,7 +153,7 @@ Dari **project root** (folder yang berisi `ai-agents-rogue/`):
 
 ### Windows
 
-Default Windows sering memblokir `.ps1` (*running scripts is disabled*). Gunakan salah satu:
+Jalankan dari **project root** pakai **PowerShell**. Default Windows sering memblokir `.ps1` (*running scripts is disabled*). Gunakan salah satu:
 
 ```powershell
 # Jalankan installer sekali dengan Bypass (tidak mengubah policy sistem)
@@ -145,6 +172,17 @@ Jika Execution Policy sudah mengizinkan skrip:
 ```powershell
 .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all
 ```
+
+#### Kalau pakai Git Bash (bukan PowerShell)
+
+Git Bash memakan backslash `\`, sehingga `.\ai-agents-rogue\scripts\install.ps1` berubah jadi `.ai-agents-roguescriptsinstall.ps1` dan gagal dengan error *"The argument ... to the -File parameter does not exist"*. Pakai **garis miring `/`**:
+
+```bash
+# Git Bash — perhatikan ./ dan /
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./ai-agents-rogue/scripts/install.ps1 -Target . -Hosts all
+```
+
+Cara paling bebas masalah: jalankan installer dari **PowerShell**, bukan Git Bash.
 
 **Pack domain lokal** (HR interview, SIMRS, dll.) ikut otomatis pada full catalog: default `-IncludeDomains hr` (`hr-cv-lifecycle`, `hr-psychometric`, `hr-employee-ops`). Opsional:
 
@@ -325,6 +363,9 @@ atau command `/new-project`.
 |--------|-----------|
 | `running scripts is disabled` / Execution Policy | `powershell -NoProfile -ExecutionPolicy Bypass -File .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all` atau `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
 | `gh` / `pwsh` not found | Install GitHub CLI / PowerShell 7; buka terminal baru |
+| `winget: command not found` | Edisi Windows tanpa winget (Enterprise/Server/LTSC). Pasang `gh` dari MSI resmi (§0 Cara install `gh`, opsi B/C) |
+| `-File parameter does not exist` (Git Bash) | Git Bash memakan backslash. Pakai `/`: `-File ./ai-agents-rogue/scripts/install.ps1`, atau jalankan dari PowerShell |
+| `sealed file missing: mcp/.../node_modules/...` | Versi lama salah menyegel `node_modules` (di-gitignore). `git -C ai-agents-rogue pull origin master` lalu install ulang; sebagai jalan sementara `cd ai-agents-rogue/mcp/youtube && npm ci` (butuh Node.js + internet) |
 | Entitlement failed / not starred | Star + Fork repo resmi, tunggu sebentar, `gh auth status`, retry |
 | Cannot read `/user` | `gh auth login` ulang atau `GITHUB_TOKEN` valid |
 | Seal / signature INVALID / hash mismatch | `git -C ai-agents-rogue pull origin master` lalu install ulang (§5); jangan ubah skill manual; jangan pakai ZIP lama |

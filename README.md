@@ -96,5 +96,5 @@ Opsional, setelah Anda membuat tim sendiri:
 .\ai-agents-rogue\scripts\install.ps1 -Target . -Hosts all -Team <id>
 ```
 
-**Jangan** commit `.attribution-private.xml` (kunci signing Rogue saja; tidak ikut distribusi).
-Yang **wajib** ada di repo publik: `ATTRIBUTION.seal`, `ATTRIBUTION.public.xml`, `LICENSE`, `NOTICE`, `GITHUB_ENTITLEMENT.json`, `INSTALL.md`.
+**Jangan** membagikan atau meng-commit kunci signing pribadi apa pun (mis. `.attribution-private.xml`) ke repo.
+File integritas berikut **wajib dipertahankan apa adanya** (jangan diubah/dihapus): `ATTRIBUTION.seal`, `ATTRIBUTION.public.xml`, `LICENSE`, `NOTICE`, `GITHUB_ENTITLEMENT.json`, `INSTALL.md`.
