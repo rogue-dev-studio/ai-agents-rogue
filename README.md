@@ -24,6 +24,18 @@ Petunjuk lengkap: **[WORKMODES.md](./WORKMODES.md)**
 | Command | `/start-feature` (e2e), `/assist` (manual), `/set-mode` |
 | Chat | “mode e2e” / “mode manual” |
 
+## Language mode
+
+Bahasa balasan chat AI: **`id`** (default) atau **`en`**. Cakupan: chat saja.
+
+Petunjuk lengkap: **[LANGMODES.md](./LANGMODES.md)**
+
+| Cara | Contoh |
+|------|--------|
+| File persisten | `LANGMODE.md` di project root |
+| Command | `/set-lang` |
+| Chat | “bahasa indonesia” / “reply in English” |
+
 ## Skills
 
 Indeks kegunaan lengkap (skills + MCP + rules + roles): **[INDEX.md](./INDEX.md)**

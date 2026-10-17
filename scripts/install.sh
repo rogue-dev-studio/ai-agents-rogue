@@ -37,7 +37,7 @@ assert_author_integrity
 
 SKILLS=(e2e-delivery clarity agentic-flow agentic-qe)
 ROLE_PATHS=()
-COMMANDS=(start-feature assist set-mode new-project)
+COMMANDS=(start-feature assist set-mode set-lang new-project)
 LOCAL_SKILLS=()
 TEAM_DIR=""
 
@@ -203,7 +203,7 @@ alwaysApply: true
 
 Follow root \`AGENTS.md\`. Active team: ${TEAM_ID:-none}.
 Skills: ${SKILLS[*]}.
-Commands: \`/start-feature\`, \`/assist\`, \`/set-mode\`, \`/new-project\`.
+Commands: \`/start-feature\`, \`/assist\`, \`/set-mode\`, \`/set-lang\`, \`/new-project\`.\nChat language: \`id\` (default) or \`en\` - see \`LANGMODE.md\`.
 EOF
 }
 
@@ -337,6 +337,11 @@ fi
 if [[ ! -f "$TARGET_ROOT/WORKMODE.md" && -f "$CATALOG_ROOT/templates/WORKMODE.md" ]]; then
   cp "$CATALOG_ROOT/templates/WORKMODE.md" "$TARGET_ROOT/WORKMODE.md"
   echo "Created WORKMODE.md (default: e2e)"
+fi
+
+if [[ ! -f "$TARGET_ROOT/LANGMODE.md" && -f "$CATALOG_ROOT/templates/LANGMODE.md" ]]; then
+  cp "$CATALOG_ROOT/templates/LANGMODE.md" "$TARGET_ROOT/LANGMODE.md"
+  echo "Created LANGMODE.md (default: id)"
 fi
 
 install_shared

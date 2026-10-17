@@ -63,7 +63,7 @@ Assert-GitHubEntitlement
 
 $script:SkillNames = @()  # empty = all skills under skills/
 $script:RolePaths = @()  # empty = all roles
-$script:CommandNames = @("start-feature", "assist", "set-mode", "new-project", "dev-shift")
+$script:CommandNames = @("start-feature", "assist", "set-mode", "set-lang", "new-project", "dev-shift")
 $script:LocalSkillNames = @()
 $script:TeamId = $null
 $script:TeamDir = $null
@@ -354,7 +354,8 @@ Default: AI Orchestrator + ``e2e-delivery`` when building.
 Skills installed: $(SkillListText).
 Rules: ``.cursor/rules/aar-*.mdc`` (includes ``aar-author.mdc``).
 Work modes: ``e2e`` (default) or ``manual`` — see ``WORKMODE.md`` / ``$catalogRel/WORKMODES.md``.
-Commands: ``/start-feature``, ``/dev-shift``, ``/assist``, ``/set-mode``, ``/new-project``.
+Chat language: ``id`` (default) or ``en`` — see ``LANGMODE.md`` / ``$catalogRel/LANGMODES.md``.
+Commands: ``/start-feature``, ``/dev-shift``, ``/assist``, ``/set-mode``, ``/set-lang``, ``/new-project``.
 Shift panjang: skill host ``loop`` + manifest ``docs/shift/current.md`` (lihat ``continuous-dev-shift``).
 No commit/push/deploy unless asked.
 "@
@@ -509,8 +510,19 @@ function Ensure-WorkModeFile {
   }
 }
 
+function Ensure-LangModeFile {
+  $lm = Join-Path $TargetRoot "LANGMODE.md"
+  if (Test-Path -LiteralPath $lm) { return }
+  $tpl = Join-Path $CatalogRoot "templates\LANGMODE.md"
+  if (Test-Path -LiteralPath $tpl) {
+    Copy-Item -LiteralPath $tpl -Destination $lm -Force
+    Write-Host "Created LANGMODE.md (default: id)"
+  }
+}
+
 Install-CatalogShared
 Ensure-WorkModeFile
+Ensure-LangModeFile
 
 foreach ($h in $requested) {
   switch ($h) {

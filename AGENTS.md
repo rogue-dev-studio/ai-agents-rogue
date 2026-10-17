@@ -5,6 +5,7 @@ Author: [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-st
 
 > Katalog AI agents & skills untuk Cursor, Antigravity, Claude Code, OpenCode, dan host lain.  
 > Mode kerja: **`e2e`** (default) atau **`manual`** — lihat `WORKMODES.md`.  
+> Bahasa chat: **`id`** (default) atau **`en`** — lihat `LANGMODES.md`.  
 > Role definitions: `roles/<divisi>/*.md` · Core: `core/` · Skills: `skills/` · Install: `scripts/`
 
 ---
@@ -44,6 +45,21 @@ Untuk permintaan yang sama saat mode manual aktif (atau `/assist`):
 Command: `/assist` · set persisten: `/set-mode`
 
 Untuk pertanyaan informasional saja: jawab langsung, tanpa E2E.
+
+## Language mode (`id` | `en`) — chat
+
+Baca **`LANGMODE.md`** di project root (jika ada) dan **`ai-agents-rogue/LANGMODES.md`**.
+
+| Mode | Perilaku |
+|------|----------|
+| `id` | Balasan chat AI dalam Bahasa Indonesia (default) |
+| `en` | AI chat replies in English |
+
+Cakupan: **balasan chat saja** — kode, identifier, dan dokumentasi/artifact tidak dipaksa.
+
+Prioritas: instruksi chat (“bahasa inggris” / “reply in English”) → `/set-lang` → `LANGMODE.md` → default **`id`**.
+
+Command: `/set-lang`
 
 ## Skills
 

@@ -150,5 +150,5 @@ Runtime hybrid: fragment Rogue + engine `npx`/`uvx`/URL remote. Lihat [`mcp/READ
 | QA Engineer | `roles/quality/qa.md` | Memastikan seluruh fitur yang diimplementasikan sesuai dengan requirement, design, dan technical specificat... |
 | Code Reviewer | `roles/quality/reviewer.md` | Memastikan seluruh implementasi kode sesuai dengan standar arsitektur, coding guideline, dan technical spec... |
 
-Workflow & organisasi: [`AGENTS.md`](./AGENTS.md). Work modes: [`WORKMODES.md`](./WORKMODES.md).
+Workflow & organisasi: [`AGENTS.md`](./AGENTS.md). Work modes: [`WORKMODES.md`](./WORKMODES.md). Language modes: [`LANGMODES.md`](./LANGMODES.md).
 

@@ -336,11 +336,12 @@ Exit code `0` = OK.
 2. Pastikan muncul (contoh Cursor):  
    - `.cursor/skills/` (termasuk `e2e-delivery`)  
    - `.cursor/rules/aar-*.mdc` dan `ai-agents-rogue.mdc`  
-   - Commands: `/start-feature`, `/dev-shift`, `/assist`, `/set-mode`, `/new-project`  
+   - Commands: `/start-feature`, `/dev-shift`, `/assist`, `/set-mode`, `/set-lang`, `/new-project`  
    - Bila `-Mcp` dipakai: `.cursor/mcp.json` berisi server terkait  
 3. Baca `AGENTS.md` di project root.  
 4. Mode kerja: `WORKMODE.md` (default **`e2e`**) + panduan `ai-agents-rogue/WORKMODES.md`.  
-5. Project baru:  
+5. Bahasa chat: `LANGMODE.md` (default **`id`**) + panduan `ai-agents-rogue/LANGMODES.md`.  
+6. Project baru:  
 
 ```powershell
 .\ai-agents-rogue\scripts\new-project.ps1 -Id my-app -Name "My App"
@@ -354,6 +355,13 @@ atau command `/new-project`.
 |------|------|
 | E2E (eksekusi penuh) | Default, atau `/start-feature` |
 | Manual (plan saja) | `/assist` atau `/set-mode` → `manual` |
+
+### Bahasa chat singkat
+
+| Bahasa | Cara |
+|--------|------|
+| Indonesia (default) | Default, atau `/set-lang` → `id` |
+| English | `/set-lang` → `en`, atau bilang “reply in English” |
 
 ---
 
