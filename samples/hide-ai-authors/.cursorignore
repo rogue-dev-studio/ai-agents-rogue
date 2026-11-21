@@ -1,0 +1,24 @@
+# Git ignore patterns for AI-generated files
+# Copy this to .git/info/exclude or .gitignore
+
+# AI agent configuration directories
+.cursor/
+.claude/
+.opencode/
+.copilot/
+.agents/
+
+# AI-generated documentation
+docs/srs/
+docs/planning/
+docs/tasks/
+docs/shift/
+
+# AI-generated artifacts
+artifacts/
+temp/
+
+# Attribution files (auto-generated)
+ATTRIBUTION.seal
+ATTRIBUTION.public.xml
+GITHUB_ENTITLEMENT.json
