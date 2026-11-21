@@ -201,10 +201,11 @@ function Write-RuleMdc([string]$RuleMd, [string]$DestMdc, [string]$Description, 
 
 function Get-HostSkillRoots([string]$TargetRoot, [string]$HostsArg) {
   $all = @{
-    cursor  = Join-Path $TargetRoot ".cursor\skills"
-    claude  = Join-Path $TargetRoot ".claude\skills"
-    agents  = Join-Path $TargetRoot ".agents\skills"
+    cursor   = Join-Path $TargetRoot ".cursor\skills"
+    claude   = Join-Path $TargetRoot ".claude\skills"
+    agents   = Join-Path $TargetRoot ".agents\skills"
     opencode = Join-Path $TargetRoot ".opencode\skills"
+    copilot  = Join-Path $TargetRoot ".github\skills"
   }
   if ($HostsArg -eq "all") { return $all.Values }
   $list = New-Object System.Collections.Generic.List[string]

@@ -30,18 +30,19 @@ To install for all supported hosts:
 
 ## What Gets Installed
 
-The Copilot adapter installs:
+The Copilot adapter installs the native GitHub Copilot structure:
 
-- **Skills** (`\.copilot\skills\`) - All catalog skills for Copilot
-- **Commands** (`\.copilot\commands\`) - Supported commands like `/start-feature`
-- **Roles** (`\.copilot\agents\roles\`) - AI agent role definitions
+- **Root Instructions** (`.github/copilot-instructions.md`) - Global instructions for Copilot.
+- **Skills** (`.github/skills/`) - Project-specific skills (SKILL.md).
+- **Agents** (`.github/agents/`) - Custom agent roles and definitions.
+- **Instructions** (`.github/instructions/`) - Path-specific instructions.
 
 ## Configuration
 
 Copilot reads AI Agents Rogue configuration from:
 
 - Root `AGENTS.md` - Main agent instructions
-- `GPT.md` - Copilot-specific adapter pointer (auto-generated)
+- `.github/copilot-instructions.md` - Native Copilot pointer
 - `WORKMODE.md` - Work mode (e2e/manual)
 - `LANGMODE.md` - Chat language preference
 
@@ -80,7 +81,7 @@ To set persistent work mode:
 If skills aren't loading in Copilot:
 
 1. Run `.\scripts\install.ps1 -Hosts copilot` again
-2. Check `.copilot\skills\` contains SKILL.md files
+2. Check `.github/skills/` contains SKILL.md files
 3. Restart Copilot
 
 ### Attribution Errors
@@ -96,7 +97,7 @@ If you see attribution errors:
 To reset and reinstall:
 
 ```powershell
-Remove-Item -Recurse -Force .copilot
+Remove-Item -Recurse -Force .github/skills, .github/agents, .github/instructions
 .\scripts\install.ps1 -Hosts copilot
 ```
 

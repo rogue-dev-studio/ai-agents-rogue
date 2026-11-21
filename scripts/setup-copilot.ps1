@@ -1,4 +1,3 @@
-# setup-copilot.ps1
 # Setup script to configure Copilot with AI Agents Rogue
 
 param(
@@ -16,21 +15,30 @@ if (-not $CatalogRoot) {
 
 $TargetRoot = (Resolve-Path $Target).Path
 
+function Ensure-Dir([string]$Path) {
+    if (-not (Test-Path $Path)) {
+        New-Item -ItemType Directory -Path $Path -Force | Out-Null
+    }
+}
+
 # Ensure Copilot directory exists
-$copilotDir = Join-Path $TargetRoot ".copilot"
-Ensure-Dir $copilotDir
+$githubDir = Join-Path $TargetRoot ".github"
+Ensure-Dir $githubDir
 
 # Ensure subdirectories
-Ensure-Dir (Join-Path $copilotDir "skills")
-Ensure-Dir (Join-Path $copilotDir "commands")
-Ensure-Dir (Join-Path $copilotDir "agents\roles")
+Ensure-Dir (Join-Path $githubDir "skills")
+Ensure-Dir (Join-Path $githubDir "agents")
+Ensure-Dir (Join-Path $githubDir "instructions")
 
-# Copy skills from catalog
-Copy-Skills (Join-Path $TargetRoot ".copilot\skills")
-Copy-Commands (Join-Path $TargetRoot ".copilot\commands")
-Copy-Roles (Join-Path $TargetRoot ".copilot\agents\roles")
+# Copy basic instructions
+$instrSrc = Join-Path $CatalogRoot "core\instructions\copilot-instructions.md"
+if (Test-Path $instrSrc) {
+    Copy-Item $instrSrc (Join-Path $githubDir "copilot-instructions.md") -Force
+}
 
+# Note: Full skill/agent sync is handled by install.ps1 via Catalog mapping
 Write-Host "Copilot setup complete."
-Write-Host "  Skills: .copilot\skills\"
-Write-Host "  Commands: .copilot\commands\"
-Write-Host "  Roles: .copilot\agents\roles\"
+Write-Host "  Instructions: .github\copilot-instructions.md"
+Write-Host "  Skills: .github\skills\"
+Write-Host "  Agents: .github\agents\"
+Write-Host "  Instructions: .github\instructions\"
