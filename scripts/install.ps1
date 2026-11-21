@@ -238,6 +238,32 @@ Global house docs: ``AGENTS.md`` still applies, scoped by the active team.
   }
 }
 
+function Install-Copilot {
+  Write-Host "Installing Copilot adapter..."
+  $githubDir = Join-Path $TargetRoot ".github"
+  Ensure-Dir $githubDir
+  Ensure-Dir (Join-Path $githubDir "skills")
+  Ensure-Dir (Join-Path $githubDir "agents")
+  Ensure-Dir (Join-Path $githubDir "instructions")
+
+  # 1. Root Instructions
+  $instrSrc = Join-Path $CatalogRoot "core\instructions\copilot-instructions.md"
+  if (Test-Path $instrSrc) {
+    Copy-Item $instrSrc (Join-Path $githubDir "copilot-instructions.md") -Force
+  }
+
+  # 2. Skills
+  Copy-Skills (Join-Path $githubDir "skills")
+
+  # 3. Roles/Agents
+  Copy-Roles (Join-Path $githubDir "agents")
+
+  # 4. Global Instructions
+  if (Test-Path (Join-Path $CatalogRoot "core\instructions")) {
+    Copy-Tree (Join-Path $CatalogRoot "core\instructions") (Join-Path $githubDir "instructions")
+  }
+}
+
 function Install-CatalogShared {
   Write-Host "  Catalog shared files..."
   Copy-Item (Join-Path $CatalogRoot "AGENTS.md") (Join-Path $TargetRoot "AGENTS.md") -Force
@@ -424,6 +450,7 @@ function Map-InstallHostsToBootstrap([string[]]$InstallHosts) {
   $mapped = New-Object System.Collections.Generic.List[string]
   foreach ($h in $InstallHosts) {
     switch ($h.ToLowerInvariant()) {
+      "copilot" { [void]$mapped.Add("copilot") }
       "cursor" { [void]$mapped.Add("cursor") }
       "claude" { [void]$mapped.Add("claude") }
       "opencode" { [void]$mapped.Add("opencode") }
@@ -531,6 +558,7 @@ foreach ($h in $requested) {
     "claude" { Install-Claude }
     "opencode" { Install-OpenCode }
     "generic" { Install-Generic }
+    "copilot" { Install-Copilot }
     default { Write-Warning "Unknown host '$h' - skip" }
   }
 }

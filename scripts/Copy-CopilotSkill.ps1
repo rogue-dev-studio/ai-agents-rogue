@@ -30,7 +30,7 @@ if (-not (Test-Path $src)) {
     exit 1
 }
 
-$dst = Join-Path $TargetRoot ".copilot\skills\$SkillName"
+$dst = Join-Path $TargetRoot ".github\skills\$SkillName"
 Ensure-Dir $dst
 Copy-Item $src (Join-Path $dst "SKILL.md") -Force
 
