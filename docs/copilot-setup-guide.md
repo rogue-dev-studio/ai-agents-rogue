@@ -34,8 +34,9 @@ The Copilot adapter installs the native GitHub Copilot structure:
 
 - **Root Instructions** (`.github/copilot-instructions.md`) - Global instructions for Copilot.
 - **Skills** (`.github/skills/`) - Project-specific skills (SKILL.md).
-- **Agents** (`.github/agents/`) - Custom agent roles and definitions.
+- **Agents** (`.github/agents/`) - Custom agents (`*.agent.md`) plus role definitions under `roles/`.
 - **Instructions** (`.github/instructions/`) - Path-specific instructions.
+- **Public identity gate** - `public-metadata-reviewer.agent.md`, `public-contribution-identity`, and `rules/public-identity.md` prevent assistant/bot attribution in public Git metadata.
 
 ## Configuration
 

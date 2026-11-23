@@ -74,13 +74,16 @@ Command: `/set-lang`
 | `container-docker-ops` | Docker/Compose |
 | `mcp-integrations` | MCP servers |
 | `ai-coding-assistants` | Claude/Kilo/Goose/OpenCode toolkits |
+| `public-contribution-identity` | Wajib sebelum commit/push/PR/release; blokir identitas AI/assistant/bot di metadata publik |
 | Lainnya | `INDEX.md` + `skills/ALIASES.md` + `skills/CATALOG.md` |
 
 Install `-Team <id>` (opsional) hanya skills di `TEAM.yaml` (+ local). Default = katalog penuh. Lihat `INDEX.md` / `skills/ALIASES.md`.
 
 ## Hard rules
 
-Lihat `rules/` — `global.md`, `author.md`, `security.md`, `coding.md`, `commit.md`, `ui.md` (ringkas di `INDEX.md`).
+Lihat `rules/` — `global.md`, `author.md`, `security.md`, `coding.md`, `commit.md`, `public-identity.md`, `ui.md` (ringkas di `INDEX.md`).
+
+Sebelum commit/push/PR/release, gunakan `agents/public-metadata-reviewer.agent.md`, skill `public-contribution-identity`, dan `scripts/check-public-identity.ps1`. Jangan menambahkan AI/assistant/bot sebagai author, co-author, sign-off, atau trailer publik.
 
 Author: [Rogue Development](https://github.com/rogue-dev-studio) — lihat `LICENSE` + `NOTICE`. Atribusi wajib.
 
