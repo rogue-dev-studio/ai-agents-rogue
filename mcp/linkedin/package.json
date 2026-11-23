@@ -1,0 +1,9 @@
+{
+  "name": "linkedin-mcp-server",
+  "version": "1.0.0",
+  "description": "LinkedIn MCP Server",
+  "main": "server.js",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest"
+  }
+}

@@ -19,7 +19,7 @@ Indeks kegunaan: [`../INDEX.md`](../INDEX.md#mcp-packages).
 | `chrome-devtools` | `browser-automation` | `npx chrome-devtools-mcp` |
 | `playwright` | `browser-automation` | `npx @playwright/mcp` |
 | `pal` | `mcp-integrations` | `uvx pal-mcp-server` + API keys |
-| `youtube` | `youtube-publishing` | Node MCP proxy → local YouTube OAuth API |
+| `linkedin` | `linkedin-ops` | LinkedIn MCP Server (Requires Client ID/Secret) |
 
 ## Partial (docs only — no fragment yet)
 
