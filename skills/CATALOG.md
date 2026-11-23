@@ -48,6 +48,7 @@ Indeks gabungan (skills + MCP + rules + roles): [`../INDEX.md`](../INDEX.md).
 | `jupyter-notebooks` | specialized | Jupyter notebook execution MCP server. Use when the project needs this capability or the user / team manifest asks fo... |
 | `jira-ops` | canonical-merge | Jira project management via MCP. Use for issues, sprints, boards, and workflow automation. |
 | `jvm` | canonical-merge | JVM languages (Java, Kotlin, Scala). Use when the project needs this capability or the user / team manifest asks for ... |
+| `kicad` | specialized | KiCad PCB design MCP server. Use when the project needs this capability or the user / team manifest asks for it. Use ... |
 | `linkedin-ops` | specialized | LinkedIn content management and analytics via API. |
 | `llm-gateway-routing` | canonical-merge | Canonical LLM gateway/routing/proxy playbook: multi-provider failover, token reduction proxies, and cost wrappers. |
 | `mcp-integrations` | canonical-merge | Canonical MCP server integration playbook: allowlist, Cursor mcp.json merge, smoke tests, and scaffolding. Use with a... |

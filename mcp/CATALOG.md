@@ -9,6 +9,7 @@ Indeks kegunaan: [`../INDEX.md`](../INDEX.md#mcp-packages).
 
 | Id | Skill terkait | Runtime |
 |----|---------------|---------|
+| `linkedin` | `linkedin-ops` | Node.js MCP server in `mcp/linkedin` |
 | `blender` | `blender` | Blender + addon + `uvx blender-mcp` |
 | `blender-lab` | `blender` | Blender 5.1+ Lab extension + `uvx` from projects.blender.org |
 | `photoshop` | `photoshop` | Photoshop desktop + `uvx photoshop-mcp-server` |
@@ -19,7 +20,7 @@ Indeks kegunaan: [`../INDEX.md`](../INDEX.md#mcp-packages).
 | `chrome-devtools` | `browser-automation` | `npx chrome-devtools-mcp` |
 | `playwright` | `browser-automation` | `npx @playwright/mcp` |
 | `pal` | `mcp-integrations` | `uvx pal-mcp-server` + API keys |
-| `linkedin` | `linkedin-ops` | LinkedIn MCP Server (Requires Client ID/Secret) |
+| `youtube` | `youtube-publishing` | Node MCP proxy → local YouTube OAuth API |
 
 ## Partial (docs only — no fragment yet)
 

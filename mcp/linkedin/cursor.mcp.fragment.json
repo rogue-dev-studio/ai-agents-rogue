@@ -1,0 +1,10 @@
+{
+  "name": "linkedin",
+  "command": "node",
+  "args": ["mcp/linkedin/server.js"],
+  "env": {
+    "LINKEDIN_ACCESS_TOKEN": "${env:LINKEDIN_ACCESS_TOKEN}",
+    "LINKEDIN_CLIENT_ID": "${env:LINKEDIN_CLIENT_ID}",
+    "LINKEDIN_CLIENT_SECRET": "${env:LINKEDIN_CLIENT_SECRET}"
+  }
+}
