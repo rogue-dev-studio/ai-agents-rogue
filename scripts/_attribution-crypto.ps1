@@ -51,6 +51,7 @@ function Get-AttributionFileMap([string]$CatalogRoot) {
     "scripts\generate-attribution-seal.ps1",
     "scripts\generate-attribution-keys.ps1",
     "scripts\install-mcp.ps1",
+    "scripts\check-skill-compliance.ps1",
     "mcp\README.md",
     "mcp\CATALOG.md"
   )
