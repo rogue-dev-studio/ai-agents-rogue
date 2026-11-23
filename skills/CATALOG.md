@@ -49,6 +49,7 @@ Indeks gabungan (skills + MCP + rules + roles): [`../INDEX.md`](../INDEX.md).
 | `jira-ops` | canonical-merge | Jira project management via MCP. Use for issues, sprints, boards, and workflow automation. |
 | `jvm` | canonical-merge | JVM languages (Java, Kotlin, Scala). Use when the project needs this capability or the user / team manifest asks for ... |
 | `kicad` | specialized | KiCad PCB design MCP server. Use when the project needs this capability or the user / team manifest asks for it. Use ... |
+| `linkedin-ops` | specialized | LinkedIn content management and analytics via API. |
 | `llm-gateway-routing` | canonical-merge | Canonical LLM gateway/routing/proxy playbook: multi-provider failover, token reduction proxies, and cost wrappers. |
 | `mcp-integrations` | canonical-merge | Canonical MCP server integration playbook: allowlist, Cursor mcp.json merge, smoke tests, and scaffolding. Use with a... |
 | `mise-config` | canonical-merge | Global mise configuration and settings. Use when the project needs this capability or the user / team manifest asks f... |
@@ -63,6 +64,7 @@ Indeks gabungan (skills + MCP + rules + roles): [`../INDEX.md`](../INDEX.md).
 | `pbr-rendering` | specialized | PBR material generation MCP server (GPU required). Use when the project needs this capability or the user / team mani... |
 | `photoshop` | specialized | Adobe Photoshop via MCP (uvx photoshop-mcp-server). Use when the user needs PSD edits, layers, exports, or Photoshop ... |
 | `php` | canonical-merge | PHP development environment. Use when the project needs this capability or the user / team manifest asks for it. Use ... |
+| `public-contribution-identity` | house | Protect public Git, PR, release, and artifact metadata from unapproved AI/assistant/bot attribution while preserving truthful human and legal attribution. |
 | `python` | canonical-merge | Python 3.13 with uv package manager via mise. Use when the project needs this capability or the user / team manifest ... |
 | `pytorch-ml` | specialized | PyTorch deep learning framework. Use when the project needs this capability or the user / team manifest asks for it. ... |
 | `qgis` | specialized | QGIS GIS operations MCP server. Use when the project needs this capability or the user / team manifest asks for it. U... |

@@ -134,6 +134,13 @@ Tentukan status:
 - NOT READY
 - NEED FIX
 
+Sebelum menetapkan READY:
+
+- Jalankan gate `rules/public-identity.md`
+- Gunakan skill `public-contribution-identity`
+- Pastikan commit, PR, release, dan changelog tidak menampilkan identitas AI/assistant/bot sebagai kontributor publik
+- Pastikan identitas human/organisasi valid dan atribusi legal tetap ada
+
 ---
 
 # 9. Risk Management

@@ -59,6 +59,7 @@ Author: [Rogue Development](https://github.com/rogue-dev-studio)
 | `pbr-rendering` | specialized | PBR material generation MCP server (GPU required). Use when the project needs this capability or the user / team mani... |
 | `photoshop` | specialized | Adobe Photoshop via MCP (uvx photoshop-mcp-server). Use when the user needs PSD edits, layers, exports, or Photoshop ... |
 | `php` | canonical-merge | PHP development environment. Use when the project needs this capability or the user / team manifest asks for it. Use ... |
+| `public-contribution-identity` | house | Protect public Git, PR, release, and artifact metadata from unapproved AI/assistant/bot attribution while preserving truthful human and legal attribution. |
 | `python` | canonical-merge | Python 3.13 with uv package manager via mise. Use when the project needs this capability or the user / team manifest ... |
 | `pytorch-ml` | specialized | PyTorch deep learning framework. Use when the project needs this capability or the user / team manifest asks for it. ... |
 | `qgis` | specialized | QGIS GIS operations MCP server. Use when the project needs this capability or the user / team manifest asks for it. U... |
@@ -121,7 +122,8 @@ Runtime hybrid: fragment Rogue + engine `npx`/`uvx`/URL remote. Lihat [`mcp/READ
 | `author` (`rules/author.md`) | Hard rule. Berlaku untuk semua host, roles, dan skills. |
 | `api` (`rules/api.md`) | Kontrak HTTP/API: envelope, pagination, authz, larangan breaking change diam-diam. |
 | `coding` (`rules/coding.md`) | Standar kode: kualitas, layering, larangan raw SQL di application code. |
-| `commit` (`rules/commit.md`) | Commit / push / PR hanya jika user meminta. |
+| `commit` (`rules/commit.md`) | Commit / push / PR hanya jika user meminta; public identity gate wajib. |
+| `public-identity` (`rules/public-identity.md`) | Blokir identitas AI/assistant/bot pada metadata publik tanpa memalsukan author human/organisasi. |
 | `database` (`rules/database.md`) | Data layer: migration reversible, integrity, index, security. |
 | `global` (`rules/global.md`) | Work modes + larangan umum; docs → `project/{id}/docs/`; generate → `project/{id}/artifacts/{kategori}/` |
 | `security` (`rules/security.md`) | Auth, secret, PII; tim boleh menambah skill lokal, bukan mengabaikan rule ini. |
@@ -149,6 +151,13 @@ Runtime hybrid: fragment Rogue + engine `npx`/`uvx`/URL remote. Lihat [`mcp/READ
 | Project Manager | `roles/management/project-manager.md` | Mengubah requirement yang telah disetujui menjadi rencana kerja yang terstruktur, terukur, dan dapat diekse... |
 | QA Engineer | `roles/quality/qa.md` | Memastikan seluruh fitur yang diimplementasikan sesuai dengan requirement, design, dan technical specificat... |
 | Code Reviewer | `roles/quality/reviewer.md` | Memastikan seluruh implementasi kode sesuai dengan standar arsitektur, coding guideline, dan technical spec... |
+| Public Metadata Reviewer | `roles/quality/public-metadata-reviewer.md` | Menjaga authorship dan metadata publik bebas dari identitas AI/assistant/bot yang tidak disetujui. |
+
+## Custom agents
+
+| Agent | Path | Kegunaan |
+|-------|------|----------|
+| Public Metadata Reviewer | `agents/public-metadata-reviewer.agent.md` | Gate khusus sebelum commit, push, PR, release, atau publikasi changelog. |
 
 Workflow & organisasi: [`AGENTS.md`](./AGENTS.md). Work modes: [`WORKMODES.md`](./WORKMODES.md). Language modes: [`LANGMODES.md`](./LANGMODES.md).
 

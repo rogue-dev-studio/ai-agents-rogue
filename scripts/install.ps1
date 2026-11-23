@@ -200,6 +200,12 @@ function Copy-Roles([string]$DestRolesRoot) {
   }
 }
 
+function Copy-Agents([string]$DestAgentsRoot) {
+  $src = Join-Path $CatalogRoot "agents"
+  if (-not (Test-Path $src)) { return }
+  Copy-Tree $src $DestAgentsRoot
+}
+
 function Write-TeamOverlay {
   if (-not $script:TeamId) { return }
   $teamOut = Join-Path $TargetRoot "ai-agents-rogue\active-team"
@@ -256,7 +262,8 @@ function Install-Copilot {
   Copy-Skills (Join-Path $githubDir "skills")
 
   # 3. Roles/Agents
-  Copy-Roles (Join-Path $githubDir "agents")
+  Copy-Roles (Join-Path $githubDir "agents\roles")
+  Copy-Agents (Join-Path $githubDir "agents")
 
   # 4. Global Instructions
   if (Test-Path (Join-Path $CatalogRoot "core\instructions")) {
@@ -292,6 +299,7 @@ function Install-CatalogShared {
   } else {
     Copy-Roles (Join-Path $bundle "roles")
   }
+  Copy-Tree (Join-Path $CatalogRoot "agents") (Join-Path $bundle "agents")
   Ensure-Dir (Join-Path $bundle "skills")
   foreach ($name in $script:SkillNames) {
     $src = Join-Path $CatalogRoot "skills\$name"
@@ -306,7 +314,7 @@ function Install-CatalogShared {
   # Keep verify tooling with the catalog copy
   $scriptsDst = Join-Path $bundle "scripts"
   Ensure-Dir $scriptsDst
-  foreach ($s in @("verify-attribution.ps1", "verify-official-upstream.ps1", "check-github-entitlement.ps1", "_attribution-crypto.ps1", "stamp-attribution.ps1", "generate-attribution-seal.ps1", "install-mcp.ps1")) {
+  foreach ($s in @("verify-attribution.ps1", "verify-official-upstream.ps1", "check-github-entitlement.ps1", "check-skill-compliance.ps1", "check-public-identity.ps1", "_attribution-crypto.ps1", "stamp-attribution.ps1", "generate-attribution-seal.ps1", "install-mcp.ps1")) {
     $src = Join-Path $CatalogRoot "scripts\$s"
     if (Test-Path $src) { Copy-Item $src (Join-Path $scriptsDst $s) -Force }
   }
@@ -361,6 +369,7 @@ function Install-Cursor {
   Copy-Commands (Join-Path $TargetRoot ".cursor\commands")
   Ensure-Dir (Join-Path $TargetRoot ".cursor\rules")
   Copy-Roles (Join-Path $TargetRoot ".cursor\agents\roles")
+  Copy-Agents (Join-Path $TargetRoot ".cursor\agents")
   Copy-Rules (Join-Path $TargetRoot ".cursor\rules")
   $catalogRel = (Get-CatalogRelFromTarget) -replace '\\', '/'
   $teamLine = if ($script:TeamId) { "Active team: ``$($script:TeamId)`` (``TEAM.md``). Use only that team's skills/roles." } else { "Full catalog mode." }
@@ -384,6 +393,7 @@ Chat language: ``id`` (default) or ``en`` — see ``LANGMODE.md`` / ``$catalogRe
 Commands: ``/start-feature``, ``/dev-shift``, ``/assist``, ``/set-mode``, ``/set-lang``, ``/new-project``.
 Shift panjang: skill host ``loop`` + manifest ``docs/shift/current.md`` (lihat ``continuous-dev-shift``).
 No commit/push/deploy unless asked.
+Before public Git metadata, enforce ``public-contribution-identity`` + ``aar-public-identity.mdc``; never add AI/assistant/bot authorship or co-author trailers.
 "@
   Set-Content -Path (Join-Path $TargetRoot ".cursor\rules\ai-agents-rogue.mdc") -Value $rule -Encoding UTF8
 }
@@ -393,6 +403,7 @@ function Install-Antigravity {
   Copy-Skills (Join-Path $TargetRoot ".agents\skills")
   Copy-Commands (Join-Path $TargetRoot ".agents\commands")
   Copy-Roles (Join-Path $TargetRoot ".agents\roles")
+  Copy-Agents (Join-Path $TargetRoot ".agents\agents")
 }
 
 function Install-Claude {
@@ -400,6 +411,7 @@ function Install-Claude {
   Copy-Skills (Join-Path $TargetRoot ".claude\skills")
   Copy-Commands (Join-Path $TargetRoot ".claude\commands")
   Copy-Roles (Join-Path $TargetRoot ".claude\agents\roles")
+  Copy-Agents (Join-Path $TargetRoot ".claude\agents")
   $teamBit = if ($script:TeamId) { "Active team: ``$($script:TeamId)``." } else { "" }
   $claudeMd = Join-Path $TargetRoot "CLAUDE.md"
   $pointer = @"
@@ -429,6 +441,7 @@ function Install-OpenCode {
   Copy-Skills (Join-Path $TargetRoot ".opencode\skills")
   Copy-Commands (Join-Path $TargetRoot ".opencode\commands")
   Copy-Roles (Join-Path $TargetRoot ".opencode\agents\roles")
+  Copy-Agents (Join-Path $TargetRoot ".opencode\agents")
 }
 
 function Install-Generic {
@@ -436,6 +449,7 @@ function Install-Generic {
   Copy-Skills (Join-Path $TargetRoot ".agents\skills")
   Copy-Commands (Join-Path $TargetRoot ".agents\commands")
   Copy-Roles (Join-Path $TargetRoot ".agents\roles")
+  Copy-Agents (Join-Path $TargetRoot ".agents\agents")
 }
 
 function Get-AllDomainPackIds {

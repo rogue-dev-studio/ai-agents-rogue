@@ -47,11 +47,13 @@ function Get-AttributionFileMap([string]$CatalogRoot) {
     "scripts\_attribution-crypto.ps1",
     "scripts\install.ps1",
     "scripts\install.sh",
+    "scripts\check-skill-compliance.ps1",
+    "scripts\check-public-identity.ps1",
     "scripts\stamp-attribution.ps1",
     "scripts\generate-attribution-seal.ps1",
     "scripts\generate-attribution-keys.ps1",
     "scripts\install-mcp.ps1",
-    "scripts\check-skill-compliance.ps1",
+    "rules\public-identity.md",
     "mcp\README.md",
     "mcp\CATALOG.md"
   )
@@ -65,6 +67,13 @@ function Get-AttributionFileMap([string]$CatalogRoot) {
     $dir = Join-Path $CatalogRoot $rootName
     if (-not (Test-Path $dir)) { continue }
     Get-ChildItem $dir -Recurse -Filter SKILL.md -File | ForEach-Object {
+      $rel = $_.FullName.Substring($CatalogRoot.Length).TrimStart('\', '/').Replace('\', '/')
+      $list.Add([pscustomobject]@{ Rel = $rel; Path = $_.FullName })
+    }
+  }
+  $agentsDir = Join-Path $CatalogRoot "agents"
+  if (Test-Path $agentsDir) {
+    Get-ChildItem $agentsDir -Recurse -Filter "*.agent.md" -File | ForEach-Object {
       $rel = $_.FullName.Substring($CatalogRoot.Length).TrimStart('\', '/').Replace('\', '/')
       $list.Add([pscustomobject]@{ Rel = $rel; Path = $_.FullName })
     }
@@ -208,6 +217,10 @@ function Test-AttributionMarkers([string]$CatalogRoot) {
     @{ Rel = "scripts\verify-attribution.ps1"; Needle = "AI MUST STOP" },
     @{ Rel = "scripts\install.ps1"; Needle = "verify-attribution.ps1" },
     @{ Rel = "scripts\install.ps1"; Needle = "install-mcp.ps1" },
+    @{ Rel = "scripts\install.ps1"; Needle = "Copy-Agents" },
+    @{ Rel = "scripts\check-public-identity.ps1"; Needle = "PUBLIC IDENTITY CHECK" },
+    @{ Rel = "rules\public-identity.md"; Needle = "public-contribution-identity" },
+    @{ Rel = "agents\public-metadata-reviewer.agent.md"; Needle = "check-public-identity.ps1" },
     @{ Rel = "mcp\CATALOG.md"; Needle = "blender" },
     @{ Rel = "mcp\blender\package.json"; Needle = "blender" },
     @{ Rel = "skills\e2e-delivery\SKILL.md"; Needle = "Gate 0" }

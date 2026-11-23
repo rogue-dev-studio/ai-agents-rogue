@@ -177,6 +177,17 @@ Skill wajib saat review: **`code-review`**.
 
 ---
 
+## 8.8 Public Metadata Review
+
+- Terapkan `rules/public-identity.md`
+- Gunakan skill `public-contribution-identity`
+- Pastikan commit, PR, release, dan changelog tidak memuat identitas AI/assistant/bot sebagai author, co-author, sign-off, atau trailer
+- Pastikan identitas human/organisasi yang dipakai benar dan bukan identitas rekaan
+- Pertahankan atribusi legal Rogue Development dan pihak ketiga
+- Jalankan `scripts/check-public-identity.ps1` sebelum publikasi
+
+---
+
 # 9. Code Smell Detection
 
 Reviewer harus mendeteksi:

@@ -9,6 +9,7 @@ Indeks kegunaan: [`../INDEX.md`](../INDEX.md#mcp-packages).
 
 | Id | Skill terkait | Runtime |
 |----|---------------|---------|
+| `linkedin` | `linkedin-ops` | Node.js MCP server in `mcp/linkedin` |
 | `blender` | `blender` | Blender + addon + `uvx blender-mcp` |
 | `blender-lab` | `blender` | Blender 5.1+ Lab extension + `uvx` from projects.blender.org |
 | `photoshop` | `photoshop` | Photoshop desktop + `uvx photoshop-mcp-server` |
