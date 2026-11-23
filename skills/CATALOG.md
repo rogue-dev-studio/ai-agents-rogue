@@ -10,10 +10,12 @@ Indeks gabungan (skills + MCP + rules + roles): [`../INDEX.md`](../INDEX.md).
 
 | Skill | Kind | Kegunaan |
 |-------|------|----------|
+| `after-effects` | specialized | Adobe After Effects via MCP. Use when the user needs motion graphics, animation, or rendering automations. |
 | `agentic-flow` | canonical-merge | Canonical multi-agent orchestration: decompose work, dependency graphs, parallel tracks, handoffs, and merge. Absorbs... |
 | `agentic-qe` | canonical-merge | Canonical quality engineering: test strategy, case generation, coverage gates, exploratory checks, and security-tinge... |
 | `ai-coding-assistants` | canonical-merge | Canonical playbook for AI coding assistants and CLI pair-programmers (Claude Code, Kilo, Goose, OpenCode, multi-CLI t... |
 | `algorithmic-art` | specialized | Generative algorithmic art. Use when the project needs this capability or the user / team manifest asks for it. Use f... |
+| `android-studio` | canonical-merge | Android development environment (Kotlin/Java) for mobile applications. Use for specialized Android work. |
 | `api-engineering` | canonical-merge | Expert API design and delivery: resource modeling, versioning, error envelopes, pagination, idempotency, OpenAPI/... |
 | `auth-access-control` | canonical-merge | Expert authentication and authorization: identity lifecycle, session/token, RBAC/ABAC, default-deny boundaries... |
 | `backend-engineering` | canonical-merge | Expert backend application engineering: layered architecture, services, validation, transactions, jobs... |
@@ -44,6 +46,7 @@ Indeks gabungan (skills + MCP + rules + roles): [`../INDEX.md`](../INDEX.md).
 | `import-to-ontology` | specialized | Document to ontology import. Use when the project needs this capability or the user / team manifest asks for it. Use ... |
 | `infra-tools` | canonical-merge | Infrastructure and DevOps tooling (Terraform, K8s, Config Mgmt). Use when the project needs this capability or the us... |
 | `jupyter-notebooks` | specialized | Jupyter notebook execution MCP server. Use when the project needs this capability or the user / team manifest asks fo... |
+| `jira-ops` | canonical-merge | Jira project management via MCP. Use for issues, sprints, boards, and workflow automation. |
 | `jvm` | canonical-merge | JVM languages (Java, Kotlin, Scala). Use when the project needs this capability or the user / team manifest asks for ... |
 | `kicad` | specialized | KiCad PCB design MCP server. Use when the project needs this capability or the user / team manifest asks for it. Use ... |
 | `llm-gateway-routing` | canonical-merge | Canonical LLM gateway/routing/proxy playbook: multi-provider failover, token reduction proxies, and cost wrappers. |
