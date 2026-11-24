@@ -3,9 +3,10 @@ name: auth-access-control
 description: >-
   Expert authentication and authorization engineering: identity lifecycle,
   session/token handling, password/OTP flows, RBAC/ABAC permission models,
+  SSO/MFA, OAuth/OIDC/SAML, privileged access, identity governance,
   default-deny enforcement at every sensitive boundary, and safe audit logging.
-  Use when implementing login/logout, role-permission matrices, policy gates,
-  scoped multi-tenant access, or reviewing authn/authz for APIs and UI routes.
+  Use for IAM strategy, identity lifecycle, access reviews, federation, role
+  matrices, policy gates, scoped multi-tenant access, or authn/authz reviews.
 expertise_level: expert
 ---
 
@@ -18,6 +19,7 @@ expertise_level: expert
 - Login, logout, refresh, reset password, OTP/session
 - Role, permission, policy, matrix akses
 - Scope data per tenant/wilayah/organisasi
+- SSO, MFA, OAuth 2.0, OIDC, SAML federation, identity governance, or PAM
 - Review endpoint/UI yang harus default deny
 
 ## When not to use
@@ -30,10 +32,14 @@ expertise_level: expert
 1. **Threat boundary** — Identifikasi aksi sensitif; default **deny**.
 2. **Authn** — Kredensial aman (hash, TTL session/token, rotate/revoke).
 3. **Authz** — Cek permission per aksi + scope data; jangan percaya “hidden UI”.
-4. **Matrix** — Sumber kebenaran permission tersentral; hindari hardcode tersebar.
-5. **Transport** — HTTPS; cookie flags / bearer hygiene sesuai stack; CSRF bila cookie session.
-6. **Audit** — Log event keamanan tanpa menumpuk PII/secret.
-7. **Verify** — Uji 401/403, escalation negatif, scope leak; libatkan Security pada trigger rule.
+4. **Lifecycle** — Provision, change, deprovision, credential recovery, access reviews, and privileged access have owners and audit evidence.
+5. **Federation** — Validate issuer, audience, redirect URIs, signature/key rotation, MFA, and session boundaries for the selected protocol.
+6. **Matrix** — Sumber kebenaran permission tersentral; hindari hardcode tersebar.
+7. **Transport** — HTTPS; cookie flags / bearer hygiene sesuai stack; CSRF bila cookie session.
+8. **Audit** — Log event keamanan tanpa menumpuk PII/secret.
+9. **Verify** — Uji 401/403, escalation negatif, scope leak; libatkan Security pada trigger rule.
+
+For continuous identity-centric access across users, devices, and resources, coordinate with `zero-trust`.
 
 Detail: `reference.md`.
 

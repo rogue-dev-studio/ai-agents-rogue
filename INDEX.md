@@ -15,10 +15,12 @@ Author: [Rogue Development](https://github.com/rogue-dev-studio)
 | `ai-coding-assistants` | canonical-merge | Canonical playbook for AI coding assistants and CLI pair-programmers (Claude Code, Kilo, Goose, OpenCode, multi-CLI t... |
 | `algorithmic-art` | specialized | Generative algorithmic art. Use when the project needs this capability or the user / team manifest asks for it. Use f... |
 | `api-engineering` | canonical-merge | Expert API design and delivery: resource modeling, versioning, error envelopes, pagination, idempotency, OpenAPI/... |
-| `auth-access-control` | canonical-merge | Expert authentication and authorization: identity lifecycle, session/token, RBAC/ABAC, default-deny boundaries... |
+| `appsec` | house | Application security and secure SDLC: authorized SAST/CodeQL, OWASP/ASVS mapping, risk-based review, and remediation verification. |
+| `auth-access-control` | canonical-merge | Authentication, authorization, identity lifecycle, SSO/MFA, OAuth/OIDC/SAML, RBAC/ABAC, default-deny boundaries. |
 | `backend-engineering` | canonical-merge | Expert backend application engineering: layered architecture, services, validation, transactions, jobs... |
 | `blender` | specialized | Blender 3D via BlenderMCP (addon + blender-mcp). Use when the user needs modeling, materials, scene ops, or rendering... |
 | `browser-automation` | canonical-merge | Canonical browser automation and web UI verification: Playwright, agent browser CLIs, and CDP-based tooling in one pl... |
+| `web-data-acquisition` | house | Authorized web research, URL mapping, bounded crawling, structured extraction, and crawler design; stop at access restrictions. |
 | `canvas-design` | specialized | Design system framework. Use when the project needs this capability or the user / team manifest asks for it. Use for ... |
 | `clarity` | canonical-merge | Canonical spec and requirements skill: 5-phase clarity workflow plus Spec-Kit / markdown-agent spec patterns. Use for... |
 | `clipper-ops` | specialized | Creator-approved video clipper/repurposing: consent, highlights, Shorts/Reels cuts, attribution, publish handoff... |
@@ -54,6 +56,7 @@ Author: [Rogue Development](https://github.com/rogue-dev-studio)
 | `nodejs-devtools` | canonical-merge | TypeScript, ESLint, Prettier. Use when the project needs this capability or the user / team manifest asks for it. Use... |
 | `office-document-tools` | canonical-merge | Canonical office/document generation and transformation: Word, PDF, PowerPoint, Excel, and LaTeX. |
 | `observability-engineering` | canonical-merge | Expert application observability: structured logging, correlation IDs, health checks, metrics/SLIs, safe diagnostics... |
+| `obs-studio` | specialized | Local OBS Studio scenes, sources, audio, recording, and streaming via authenticated obs-websocket, with approval gates for production actions. |
 | `ontology-enrich` | specialized | AI-powered ontology enrichment. Use when the project needs this capability or the user / team manifest asks for it. U... |
 | `openclaw` | canonical-merge | OpenClaw - Multi-channel AI gateway for messaging platforms with browser Control UI. Use when the project needs this ... |
 | `pbr-rendering` | specialized | PBR material generation MCP server (GPU required). Use when the project needs this capability or the user / team mani... |
@@ -64,6 +67,22 @@ Author: [Rogue Development](https://github.com/rogue-dev-studio)
 | `pytorch-ml` | specialized | PyTorch deep learning framework. Use when the project needs this capability or the user / team manifest asks for it. ... |
 | `qgis` | specialized | QGIS GIS operations MCP server. Use when the project needs this capability or the user / team manifest asks for it. U... |
 | `remote-desktop-access` | canonical-merge | Canonical remote desktop / GUI access playbook: Guacamole, XFCE/xRDP, and VNC for environments that need a graphical ... |
+| `reverse-engineer-anything` | specialized | Authorized reverse engineering of native, managed, Electron/JavaScript, packaged, firmware, and browser targets using REA, with evidence tied to runtime or binary artifacts. |
+| `reverse-skill` | specialized | Cybersecurity skills router for authorized reverse engineering, mobile/binaries (.NET, JavaScript, IDA/radare2), malware analysis, and penetration testing; 45 specialist modules. |
+| `remotion-best-practices` | specialized | Router across the official Remotion skill suite; use when the specific Remotion workflow is unclear. |
+| `remotion-captions` | specialized | Transcribe, import, display, and animate captions in Remotion compositions. |
+| `remotion-create` | specialized | Scaffold a Remotion project or create a composition with video-first layout guidance. |
+| `remotion-docs` | specialized | Search current Remotion documentation and fetch API or package references as Markdown. |
+| `remotion-elements` | specialized | Find, register, install, adapt, and preview reusable Remotion Elements from trusted libraries. |
+| `remotion-interactivity` | specialized | Structure Remotion markup so layers, timing, props, and styles remain editable in Studio. |
+| `remotion-license` | specialized | Look up current Remotion license terms, FAQs, pricing, and purchase information. |
+| `remotion-maps` | specialized | Build static or animated geographic scenes with Mapbox, MapLibre, MapTiler, GeoJSON, or CesiumJS. |
+| `remotion-markup` | specialized | Apply Remotion React markup, animation, layout, typography, media, audio, timing, and effects practices. |
+| `remotion-multimedia` | specialized | Handle browser-based audio and video metadata with Mediabunny. |
+| `remotion-render` | specialized | Render Remotion videos or stills and export editable OpenTimelineIO timelines. |
+| `remotion-saas` | specialized | Design Remotion-powered apps, embedded players, render services, and product integrations. |
+| `remotion-studio` | specialized | Launch and verify Remotion Studio for interactive video preview. |
+| `remotion-upgrade` | specialized | Upgrade Remotion, related packages, Mediabunny dependencies, and installed Remotion skills. |
 | `research-and-local-llm` | canonical-merge | Canonical research and local/remote LLM usage: Ollama, DeepSeek/Perplexity style research MCPs, web/youtube summary, ... |
 | `ruby` | canonical-merge | Ruby development environment. Use when the project needs this capability or the user / team manifest asks for it. Use... |
 | `rust` | canonical-merge | Rust development environment. Use when the project needs this capability or the user / team manifest asks for it. Use... |
@@ -79,6 +98,26 @@ Author: [Rogue Development](https://github.com/rogue-dev-studio)
 | `wardley-maps` | specialized | Strategic mapping visualization. Use when the project needs this capability or the user / team manifest asks for it. ... |
 | `workspace-hygiene` | specialized | Organize personal folders by file type or face clusters; opt-in only when user asks to tidy/organize a folder... |
 | `youtube-publishing` | specialized | Manual YouTube upload via local OAuth API + MCP; explicit confirm gate — never auto-upload... |
+| `svg-vector-designer` | specialized | Structural SVG creation, vector animation, raster-to-vector conversion, design system icon kits, SVGO-style cleanup, and data visualization diagrams. |
+| `youtube-content-specialist` | specialized | YouTube strategy, scriptwriting (hook analysis), thumbnail conception, SEO optimization, metadata, EDL/dead-air detection, chapters, retention analytics, viral analysis, content planning, comment management, and channel audits. |
+
+Cybersecurity house skills:
+
+| Skill | Coverage |
+|-------|----------|
+| `appsec` | Secure SDLC, authorized SAST/CodeQL, OWASP/ASVS, security champions, agentic-AI security. |
+| `cloud-security` | AWS/Azure/GCP posture, IAM, encryption, network controls, and hardening. |
+| `compliance-security` | SOC 2, ISO 27001, HIPAA, PCI DSS, control mapping, and audit evidence; no certification claims. |
+| `incident-response` | Authorized preparation, triage, evidence, approved containment, recovery, and review. |
+| `privacy-engineering` | Privacy by design, data minimization, consent/purpose, retention, and anonymization risk. |
+| `security-awareness` | Role-based learning paths plus approved, privacy-preserving awareness programs and measurement. |
+| `security-operations` | Defensive SOC/SIEM, alert triage, detection engineering, offline YARA authoring. |
+| `smart-contract-security` | Defensive smart-contract review and authorized validation. |
+| `threat-modeling` | STRIDE and PASTA threat analysis, ranked mitigations, and verification. |
+| `vulnerability-management` | CVE intake, risk prioritization, patching, remediation SLAs, verification. |
+| `zero-trust` | Identity-centric, least-privilege Zero Trust architecture and roadmaps. |
+
+Third-party skill payloads and security runtime dependencies were not imported. Detailed triggers and procedures are in [`skills/CATALOG.md`](./skills/CATALOG.md) and [`skills/ALIASES.md`](./skills/ALIASES.md).
 
 Alias / nama lama: [`skills/ALIASES.md`](./skills/ALIASES.md).
 
@@ -101,6 +140,7 @@ Runtime hybrid: fragment Rogue + engine `npx`/`uvx`/URL remote. Lihat [`mcp/READ
 | `playwright` | `browser-automation` | Browser E2E / automation via @playwright/mcp |
 | `pal` | `mcp-integrations` | Provider Abstraction Layer (multi-LLM tools via uvx) |
 | `youtube` | `youtube-publishing` | Proxy MCP ke YouTube OAuth API lokal (Node; upload gated) |
+| `obs-studio` | `obs-studio` | OBS Studio lokal melalui obs-websocket; baca status/audio, kelola scene/audio, kontrol streaming/rekaman memakai confirm gate |
 
 ### Partial (docs only)
 
@@ -114,6 +154,12 @@ Runtime hybrid: fragment Rogue + engine `npx`/`uvx`/URL remote. Lihat [`mcp/READ
 | `qgis` | `qgis` | QGIS desktop + optional MCP |
 | `pbr-rendering` | `pbr-rendering` | Material/PBR via Blender MCP (butuh GPU) |
 | `mcp-builder` | `skill-authoring` | Scaffold paket MCP baru dari mcp/_template |
+| `remotion` | `remotion-*` | Remotion CLI/Studio dan browser workflow; docs only, tanpa MCP generik |
+| `reverse-engineering` | `reverse-engineer-anything`, `reverse-skill` | Integrasi tool reverse spesifik target; docs only, tanpa MCP generik |
+| `security-tooling` | `appsec`, `cloud-security`, `security-operations`, `vulnerability-management` | Docs-only guidance; no generic scanner, cloud auditor, SIEM, or pentest MCP runtime |
+| `web-data-acquisition` | `web-data-acquisition`, `browser-automation` | Docs-only guidance; no scraper server, actor runtime, provider credentials, proxy service, or anti-bot bypass |
+| `svg-vector-designer` | `svg-vector-designer` | Docs-only guidance; no vector editor runtime implied |
+| `youtube-content-specialist` | `youtube-publishing` | Docs-only guidance; upload gate via `youtube-publishing` MCP/local API with explicit confirm |
 
 ## Rules
 
@@ -126,7 +172,14 @@ Runtime hybrid: fragment Rogue + engine `npx`/`uvx`/URL remote. Lihat [`mcp/READ
 | `public-identity` (`rules/public-identity.md`) | Blokir identitas AI/assistant/bot pada metadata publik tanpa memalsukan author human/organisasi. |
 | `database` (`rules/database.md`) | Data layer: migration reversible, integrity, index, security. |
 | `global` (`rules/global.md`) | Work modes + larangan umum; docs → `project/{id}/docs/`; generate → `project/{id}/artifacts/{kategori}/` |
+| `media-production` (`rules/media-production.md`) | Batas Remotion/OBS, hak media, dan persetujuan untuk publish/record/stream. |
+| `reverse-engineering` (`rules/reverse-engineering.md`) | Scope berizin, analisis sampel aman, dan evidence-backed reporting. |
 | `security` (`rules/security.md`) | Auth, secret, PII; tim boleh menambah skill lokal, bukan mengabaikan rule ini. |
+| `security-testing` (`rules/security-testing.md`) | Security tests wajib scoped, berizin, minim dampak, dan evidence-backed; melarang pengujian target publik tanpa izin dan teknik destruktif. |
+| `privacy` (`rules/privacy.md`) | Data minimization, purpose, retention, access, and safe handling of personal data. |
+| `web-data-acquisition` (`rules/web-data-acquisition.md`) | Source scope, policy-aware collection, bounded request rates, provenance, privacy, and mandatory stop conditions. |
+| `svg-vector-designer` (`skills/svg-vector-designer/SKILL.md`) | Structural SVG design, icon systems, animation, raster-to-vector tracing, SVGO cleanup, and data visualization diagrams; follows project theme gate. |
+| `youtube-content-specialist` (`skills/youtube-content-specialist/SKILL.md`) | YouTube strategy, scripting, SEO, packaging, transcript processing, analytics, and content planning. |
 | `ui` (`rules/ui.md`) | UI/UX + theme/brand alignment terhadap project aktif. |
 
 ## Roles
@@ -143,7 +196,14 @@ Runtime hybrid: fragment Rogue + engine `npx`/`uvx`/URL remote. Lihat [`mcp/READ
 | Database Engineer | `roles/engineering/database.md` | Merancang dan mengimplementasikan struktur database yang konsisten, efisien, scalable, dan sesuai dengan Sy... |
 | DevOps Engineer | `roles/engineering/devops.md` | Menyediakan dan memelihara infrastruktur development lokal (Phase 1) agar backend, frontend, dan database d... |
 | Frontend Developer | `roles/engineering/frontend.md` | Mengimplementasikan seluruh antarmuka pengguna berdasarkan design system, API contract, dan technical speci... |
+| OBS Studio Engineer | `roles/engineering/obs-studio-engineer.md` | Mengelola OBS lokal melalui obs-websocket dengan kontrol produksi yang memerlukan persetujuan eksplisit. |
+| Remotion Engineer | `roles/engineering/remotion-engineer.md` | Membuat, preview, dan render komposisi Remotion yang editable serta mematuhi lisensi media. |
+| Reverse Engineer | `roles/engineering/reverse-engineer.md` | Menganalisis artefak atau runtime berizin dengan temuan yang ditautkan pada evidence. |
 | Security Engineer | `roles/engineering/security.md` | Memastikan aplikasi aman dari risiko keamanan umum dengan menerapkan standar authentication, authorization,... |
+| Cloud Security Engineer | `roles/engineering/cloud-security.md` | Hardening cloud yang diotorisasi dengan review read-only-first, least privilege, dan perubahan terverifikasi. |
+| Security Operations Engineer | `roles/engineering/security-operations.md` | Operasi pertahanan, deteksi, dan incident response yang menjaga scope dan bukti. |
+| Privacy & Compliance Engineer | `roles/engineering/privacy-compliance.md` | Mengubah kebutuhan privasi/kepatuhan menjadi kontrol dan bukti yang dimiliki tanpa klaim legal/sertifikasi. |
+| Web Data Acquisition Engineer | `roles/engineering/web-data-acquisition.md` | Merancang pengumpulan data web yang terotorisasi, terbatas, minim data, dan dapat ditelusuri. |
 | Tech Lead | `roles/engineering/tech-lead.md` | Menerjemahkan Solution Architecture menjadi standar teknis implementasi yang jelas, konsisten, dan dapat di... |
 | AI Orchestrator | `roles/management/ai-orchestrator.md` | Mengelola seluruh siklus pengembangan aplikasi dengan mengoordinasikan semua agent sesuai workflow. |
 | Delivery Manager | `roles/management/delivery-manager.md` | Memastikan seluruh hasil pengembangan (engineering, QA, review, dan dokumentasi) siap untuk dirilis sebagai... |
@@ -158,6 +218,14 @@ Runtime hybrid: fragment Rogue + engine `npx`/`uvx`/URL remote. Lihat [`mcp/READ
 | Agent | Path | Kegunaan |
 |-------|------|----------|
 | Public Metadata Reviewer | `agents/public-metadata-reviewer.agent.md` | Gate khusus sebelum commit, push, PR, release, atau publikasi changelog. |
+| OBS Studio Engineer | `agents/obs-studio-engineer.agent.md` | Mengoperasikan OBS lokal; stream/record memerlukan persetujuan eksplisit dan confirm gate. |
+| Remotion Engineer | `agents/remotion-engineer.agent.md` | Implementasi, preview, dan render Remotion melalui skill suite terkait. |
+| Reverse Engineer | `agents/reverse-engineer.agent.md` | Analisis reverse berizin dengan scope yang jelas dan laporan berbasis evidence. |
+| AppSec Engineer | `agents/appsec-engineer.agent.md` | Secure SDLC dan review aplikasi dengan batas source/target yang jelas. |
+| Cloud Security Engineer | `agents/cloud-security-engineer.agent.md` | Review read-only-first dan hardening cloud terotorisasi. |
+| Security Operations Engineer | `agents/security-operations-engineer.agent.md` | SOC/detection/incident response defensif dan terotorisasi. |
+| Privacy & Compliance Engineer | `agents/privacy-compliance-engineer.agent.md` | Kontrol privacy/compliance serta bukti audit yang terverifikasi. |
+| Web Data Acquisition Engineer | `agents/web-data-acquisition-engineer.agent.md` | Riset, crawling, dan ekstraksi web berizin dengan batas request dan privasi. |
 
 Workflow & organisasi: [`AGENTS.md`](./AGENTS.md). Work modes: [`WORKMODES.md`](./WORKMODES.md). Language modes: [`LANGMODES.md`](./LANGMODES.md).
 

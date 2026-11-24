@@ -10,7 +10,7 @@ Katalog Rogue **berdiri sendiri** di lapisan skill + wiring + install. Engine MC
 |-------|--------|----------------|
 | Remote SaaS | `context7`, `atlassian`, `linear` | URL vendor + jaringan / OAuth |
 | Unduh on-demand | `playwright`, `chrome-devtools`, `pal`, `blender-mcp`, `photoshop-mcp-server`, `illustrator-mcp-server` | `npx` / `uvx` (npm / PyPI) |
-| Lokal di katalog | addon Blender + `mcp-server/server.js` | Sudah ada di `mcp/blender/` |
+| Lokal di katalog | addon Blender + `mcp-server/server.js`; OBS stdio + obs-websocket | `mcp/blender/`, `mcp/obs-studio/` |
 | Partial | `comfyui`, `kicad`, … | Docs saja sampai ada fragment + runtime stabil |
 
 Jangan harapkan mode offline penuh sebagai default. Mode vendored/air-gapped hanya jika nanti ditambah secara eksplisit.
@@ -31,6 +31,7 @@ Jangan harapkan mode offline penuh sebagai default. Mode vendored/air-gapped han
 - Paket **remote**: jaringan + OAuth/API key sesuai README paket
 - **blender**: Blender 3+ + addon (`mcp/blender`)
 - **photoshop** / **illustrator**: Adobe desktop app + lisensi valid
+- **obs-studio**: OBS Studio 28+, authenticated obs-websocket on loopback, Node dependencies installed with `npm ci`
 
 ## Install
 
@@ -59,7 +60,11 @@ Tiap folder `mcp/<id>/README.md` berisi prerequisites, setup app/addon, wire, da
 | [`context7`](./context7/README.md) / [`atlassian`](./atlassian/README.md) / [`linear`](./linear/README.md) | Remote + OAuth/API |
 | [`chrome-devtools`](./chrome-devtools/README.md) / [`playwright`](./playwright/README.md) | Node + browser |
 | [`pal`](./pal/README.md) | `uvx` + API keys |
+| [`obs-studio`](./obs-studio/README.md) | OBS 28+ + local password in host environment; recording/streaming calls require explicit confirmation |
+| [`web-data-acquisition`](./web-data-acquisition/README.md) | Docs only; no scraper MCP runtime or provider credentials |
 | Partial (`comfyui`, `kicad`, …) | Docs only — lihat README masing-masing |
+
+Remotion, reverse-engineering, security-tooling, and web-data-acquisition entries are intentionally docs-only; see [`remotion`](./remotion/README.md), [`reverse-engineering`](./reverse-engineering/README.md), [`security-tooling`](./security-tooling/README.md), and [`web-data-acquisition`](./web-data-acquisition/README.md). No generic server is implied.
 
 ## Attribution
 

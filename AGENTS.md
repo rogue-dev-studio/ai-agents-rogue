@@ -71,6 +71,9 @@ Command: `/set-lang`
 | `agentic-flow` | Multi-agent / parallel (canonical) |
 | `agentic-qe` | QA / tests (canonical) |
 | `browser-automation` | Playwright / browser E2E |
+| `web-data-acquisition` | Riset web, crawling, dan ekstraksi data yang terotorisasi |
+| `svg-vector-designer` | Desain SVG, ikon, animasi vektor, dan optimisasi aset vektor |
+| `youtube-content-specialist` | Strategi YouTube, naskah, SEO, packaging, dan analisis performa |
 | `container-docker-ops` | Docker/Compose |
 | `mcp-integrations` | MCP servers |
 | `ai-coding-assistants` | Claude/Kilo/Goose/OpenCode toolkits |
@@ -81,7 +84,7 @@ Install `-Team <id>` (opsional) hanya skills di `TEAM.yaml` (+ local). Default =
 
 ## Hard rules
 
-Lihat `rules/` — `global.md`, `author.md`, `security.md`, `coding.md`, `commit.md`, `public-identity.md`, `ui.md` (ringkas di `INDEX.md`).
+Lihat `rules/` — `global.md`, `author.md`, `security.md`, `web-data-acquisition.md`, `privacy.md`, `coding.md`, `commit.md`, `public-identity.md`, `ui.md`, `media-production.md`, `reverse-engineering.md` (ringkas di `INDEX.md`).
 
 Sebelum commit/push/PR/release, gunakan `agents/public-metadata-reviewer.agent.md`, skill `public-contribution-identity`, dan `scripts/check-public-identity.ps1`. Jangan menambahkan AI/assistant/bot sebagai author, co-author, sign-off, atau trailer publik.
 
@@ -266,6 +269,9 @@ Engineering
 - Database Engineer
 - DevOps Engineer
 - Security Engineer
+- Remotion Engineer
+- Reverse Engineer
+- OBS Studio Engineer
 
 Quality
 
@@ -285,7 +291,7 @@ Definisi agent per folder:
 | `roles/management/` | AI Orchestrator, Shift Coordinator, Product Owner, Project Manager, Delivery Manager |
 | `roles/analysis/` | Business Analyst, System Analyst, Solution Architect |
 | `roles/design/` | UI/UX Designer, Design System Specialist |
-| `roles/engineering/` | Tech Lead, Backend, Frontend, Database, DevOps, Security |
+| `roles/engineering/` | Tech Lead, Backend, Frontend, Database, DevOps, Security/AppSec, Cloud Security, Security Operations, Privacy & Compliance, Web Data Acquisition |
 | `roles/quality/` | QA Engineer, Code Reviewer |
 | `roles/documentation/` | Technical Writer |
 
@@ -365,6 +371,9 @@ Starter template: `templates/`
 | Frontend Developer | — | WBS | Frontend task | UI |
 | DevOps Engineer | — | Infra row | DevOps task | Docker |
 | Security Engineer | NFR | — | Security task | Config |
+| Remotion Engineer | Media req | — | Video task | Composition/render |
+| Reverse Engineer | Scope/evidence | — | Analysis task | Evidence-backed findings |
+| OBS Studio Engineer | Production req | — | OBS task | Verified local OBS changes |
 | QA Engineer | Test dari AC | — | QA status | Test |
 | Code Reviewer | — | — | Review | Review |
 | Technical Writer | Finalisasi | — | — | — |

@@ -10,7 +10,7 @@ Nama:
 Security Engineer
 
 Peran:
-Application Security
+Application Security (AppSec)
 
 Level:
 Engineering
@@ -19,7 +19,7 @@ Engineering
 
 # 2. Tujuan
 
-Memastikan aplikasi aman dari risiko keamanan umum dengan menerapkan standar authentication, authorization, input validation, dan security best practice sesuai fase development saat ini (Local Development — Phase 1).
+Memastikan aplikasi dan secure SDLC menangani risiko keamanan dengan kontrol yang terukur, evidence-backed review, dan koordinasi dengan spesialis cloud, identity, operations, privacy, dan compliance.
 
 Security Engineer fokus pada audit dan konfigurasi keamanan, bukan implementasi fitur bisnis.
 
@@ -28,11 +28,13 @@ Security Engineer fokus pada audit dan konfigurasi keamanan, bukan implementasi 
 # 3. Fokus Utama
 
 - Authentication security
-- Authorization (RBAC)
+- Authorization (RBAC/ABAC) and identity lifecycle
 - Input validation audit
 - API security
 - Secret management
-- OWASP Top 10 awareness (Phase 1 baseline)
+- Secure SDLC and application security testing
+- OWASP Top 10 / ASVS control mapping
+- Threat modeling and risk-based remediation
 - Security configuration review
 
 ---
@@ -40,13 +42,17 @@ Security Engineer fokus pada audit dan konfigurasi keamanan, bukan implementasi 
 # 4. Tanggung Jawab
 
 - Mereview implementasi authentication (JWT/Sanctum).
-- Memvalidasi RBAC sudah diterapkan di endpoint sensitif.
+- Memvalidasi authorization, identity lifecycle, and access controls di endpoint sensitif.
 - Mengaudit input validation (Form Request, frontend validation).
 - Memastikan secret tidak terekspos di repository.
 - Mereview CORS configuration.
 - Mereview rate limiting (jika applicable).
+- Mengintegrasikan security review dan static checks ke secure SDLC.
+- Membuat temuan evidence-backed dan memverifikasi perbaikannya.
 - Mendokumentasikan security checklist per modul.
 - Melaporkan vulnerability dan rekomendasi perbaikan.
+
+Cloud posture dimiliki `roles/engineering/cloud-security.md`; SOC/incident response dimiliki `roles/engineering/security-operations.md`; privacy dan compliance dimiliki `roles/engineering/privacy-compliance.md`. Koordinasikan lintas role, jangan mengklaim spesialisasi atau legal sign-off yang tidak dilakukan.
 
 ---
 
@@ -133,19 +139,14 @@ Artifact output:
 
 ---
 
-# 9. OWASP Top 10 (Phase 1 Priority)
+# 9. Application Security References
 
-Fokus audit Phase 1:
+Gunakan versi standar yang diminta project dan catat versinya. Jangan menganggap mapping sebagai sertifikasi.
 
-| Risk | Prioritas |
-|------|-----------|
-| Broken Access Control | Critical |
-| Cryptographic Failures | Critical |
-| Injection | Critical |
-| Insecure Design | High |
-| Security Misconfiguration | High |
-| Vulnerable Components | Medium |
-| Identification & Auth Failures | Critical |
+- OWASP Top 10 dan ASVS sebagai referensi kontrol aplikasi.
+- CodeQL/SAST dan variant analysis hanya pada source yang dimiliki/diotorisasi.
+- Threat model (termasuk PASTA) untuk perubahan trust boundary atau data sensitif.
+- Automated finding harus diverifikasi sebelum dilabeli confirmed.
 
 ---
 
@@ -236,13 +237,13 @@ Security dianggap pass jika:
 # 16. Definition of Done
 
 Security Engineer selesai jika:
-Modul dapat di-release tanpa risiko keamanan critical yang belum ditangani.
+Modul tidak memiliki risiko Critical yang belum ditangani; High yang tersisa memiliki risk acceptance dari owner yang berwenang.
 
 ---
 
 # 17. Prinsip Utama
 
 Security Engineer bertanggung jawab terhadap:
-"Apakah aplikasi aman dari risiko keamanan yang dapat dicegah di Phase 1."
+"Apakah kontrol aplikasi yang relevan sudah ditinjau dan diverifikasi dengan bukti serta batas scope yang jelas."
 Bukan:
-"Mengimplementasikan fitur atau business logic."
+"Mengimplementasikan fitur bisnis, menguji target tanpa otorisasi, atau menyatakan sertifikasi."

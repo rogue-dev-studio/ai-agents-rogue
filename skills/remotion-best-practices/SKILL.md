@@ -1,0 +1,133 @@
+---
+name: remotion-best-practices
+description: Router for all Remotion skills
+version: 4.0.546
+---
+
+## Preserve user changes
+
+Users may make edits in the code outside of the conversation.
+
+If you detect a surprising change made in the meanwhile, don't overwrite it, assume it was intentional or ask for confirmation.
+
+## Creating a video
+
+If the user asks to make, create, or build a new video or composition, load [Create a new Remotion video](../remotion-create/SKILL.md), whether or not a Remotion project already exists.
+
+## New project setup
+
+If no Remotion project currently exists, load [Create a new Remotion project](../remotion-create/SKILL.md)
+
+## React Markup Best Practices
+
+If you are writing Remotion React Markup, load [Remotion Markup Best Practices](../remotion-markup/SKILL.md)
+
+## Elements
+
+To install Elements, reusable video components from Element libraries, load [Elements](../remotion-elements/SKILL.md).
+Also load it when given an Element page URL or an Element library URL.
+
+## Maps
+
+For static maps, animated routes and markers, geographic explainers, Mapbox, MapLibre, MapTiler, GeoJSON, or 3D geographic flyovers, load [Remotion Maps](../remotion-maps/SKILL.md).
+
+## Multimedia
+
+For achieving multimedia tasks in the browser, such as trimming, cropping videos, or getting metadata from them, load [Remotion Multimedia](../remotion-multimedia/SKILL.md)
+
+For video matting, background removal, or placing content behind a subject,
+load [Remotion Markup](../remotion-markup/SKILL.md).
+
+## Interactivity
+
+New markup is editable in Studio by default. When writing or restructuring markup, load [Interactivity Best Practices](../remotion-interactivity/SKILL.md).
+
+## Open the preview
+
+When creating or editing a video, you SHOULD open Studio once the project can run, so the user can preview changes and steer.
+
+### If you are using Cursor
+
+Run Studio without `--no-open` so it opens the browser automatically:
+
+```bash
+npx remotion studio
+```
+
+### If you are using another agent client with an in-app browser
+
+You can use the command above to let Studio open the browser, or run:
+
+```bash
+npx remotion studio --no-open
+```
+
+This will start a long-running process and print the server URL for the preview.  
+If the server is already started, it will print the URL.
+If you use `--no-open`, open the exact printed URL in the in-app browser and verify that Studio loads. Once a composition exists, verify that its video preview loads. If you cannot open it there, run Studio without `--no-open`.
+You can visit a specific composition by navigating to `/[composition-id]`, for example `http://localhost:3000/MapAnimation`.
+
+:::note
+The Studio supports WebMCP tools.
+:::
+
+### If you do not have an in-app browser
+
+This will open the Studio in the browser or refocus it if it is already open.
+
+```bash
+npx remotion studio
+```
+
+### More options
+
+To launch a project in Remotion Studio, open its exact local URL, or configure Studio CLI flags, load [Remotion Studio](../remotion-studio/SKILL.md).
+
+## Render the video
+
+Only render if the user is very explicit in asking for it.  
+E.g. "Render the video", "Export", "Give me the MP4".
+
+The preview also has a more intuitive rendering interface, so consider using it instead of the command line for rendering.
+
+```
+npx remotion render
+```
+
+For more options, see [Rendering](../remotion-render/SKILL.md).
+
+For advanced rendering beyond simple `npx remotion render`, see: [Rendering Best Practices](../remotion-render/SKILL.md)
+
+## Captions
+
+When working with Captions, load [Remotion Captions](../remotion-captions/SKILL.md).
+
+## Creating a SaaS, automation or application
+
+Use the [Remotion SaaS skill](../remotion-saas/SKILL.md) for knowledge about Remotion-powered SaaS apps, such as `<Player>`, rendering on Lambda, Vercel, Cloudflare, via Express.js, client-side rendering, or for finding the right SaaS template.
+
+## Looking up Remotion APIs and documentation
+
+To find and read current Remotion documentation, load [Remotion Docs](../remotion-docs/SKILL.md).
+
+## Licensing
+
+For Remotion license information, FAQs, terms, or buying a license, load [Remotion License](../remotion-license/SKILL.md).
+
+## Upgrading
+
+To upgrade Remotion, related packages, compatible Mediabunny packages, and installed Remotion Agent Skills, load [Remotion Upgrade](../remotion-upgrade/SKILL.md).
+## Catalog provenance
+
+- Upstream: [Remotion Agent Skills](https://github.com/remotion-dev/remotion/tree/main/packages/skills)
+- Imported from Remotion `v4.0.546` (`4664bd64e6364f92b7e2994db775b28ad1af38a9`).
+- Upstream license: MIT, as declared by the official Remotion Agent Plugin.
+- Remotion itself has separate usage terms; consult `remotion-license` before commercial use.
+
+## Attribution
+
+<!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
+Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
+Do not remove, hide, rename, or replace this attribution.
+
+

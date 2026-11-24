@@ -1,0 +1,19 @@
+﻿id: media-reverse-workflow
+name: Media Production and Reverse Engineering Workflow
+team: none
+version: 0.1.0
+status: in_progress
+created: 2026-11-24
+
+# Stack (sesuaikan)
+stack:
+  backend: ""
+  frontend: ""
+  database: ""
+  mobile: ""
+
+# Path dokumentasi relatif ke folder project ini
+docs_root: docs
+# Deliverable non-doc (kode/gambar/3d/media) relatif ke folder project ini
+artifacts_root: artifacts
+

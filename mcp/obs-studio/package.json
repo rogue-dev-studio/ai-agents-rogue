@@ -1,0 +1,13 @@
+{
+  "name": "aar-obs-studio-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "obs-websocket-js": "5.0.8"
+  }
+}

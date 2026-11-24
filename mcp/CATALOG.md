@@ -21,6 +21,7 @@ Indeks kegunaan: [`../INDEX.md`](../INDEX.md#mcp-packages).
 | `playwright` | `browser-automation` | `npx @playwright/mcp` |
 | `pal` | `mcp-integrations` | `uvx pal-mcp-server` + API keys |
 | `youtube` | `youtube-publishing` | Node MCP proxy → local YouTube OAuth API |
+| `obs-studio` | `obs-studio` | First-party Node stdio MCP → authenticated loopback obs-websocket |
 
 ## Partial (docs only — no fragment yet)
 
@@ -34,6 +35,12 @@ Indeks kegunaan: [`../INDEX.md`](../INDEX.md#mcp-packages).
 | `qgis` | `qgis` | QGIS desktop + MCP |
 | `pbr-rendering` | `pbr-rendering` | GPU + Blender MCP |
 | `mcp-builder` | `skill-authoring` | Scaffold MCP (`mcp/_template`) |
+| `remotion` | `remotion-*` | Remotion CLI/Studio and browser workflow; no generic first-party MCP |
+| `reverse-engineering` | `reverse-engineer-anything`, `reverse-skill` | Tool-specific integrations only; no generic first-party MCP |
+| `security-tooling` | `appsec`, `cloud-security`, `security-operations`, `vulnerability-management` | Documentation and routing only; no first-party scanner, cloud auditor, SIEM, or pentest MCP runtime |
+| `web-data-acquisition` | `web-data-acquisition`, `browser-automation` | Documentation only; no scraper server, actor runtime, provider credentials, proxy service, or anti-bot bypass |
+| `svg-vector-designer` | `svg-vector-designer` | Documentation only; no vector editor runtime implied |
+| `youtube-content-specialist` | `youtube-publishing` | Documentation only; upload gate via `youtube-publishing` MCP/local API with explicit confirm |
 
 Contoh:
 

@@ -94,13 +94,13 @@ copy_skills() {
   local name
   for name in "${SKILLS[@]}"; do
     ensure_dir "$dest/$name"
-    cp "$CATALOG_ROOT/skills/$name/SKILL.md" "$dest/$name/SKILL.md"
+    cp -R "$CATALOG_ROOT/skills/$name/." "$dest/$name/"
   done
   if [[ -n "$TEAM_DIR" ]]; then
     for name in "${LOCAL_SKILLS[@]+"${LOCAL_SKILLS[@]}"}"; do
       [[ -z "${name:-}" ]] && continue
       ensure_dir "$dest/$name"
-      cp "$TEAM_DIR/skills/$name/SKILL.md" "$dest/$name/SKILL.md"
+      cp -R "$TEAM_DIR/skills/$name/." "$dest/$name/"
     done
   fi
 }
