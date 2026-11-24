@@ -144,22 +144,20 @@ function Copy-Skills([string]$DestSkillsRoot) {
   $names = $script:SkillNames
   if ($names.Count -eq 0) { $names = @(Get-AllCatalogSkills) }
   foreach ($name in $names) {
-    $src = Join-Path $CatalogRoot "skills\$name\SKILL.md"
-    if (-not (Test-Path $src)) {
+    $src = Join-Path $CatalogRoot "skills\$name"
+    if (-not (Test-Path (Join-Path $src "SKILL.md"))) {
       Write-Warning "Skill missing in catalog: $name"
       continue
     }
     $dst = Join-Path $DestSkillsRoot $name
-    Ensure-Dir $dst
-    Copy-Item $src (Join-Path $dst "SKILL.md") -Force
+    Copy-Tree $src $dst
   }
   if ($script:TeamDir) {
     foreach ($name in $script:LocalSkillNames) {
-      $src = Join-Path $script:TeamDir "skills\$name\SKILL.md"
-      if (-not (Test-Path $src)) { Write-Warning "Local team skill missing: $name"; continue }
+      $src = Join-Path $script:TeamDir "skills\$name"
+      if (-not (Test-Path (Join-Path $src "SKILL.md"))) { Write-Warning "Local team skill missing: $name"; continue }
       $dst = Join-Path $DestSkillsRoot $name
-      Ensure-Dir $dst
-      Copy-Item $src (Join-Path $dst "SKILL.md") -Force
+      Copy-Tree $src $dst
     }
   }
 }

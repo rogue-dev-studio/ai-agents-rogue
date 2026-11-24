@@ -22,3 +22,32 @@ Selected MCP packages under mcp/ wire public upstream runtimes, including:
   pal-mcp-server (BeehiveInnovations)
 
 Retain upstream notices where present in those packages.
+
+Third-party (REA)
+-----------------
+The skill skills/reverse-engineer-anything includes material from morluto/rea:
+  Copyright (c) 2026 morluto
+  https://github.com/morluto/rea
+
+This material is distributed under the MIT License. The complete upstream
+notice is retained in skills/REA-THIRD-PARTY-LICENSE.
+
+Third-party (reverse-skill)
+---------------------------
+The skill skills/reverse-skill includes material from zhaoxuya520/reverse-skill:
+  Copyright (c) 2026 zhaoxuya520
+  https://github.com/zhaoxuya520/reverse-skill
+
+This material is distributed under the MIT License. The complete upstream
+notice is retained in skills/REVERSE-SKILL-THIRD-PARTY-LICENSE.
+
+Third-party (Remotion Agent Skills)
+-----------------------------------
+The skills under skills/remotion-* include material from the official Remotion
+Agent Skills project:
+  Copyright (c) 2026 Remotion
+  https://github.com/remotion-dev/remotion/tree/main/packages/skills
+
+This material is distributed under the MIT License. The complete upstream
+notice is retained in skills/REMOTION-THIRD-PARTY-LICENSE. Remotion software
+itself may be subject to separate usage terms; see the remotion-license skill.

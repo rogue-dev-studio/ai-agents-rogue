@@ -176,8 +176,31 @@ Technical Writer
 ↓
 
 User
-
 ---
+
+## 8.1 Routing Spesialis
+
+| Permintaan | Role/agent | Skill dan rule |
+|------------|------------|----------------|
+| Web research, URL discovery/map, permitted crawling, structured extraction, or crawler design | Web Data Acquisition Engineer | `web-data-acquisition`; `web-data-acquisition` + `privacy` rules; use `browser-automation` only for approved rendered-page interaction |
+| Browser UI testing or an authorized user journey | Frontend Developer / QA Engineer | `browser-automation`; `web-data-acquisition` rule applies if page data is collected |
+| Video Remotion: komposisi, markup, preview, render, caption, atau maps | Remotion Engineer | `remotion-best-practices` → skill Remotion spesifik; `rules/media-production.md` |
+| OBS Studio: scene, source, audio, rekaman, streaming | OBS Studio Engineer | `obs-studio`; `rules/media-production.md`; MCP lokal hanya melalui loopback |
+| Reverse engineering/security analysis | Reverse Engineer | Pilih `reverse-engineer-anything` atau `reverse-skill`; `rules/reverse-engineering.md` + `rules/security.md` |
+| Secure SDLC, application review, SAST/CodeQL, OWASP/ASVS | AppSec Engineer + Security Engineer | `appsec`, `auth-access-control`, `vulnerability-management`; `security` + `security-testing` rules |
+| Cloud posture, cloud IAM, encryption, or Zero Trust | Cloud Security Engineer | `cloud-security`, `zero-trust`, `auth-access-control`; `security` + `security-testing` rules |
+| SOC/SIEM, alert triage, YARA detection, or security awareness | Security Operations Engineer | `security-operations`, `incident-response`, `security-awareness`; `security` + `security-testing` + `privacy` rules |
+| Security incident, breach, containment, or recovery | Security Operations Engineer / incident commander | `incident-response`, `security-operations`; `security` + `privacy`; explicit authority for disruptive actions |
+| Privacy-by-design, data minimization, or compliance evidence | Privacy & Compliance Engineer | `privacy-engineering`, `compliance-security`; `privacy` + `security` rules |
+| IAM strategy, SSO/MFA, OAuth/OIDC/SAML, or access governance | Security Engineer / Cloud Security Engineer | `auth-access-control`, plus `zero-trust` for continuous identity-centric access |
+| SVG/vector design, icon systems, animation, tracing, optimization, or data visualization | SVG Vector Designer | `svg-vector-designer`; `ui` + `media-production` rules |
+| YouTube content strategy, scriptwriting, SEO, packaging, analytics, or planning | YouTube Content Specialist | `youtube-content-specialist`; `youtube-publishing` (for uploads); `media-production` rule |
+
+Untuk reverse engineering, validasi target, otorisasi, dan aksi yang diizinkan sebelum menyentuh target live. Untuk OBS, jangan menganggap permintaan render sebagai izin record/stream; operasi tersebut memerlukan persetujuan eksplisit dan `confirm: true`. Remotion, reverse engineering, dan OBS MCP maturity/status dijelaskan di `mcp/CATALOG.md`; jangan mengklaim MCP generik tersedia untuk integrasi docs-only.
+
+Untuk pengumpulan data web, pastikan tujuan, domain/path, field, volume, tujuan penyimpanan, dan retensi jelas; utamakan API resmi atau ekspor yang diizinkan. Berhenti pada CAPTCHA, paywall, autentikasi, penolakan, robots disallow, atau rate limit; jangan memakai rotasi proxy, stealth, atau teknik pengelakan. Web-data MCP berstatus docs-only sampai runtime spesifik ditinjau dan disetujui.
+
+Semua pekerjaan cybersecurity harus membatasi scope ke aset yang dimiliki/diotorisasi, memakai pemeriksaan lokal/read-only bila cukup, dan mengikuti `rules/security-testing.md`. Jangan melakukan eksploitasi, credential collection, persistence, evasion, atau tindakan destruktif.
 
 # 9. Aturan Routing
 

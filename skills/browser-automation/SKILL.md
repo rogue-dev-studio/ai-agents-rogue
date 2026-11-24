@@ -1,19 +1,23 @@
 ---
 name: browser-automation
 description: >-
-  Canonical browser automation and web UI verification: Playwright, agent
-  browser CLIs, and CDP-based tooling in one playbook.
+  Canonical browser automation and web UI verification: deterministic
+  accessibility-based interaction, Playwright, browser agents, screenshots,
+  and CDP-based tooling in one playbook.
 ---
 
 # Browser Automation (Canonical)
 
-**Level: max.** Aliases: `playwright`, `agent-browser`.
+**Level: max.** Aliases: `playwright`, `agent-browser`, `browser-use`, `playwright-skill`.
 
 ## When to use
 
 - E2E / smoke UI, regresi alur kritis
 - Agent perlu klik/isi form / snapshot halaman
 - Debug front-end di browser nyata
+- Mengambil halaman yang diizinkan dan membutuhkan JavaScript rendering atau screenshot
+
+For bulk collection, URL discovery, or structured extraction across many pages, use `web-data-acquisition` instead.
 
 ## Tool map
 
@@ -37,6 +41,9 @@ Wire MCP:
 - Daftar user journey P0 (max 5 dulu)
 - Data uji fiktif (jangan PII nyata)
 - Environment: local/staging URL dari project
+- For page collection, record permitted domains, purpose, fields, request limits, and output destination; follow `rules/web-data-acquisition.md`.
+- Use only public/authorized pages or an explicitly approved user-owned session.
+- Stop at CAPTCHA, authentication barriers, paywalls, rate limits, or anti-bot denials; do not evade them.
 
 ### 2. Stabilize selectors
 

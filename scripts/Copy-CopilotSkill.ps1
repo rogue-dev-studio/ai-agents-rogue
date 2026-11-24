@@ -24,14 +24,14 @@ function Ensure-Dir([string]$Path) {
 }
 
 # Copy skill to Copilot
-$src = Join-Path $CatalogRoot "skills\$SkillName\SKILL.md"
-if (-not (Test-Path $src)) {
+$src = Join-Path $CatalogRoot "skills\$SkillName"
+if (-not (Test-Path (Join-Path $src "SKILL.md"))) {
     Write-Error "Skill not found: $SkillName"
     exit 1
 }
 
 $dst = Join-Path $TargetRoot ".github\skills\$SkillName"
 Ensure-Dir $dst
-Copy-Item $src (Join-Path $dst "SKILL.md") -Force
+Copy-Item -Path (Join-Path $src "*") -Destination $dst -Recurse -Force
 
 Write-Host "Copied skill '$SkillName' to Copilot"
