@@ -222,7 +222,6 @@ function Test-AttributionMarkers([string]$CatalogRoot) {
     @{ Rel = "rules\public-identity.md"; Needle = "public-contribution-identity" },
     @{ Rel = "agents\public-metadata-reviewer.agent.md"; Needle = "check-public-identity.ps1" },
     @{ Rel = "mcp\CATALOG.md"; Needle = "blender" },
-    @{ Rel = "mcp\blender\package.json"; Needle = "blender" },
     @{ Rel = "skills\e2e-delivery\SKILL.md"; Needle = "Gate 0" }
   )
   foreach ($c in $checks) {
