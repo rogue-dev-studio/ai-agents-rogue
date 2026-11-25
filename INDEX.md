@@ -16,8 +16,10 @@ Author: [Rogue Development](https://github.com/rogue-dev-studio)
 | `algorithmic-art` | specialized | Generative algorithmic art. Use when the project needs this capability or the user / team manifest asks for it. Use f... |
 | `api-engineering` | canonical-merge | Expert API design and delivery: resource modeling, versioning, error envelopes, pagination, idempotency, OpenAPI/... |
 | `appsec` | house | Application security and secure SDLC: authorized SAST/CodeQL, OWASP/ASVS mapping, risk-based review, and remediation verification. |
+| `asset-analysis` | specialized | Analisis mendalam aset yang dihasilkan AI: struktur, metadata, provenance, dan komposisi. Hasilkan laporan terstruktur untuk review dan arsip. |
 | `auth-access-control` | canonical-merge | Authentication, authorization, identity lifecycle, SSO/MFA, OAuth/OIDC/SAML, RBAC/ABAC, default-deny boundaries. |
-| `backend-engineering` | canonical-merge | Expert backend application engineering: layered architecture, services, validation, transactions, jobs... |
+| `backend-engineering` | canonical-merge | Expert backend application engineering: layered architecture, services, validation, transactions, jobs...
+| `brand-kit` | specialized | Bangun dan kelola sistem identitas visual: logo SVG, wordmark, palet warna, tipografi, varian brand, dan guidelines untuk aset produksi. |
 | `blender` | specialized | Blender 3D via BlenderMCP (addon + blender-mcp). Use when the user needs modeling, materials, scene ops, or rendering... |
 | `browser-automation` | canonical-merge | Canonical browser automation and web UI verification: Playwright, agent browser CLIs, and CDP-based tooling in one pl... |
 | `web-data-acquisition` | house | Authorized web research, URL mapping, bounded crawling, structured extraction, and crawler design; stop at access restrictions. |
@@ -29,6 +31,8 @@ Author: [Rogue Development](https://github.com/rogue-dev-studio)
 | `comfyui` | specialized | ComfyUI image generation MCP server (GPU required). Use when the project needs this capability or the user / team man... |
 | `compahook` | canonical-merge | Persistent memory layer for Claude Code's /compact command. Use when the project needs this capability or the user / ... |
 | `container-docker-ops` | canonical-merge | Canonical container workflows: Docker/Compose development plus MCP-style container management patterns. |
+| `consistency-gate` | specialized | Terapkan konsistensi karakter dan brand di seluruh aset yang dihasilkan AI. Kunci palet, gaya, dan elemen visual agar output koheren antar run. |
+| `content-moderation` | specialized | Moderasi konten yang dihasilkan AI sebelum diterbitkan. Tandai atau blokir materi yang melanggar kebijakan konten project. |
 | `continuous-dev-shift` | house | Autonomous timed dev shift: auto-pick backlog, maintenance, impact, QA, review loop until duration ends. **Panduan:** `docs/dev-shift-guide.md` · Prompt or `/dev-shift`. |
 | `database-engineering` | canonical-merge | Expert database engineering: schema/ERD, relations, indexing, performance gates, views/triggers/functions, mapping... |
 | `dotnet` | canonical-merge | .NET development environment. Use when the project needs this capability or the user / team manifest asks for it. Use... |
@@ -66,6 +70,7 @@ Author: [Rogue Development](https://github.com/rogue-dev-studio)
 | `python` | canonical-merge | Python 3.13 with uv package manager via mise. Use when the project needs this capability or the user / team manifest ... |
 | `pytorch-ml` | specialized | PyTorch deep learning framework. Use when the project needs this capability or the user / team manifest asks for it. ... |
 | `qgis` | specialized | QGIS GIS operations MCP server. Use when the project needs this capability or the user / team manifest asks for it. U... |
+| `quality-gate` | specialized | Gate kualitas aset yang dihasilkan AI sebelum diterima. Verifikasi format, resolusi, struktur, dan standar produksi. |
 | `remote-desktop-access` | canonical-merge | Canonical remote desktop / GUI access playbook: Guacamole, XFCE/xRDP, and VNC for environments that need a graphical ... |
 | `reverse-engineer-anything` | specialized | Authorized reverse engineering of native, managed, Electron/JavaScript, packaged, firmware, and browser targets using REA, with evidence tied to runtime or binary artifacts. |
 | `reverse-skill` | specialized | Cybersecurity skills router for authorized reverse engineering, mobile/binaries (.NET, JavaScript, IDA/radare2), malware analysis, and penetration testing; 45 specialist modules. |
