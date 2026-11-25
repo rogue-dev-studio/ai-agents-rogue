@@ -42,6 +42,11 @@ Nama/tool lama di kolom kanan **tidak** punya folder sendiri — pakai nama kano
 | `youtube-content-specialist` | yt-script, yt-package, yt-seo, yt-edit, yt-chapters, yt-retention, yt-shorts, yt-viral, yt-plan, yt-comment, yt-audit |
 | `agentic-qe` | shannon |
 | `mcp-integrations` | context7-mcp, jira-mcp, linear-mcp, excalidraw-mcp, pal-mcp-server, mcp-builder |
+| `brand-kit` | brand, brand-system, visual-identity, brand-guidelines |
+| `consistency-gate` | consistency, character-lock, brand-lock, style-lock |
+| `quality-gate` | qc, asset-qc, output-gate, acceptance-gate |
+| `content-moderation` | moderation, content-filter, policy-gate, safety-review |
+| `asset-analysis` | asset-scan, asset-inspect, generative-audit |
 
 Di dalam skill kanonik, **tool map** menjelaskan kapan memakai runtime/CLI mana (jika terpasang).
 
