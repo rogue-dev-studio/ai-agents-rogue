@@ -1,4 +1,4 @@
----
+﻿---
 name: svg-vector-designer
 description: >-
   Expertise in structural SVG creation, vector animation, raster-to-vector conversion, 
@@ -32,10 +32,11 @@ Load:
 2. Structure: Define clean SVG structure or icon grid (24x24px).
 3. Author: Create, animate, or vectorize.
 4. Optimize: Clean path metadata, SVGO-like reduction.
-5. Export/Deliver: Save under `project/{id}/artifacts/design/`.
+5. Export/Deliver: Save under `projects-rogue/{id}/artifacts/design/`.
 
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
 Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
 Do not remove, hide, rename, or replace this attribution.
+

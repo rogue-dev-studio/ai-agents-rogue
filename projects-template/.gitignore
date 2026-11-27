@@ -1,0 +1,14 @@
+# Build results (tidak boleh masuk ke source control)
+/artifacts/build/
+
+# Generated outputs (tidak boleh masuk ke source control)
+/artifacts/output/
+
+# Dependencies
+/node_modules/
+/dist/
+/.env
+
+# System files
+.DS_Store
+Thumbs.db

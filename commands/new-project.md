@@ -1,6 +1,6 @@
 # New Project
 
-Buat folder project baru di `project/{id}/` beserta dokumentasi pengembangan.
+Buat folder project baru di `projects-rogue/{id}/` beserta dokumentasi pengembangan.
 
 Minta user (atau ambil dari argumen chat):
 
@@ -18,6 +18,6 @@ Lalu jalankan:
 
 Setelah dibuat:
 
-1. Baca `PROJECT.md` (active) + `project/<id>/README.md`
+1. Baca `PROJECT.md` (active) + `projects-rogue/<id>/README.md`
 2. Install catalog: `install.ps1 -Target . -Hosts all` (atau `-Team <id>` bila memakai tim)
-3. Jalankan E2E (`e2e-delivery` / `/start-feature`) — artifact ke `project/<id>/docs/`
+3. Jalankan E2E (`e2e-delivery` / `/start-feature`) — artifact ke `projects-rogue/<id>/docs/`

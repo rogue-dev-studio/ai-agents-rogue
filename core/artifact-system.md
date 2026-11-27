@@ -1,4 +1,4 @@
-# Artifact System
+﻿# Artifact System
 
 Version: 1.0.0
 
@@ -17,32 +17,32 @@ Semua pekerjaan agent harus menghasilkan artifact yang dapat ditelusuri.
 Semua dokumentasi pengembangan per project hidup di:
 
 ```text
-project/{id-namaproject}/docs/
+projects-rogue/{id-namaproject}/docs/
 ```
 
 Deliverable non-dokumentasi (program generate, gambar, 3D, desain, media, data) hidup di:
 
 ```text
-project/{id-namaproject}/artifacts/{kategori}/
+projects-rogue/{id-namaproject}/artifacts/{kategori}/
 ```
 
 | Jenis | Analogi | Format | Lokasi |
 |-------|---------|--------|--------|
-| SRS | PDF formal | Markdown terstruktur | `project/{id}/docs/srs/` |
-| Planning | Spreadsheet | Markdown tabel | `project/{id}/docs/planning/` |
-| Architecture | Design docs | Markdown | `project/{id}/docs/architecture/` |
-| Design | UI/UX | Markdown | `project/{id}/docs/design/` |
-| Task | Jira board | Markdown board + metadata | `project/{id}/docs/tasks/` |
-| QA | Test report | Markdown | `project/{id}/docs/qa/` |
-| Review | Review notes | Markdown | `project/{id}/docs/review/` |
-| Release | Checklist | Markdown | `project/{id}/docs/release/` |
-| Code (app besar) | Aplikasi | Source code | `backend/`, `frontend/`, `database/` di root repo **jika** struktur itu sudah ada; prototype/generate → `project/{id}/artifacts/code/` |
-| Images | Aset raster | PNG/JPG/… | `project/{id}/artifacts/images/` |
-| 3D | Model/render | `.blend`, GLB, render | `project/{id}/artifacts/3d/` |
-| Design exports | Vektor/UI export | AI/SVG/PDF | `project/{id}/artifacts/design/` |
-| Media | AV | video/audio | `project/{id}/artifacts/media/` |
-| Data | Dataset/out | CSV, notebook out | `project/{id}/artifacts/data/` |
-| Other | Catch-all | — | `project/{id}/artifacts/other/` |
+| SRS | PDF formal | Markdown terstruktur | `projects-rogue/{id}/docs/srs/` |
+| Planning | Spreadsheet | Markdown tabel | `projects-rogue/{id}/docs/planning/` |
+| Architecture | Design docs | Markdown | `projects-rogue/{id}/docs/architecture/` |
+| Design | UI/UX | Markdown | `projects-rogue/{id}/docs/design/` |
+| Task | Jira board | Markdown board + metadata | `projects-rogue/{id}/docs/tasks/` |
+| QA | Test report | Markdown | `projects-rogue/{id}/docs/qa/` |
+| Review | Review notes | Markdown | `projects-rogue/{id}/docs/review/` |
+| Release | Checklist | Markdown | `projects-rogue/{id}/docs/release/` |
+| Code (app besar) | Aplikasi | Source code | `backend/`, `frontend/`, `database/` di root repo **jika** struktur itu sudah ada; prototype/generate â†’ `projects-rogue/{id}/artifacts/code/` |
+| Images | Aset raster | PNG/JPG/â€¦ | `projects-rogue/{id}/artifacts/images/` |
+| 3D | Model/render | `.blend`, GLB, render | `projects-rogue/{id}/artifacts/3d/` |
+| Design exports | Vektor/UI export | AI/SVG/PDF | `projects-rogue/{id}/artifacts/design/` |
+| Media | AV | video/audio | `projects-rogue/{id}/artifacts/media/` |
+| Data | Dataset/out | CSV, notebook out | `projects-rogue/{id}/artifacts/data/` |
+| Other | Catch-all | â€” | `projects-rogue/{id}/artifacts/other/` |
 
 Project baru: `scripts/new-project.ps1` / `/new-project` (template sudah berisi `artifacts/`).
 
@@ -50,7 +50,7 @@ Project baru: `scripts/new-project.ps1` / `/new-project` (template sudah berisi 
 
 ---
 
-# 3. SRS — Software Requirement Specification
+# 3. SRS â€” Software Requirement Specification
 
 ## 3.1 Karakteristik
 
@@ -70,16 +70,16 @@ Project baru: `scripts/new-project.ps1` / `/new-project` (template sudah berisi 
 
 ```
 docs/srs/
-├── README.md
-├── {project-name}/
-│   ├── SRS-{module}-v{version}.md
-│   └── changelog.md
+â”œâ”€â”€ README.md
+â”œâ”€â”€ {project-name}/
+â”‚   â”œâ”€â”€ SRS-{module}-v{version}.md
+â”‚   â””â”€â”€ changelog.md
 ```
 
 ## 3.4 Template SRS
 
 ```markdown
-# SRS — {Nama Modul}
+# SRS â€” {Nama Modul}
 
 Version: {x.y.z}
 Status: Draft | Review | Approved
@@ -116,7 +116,7 @@ Last Updated: {YYYY-MM-DD}
 |----|------|--------|
 
 ## 6. Use Case
-### UC-001 — {Nama Use Case}
+### UC-001 â€” {Nama Use Case}
 - Actor:
 - Preconditions:
 - Main Flow:
@@ -152,7 +152,7 @@ Last Updated: {YYYY-MM-DD}
 
 ---
 
-# 4. Planning — Spreadsheet Markdown
+# 4. Planning â€” Spreadsheet Markdown
 
 ## 4.1 Karakteristik
 
@@ -172,19 +172,19 @@ Last Updated: {YYYY-MM-DD}
 
 ```
 docs/planning/
-├── README.md
-├── roadmap.md
-├── milestone.md
-├── wbs.md
-├── timeline.md
-├── dependency-map.md
-└── risk-register.md
+â”œâ”€â”€ README.md
+â”œâ”€â”€ roadmap.md
+â”œâ”€â”€ milestone.md
+â”œâ”€â”€ wbs.md
+â”œâ”€â”€ timeline.md
+â”œâ”€â”€ dependency-map.md
+â””â”€â”€ risk-register.md
 ```
 
 ## 4.4 Template Roadmap
 
 ```markdown
-# Product Roadmap — {Project Name}
+# Product Roadmap â€” {Project Name}
 
 Version: {x.y.z}
 Last Updated: {YYYY-MM-DD}
@@ -198,12 +198,12 @@ Last Updated: {YYYY-MM-DD}
 ## 4.5 Template WBS
 
 ```markdown
-# Work Breakdown Structure — {Project Name}
+# Work Breakdown Structure â€” {Project Name}
 
 | WBS ID | Epic | Feature | Sub Feature | Agent | Effort | Dependency |
 |--------|------|---------|-------------|-------|--------|------------|
 | 1.0 | Auth | Login | API Login | Backend Developer | M | 1.1 |
-| 1.1 | Auth | Login | DB Users | Database Engineer | S | — |
+| 1.1 | Auth | Login | DB Users | Database Engineer | S | â€” |
 | 1.2 | Auth | Login | UI Login | Frontend Developer | M | 1.0 |
 ```
 
@@ -214,14 +214,14 @@ Last Updated: {YYYY-MM-DD}
 
 | Milestone | Target Date | Status | Deliverables | Blocker |
 |-----------|-------------|--------|--------------|---------|
-| M1 — Project Setup | 2026-07-10 | Done | Docker, DB, skeleton | — |
-| M2 — Authentication | 2026-07-20 | In Progress | SRS, API, UI Login | — |
+| M1 â€” Project Setup | 2026-07-10 | Done | Docker, DB, skeleton | â€” |
+| M2 â€” Authentication | 2026-07-20 | In Progress | SRS, API, UI Login | â€” |
 ```
 
 ## 4.7 Template Timeline
 
 ```markdown
-# Timeline — {Sprint/Phase}
+# Timeline â€” {Sprint/Phase}
 
 | Week | Agent | Focus | Output Artifact |
 |------|-------|-------|-----------------|
@@ -240,7 +240,7 @@ Last Updated: {YYYY-MM-DD}
 
 ---
 
-# 5. Task — Jira-like Markdown
+# 5. Task â€” Jira-like Markdown
 
 ## 5.1 Karakteristik
 
@@ -262,15 +262,15 @@ Last Updated: {YYYY-MM-DD}
 
 ```
 docs/tasks/
-├── README.md
-├── backlog.md
-├── board/
-│   ├── sprint-01.md
-│   └── sprint-02.md
-└── tasks/
-    ├── TASK-001.md
-    ├── TASK-002.md
-    └── ...
+â”œâ”€â”€ README.md
+â”œâ”€â”€ backlog.md
+â”œâ”€â”€ board/
+â”‚   â”œâ”€â”€ sprint-01.md
+â”‚   â””â”€â”€ sprint-02.md
+â””â”€â”€ tasks/
+    â”œâ”€â”€ TASK-001.md
+    â”œâ”€â”€ TASK-002.md
+    â””â”€â”€ ...
 ```
 
 ## 5.4 Template Board (Sprint)
@@ -278,7 +278,7 @@ docs/tasks/
 ```markdown
 # Sprint 01 Board
 
-Period: {start} — {end}
+Period: {start} â€” {end}
 Goal: {sprint goal}
 
 ## Todo
@@ -306,7 +306,7 @@ Goal: {sprint goal}
 ## 5.5 Template Task Detail
 
 ```markdown
-# TASK-001 — Setup migration users
+# TASK-001 â€” Setup migration users
 
 | Field | Value |
 |-------|-------|
@@ -334,7 +334,7 @@ Membuat migration tabel users sesuai database design.
 - [ ] Index pada email unik
 
 ## Dependencies
-- TASK-000 (project setup) — done
+- TASK-000 (project setup) â€” done
 
 ## Notes
 ```
@@ -348,7 +348,7 @@ Membuat migration tabel users sesuai database design.
 
 ---
 
-# 6. Code — Aplikasi
+# 6. Code â€” Aplikasi
 
 ## 6.1 Karakteristik
 
@@ -370,37 +370,37 @@ Membuat migration tabel users sesuai database design.
 
 ```
 {project-root}/
-├── backend/
-│   ├── app/
-│   │   ├── Http/
-│   │   │   ├── Controllers/
-│   │   │   ├── Requests/
-│   │   │   └── Resources/
-│   │   ├── Services/
-│   │   ├── DTO/
-│   │   └── Models/
-│   ├── database/
-│   │   ├── migrations/
-│   │   └── seeders/
-│   ├── routes/
-│   └── tests/
-├── frontend/
-│   ├── src/
-│   │   ├── pages/
-│   │   ├── components/
-│   │   ├── services/
-│   │   ├── hooks/
-│   │   └── utils/
-│   └── tests/
-├── database/
-│   └── schema/          (optional: ERD export, reference SQL)
-├── docker/
-│   ├── docker-compose.yml
-│   └── Dockerfile
-└── docs/                (SRS, Planning, Task — bukan code)
+â”œâ”€â”€ backend/
+â”‚   â”œâ”€â”€ app/
+â”‚   â”‚   â”œâ”€â”€ Http/
+â”‚   â”‚   â”‚   â”œâ”€â”€ Controllers/
+â”‚   â”‚   â”‚   â”œâ”€â”€ Requests/
+â”‚   â”‚   â”‚   â””â”€â”€ Resources/
+â”‚   â”‚   â”œâ”€â”€ Services/
+â”‚   â”‚   â”œâ”€â”€ DTO/
+â”‚   â”‚   â””â”€â”€ Models/
+â”‚   â”œâ”€â”€ database/
+â”‚   â”‚   â”œâ”€â”€ migrations/
+â”‚   â”‚   â””â”€â”€ seeders/
+â”‚   â”œâ”€â”€ routes/
+â”‚   â””â”€â”€ tests/
+â”œâ”€â”€ frontend/
+â”‚   â”œâ”€â”€ src/
+â”‚   â”‚   â”œâ”€â”€ pages/
+â”‚   â”‚   â”œâ”€â”€ components/
+â”‚   â”‚   â”œâ”€â”€ services/
+â”‚   â”‚   â”œâ”€â”€ hooks/
+â”‚   â”‚   â””â”€â”€ utils/
+â”‚   â””â”€â”€ tests/
+â”œâ”€â”€ database/
+â”‚   â””â”€â”€ schema/          (optional: ERD export, reference SQL)
+â”œâ”€â”€ docker/
+â”‚   â”œâ”€â”€ docker-compose.yml
+â”‚   â””â”€â”€ Dockerfile
+â””â”€â”€ docs/                (SRS, Planning, Task â€” bukan code)
 ```
 
-## 6.4 Mapping Task → Code
+## 6.4 Mapping Task â†’ Code
 
 | Task Type | Code Output |
 |-----------|-------------|
@@ -414,13 +414,13 @@ Membuat migration tabel users sesuai database design.
 
 ```
 Database Engineer (migration)
-        ↓
+        â†“
 Backend Developer (API + service)
-        ↓
+        â†“
 Frontend Developer (UI + integration)
-        ↓
+        â†“
 QA Engineer (testing)
-        ↓
+        â†“
 Code Reviewer (review)
 ```
 
@@ -443,44 +443,44 @@ Setiap artifact harus dapat ditelusuri:
 
 ```
 User Request
-    ↓
+    â†“
 SRS (requirement ID)
-    ↓
-Planning (feature ID → SRS ref)
-    ↓
-Task (task ID → requirement ID)
-    ↓
-Code (file path → task ID)
-    ↓
+    â†“
+Planning (feature ID â†’ SRS ref)
+    â†“
+Task (task ID â†’ requirement ID)
+    â†“
+Code (file path â†’ task ID)
+    â†“
 QA Report (task ID)
-    ↓
+    â†“
 Release (Delivery Manager)
 ```
 
 ---
 
-# 8. Agent × Artifact Matrix
+# 8. Agent Ã— Artifact Matrix
 
 | Agent | SRS | Planning | Task | Code |
 |-------|-----|----------|------|------|
-| AI Orchestrator | Review | Koordinasi | Routing | — |
-| Product Owner | Input/Approve | Roadmap, prioritas | Epic definition | — |
-| Project Manager | — | WBS, milestone, timeline | Board, breakdown | — |
-| Business Analyst | Business layer | — | — | — |
-| System Analyst | System layer | — | — | — |
-| Solution Architect | Referensi arsitektur | — | — | — |
-| Tech Lead | — | — | Technical breakdown | Standard & review |
-| UI/UX Designer | UI requirement | — | Design task | — |
-| Design System Specialist | — | — | Design task | Design tokens |
+| AI Orchestrator | Review | Koordinasi | Routing | â€” |
+| Product Owner | Input/Approve | Roadmap, prioritas | Epic definition | â€” |
+| Project Manager | â€” | WBS, milestone, timeline | Board, breakdown | â€” |
+| Business Analyst | Business layer | â€” | â€” | â€” |
+| System Analyst | System layer | â€” | â€” | â€” |
+| Solution Architect | Referensi arsitektur | â€” | â€” | â€” |
+| Tech Lead | â€” | â€” | Technical breakdown | Standard & review |
+| UI/UX Designer | UI requirement | â€” | Design task | â€” |
+| Design System Specialist | â€” | â€” | Design task | Design tokens |
 | Database Engineer | Data requirement | WBS row | DB task | Migration, seeder |
 | Backend Developer | API requirement | WBS row | Backend task | Laravel backend |
-| Frontend Developer | — | WBS row | Frontend task | React/Vue frontend |
-| DevOps Engineer | — | Infrastructure row | DevOps task | Docker, compose |
-| Security Engineer | NFR security | — | Security task | Security config |
-| QA Engineer | Test dari AC | — | QA status | Test execution |
-| Code Reviewer | — | — | Review status | Code review |
-| Technical Writer | Finalisasi SRS | — | — | — |
-| Delivery Manager | — | Release plan | Release task | Release package |
+| Frontend Developer | â€” | WBS row | Frontend task | React/Vue frontend |
+| DevOps Engineer | â€” | Infrastructure row | DevOps task | Docker, compose |
+| Security Engineer | NFR security | â€” | Security task | Security config |
+| QA Engineer | Test dari AC | â€” | QA status | Test execution |
+| Code Reviewer | â€” | â€” | Review status | Code review |
+| Technical Writer | Finalisasi SRS | â€” | â€” | â€” |
+| Delivery Manager | â€” | Release plan | Release task | Release package |
 
 ---
 
@@ -492,3 +492,4 @@ Release (Delivery Manager)
 - Code sebelum Release
 - Tidak ada artifact tanpa agent owner
 - Tidak ada pekerjaan tanpa task
+

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+﻿#!/usr/bin/env bash
 # Usage: ./new-project.sh <id> [name] [team] [target_dir]
 set -euo pipefail
 
@@ -14,11 +14,11 @@ CATALOG_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 if [[ -z "$TARGET" ]]; then
   PARENT="$(dirname "$CATALOG_ROOT")"
-  if [[ -d "$PARENT/project" ]]; then TARGET="$PARENT"; else TARGET="$(pwd)"; fi
+  if [[ -d "$PARENT/projects-rogue" ]]; then TARGET="$PARENT"; else TARGET="$(pwd)"; fi
 fi
 TARGET_ROOT="$(cd "$TARGET" && pwd)"
-TEMPLATE="$CATALOG_ROOT/project-template"
-PROJECT_DIR="$TARGET_ROOT/project/$ID"
+TEMPLATE="$CATALOG_ROOT/projects-template"
+PROJECT_DIR="$TARGET_ROOT/projects-rogue/$ID"
 DATE="$(date +%F)"
 [[ -n "$NAME" ]] || NAME="$ID"
 
@@ -47,13 +47,14 @@ cp "$CATALOG_ROOT/templates/task-template.md" "$PROJECT_DIR/docs/tasks/_template
 cat > "$TARGET_ROOT/PROJECT.md" <<EOF
 # Active Project: $ID
 
-- Path: \`project/$ID/\`
+- Path: \`projects-rogue/$ID/\`
 - Name: $NAME
 - Team: $TEAM
-- Docs: \`project/$ID/docs/\`
+- Docs: \`projects-rogue/$ID/docs/\`
 
 AI harus menulis dokumentasi pengembangan ke folder docs project ini.
 EOF
 
 echo "Created: $PROJECT_DIR"
 echo "Active:  $TARGET_ROOT/PROJECT.md"
+
