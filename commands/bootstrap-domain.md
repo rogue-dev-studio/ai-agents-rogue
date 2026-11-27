@@ -1,13 +1,13 @@
-# Bootstrap Domain (prompt-first)
+﻿# Bootstrap Domain (prompt-first)
 
-Siapkan **pack domain** (`simrs`, `hr`, atau custom) untuk dipakai langsung dari prompt — **tanpa** `install.ps1 -Team` (full catalog tetap utuh).
+Siapkan **pack domain** (`simrs`, `hr`, atau custom) untuk dipakai langsung dari prompt â€” **tanpa** `install.ps1 -Team` (full catalog tetap utuh).
 
 ## Kapan agent menjalankan ini
 
 Jalankan **proaktif** bila user:
 
-- Minta **buat aplikasi SIMRS** / modul rumah sakit → domain `simrs`
-- Minta **CV / HR / recruitment / onboarding** → domain `hr`
+- Minta **buat aplikasi SIMRS** / modul rumah sakit â†’ domain `simrs`
+- Minta **CV / HR / recruitment / onboarding** â†’ domain `hr`
 - Menyebut domain yang pack-nya belum tersync ke host
 
 Urutan disarankan:
@@ -36,17 +36,17 @@ Urutan disarankan:
 |-------|--------|
 | `-Domain` | `simrs`, `hr`, atau id pack custom |
 | `-Prompt` | Infer domain dari teks user jika `-Domain` kosong |
-| `-ProjectId` / `-ProjectName` | Buat `project/{id}/` setelah sync |
+| `-ProjectId` / `-ProjectName` | Buat `projects-rogue/{id}/` setelah sync |
 | `-CreatePackIfMissing` | Scaffold `teams/<id>` dari `_template` |
 | `-Force` | Timpa salinan skill/role/rule di host |
 | `-DryRun` | Laporan saja |
 
 ## Output
 
-- Skill lokal → `.cursor/skills/`, `.claude/skills/`, `.agents/skills/`, `.opencode/skills/` (merge, bukan subset install)
-- Role pack → `.cursor/agents/roles/{clinical|people-ops|...}/`
-- Rule pack → `.cursor/rules/simrs-*.mdc` / `hr-*.mdc`
-- Manifest → `ai-agents-rogue/active-domain/{domain}.json`
+- Skill lokal â†’ `.cursor/skills/`, `.claude/skills/`, `.agents/skills/`, `.opencode/skills/` (merge, bukan subset install)
+- Role pack â†’ `.cursor/agents/roles/{clinical|people-ops|...}/`
+- Rule pack â†’ `.cursor/rules/simrs-*.mdc` / `hr-*.mdc`
+- Manifest â†’ `ai-agents-rogue/active-domain/{domain}.json`
 
 ## Update skill dari prompt (gap)
 
@@ -54,7 +54,7 @@ Setelah bootstrap, jika prompt menyinggung modul/AC yang belum ada di skill:
 
 1. Edit `teams/<domain>/skills/<skill>/SKILL.md` (sumber kebenaran)
 2. Jalankan ulang `bootstrap-domain -Domain <id> -Force` **atau** salin manual ke host
-3. Jangan menambah requirement tanpa dokumentasi singkat di skill atau `project/{id}/docs/`
+3. Jangan menambah requirement tanpa dokumentasi singkat di skill atau `projects-rogue/{id}/docs/`
 
 Pack **baru** (`-CreatePackIfMissing`): isi skill/rule/role, daftar di `TEAM.yaml` `local_skills`, bootstrap ulang.
 
@@ -62,7 +62,8 @@ Pack **baru** (`-CreatePackIfMissing`): isi skill/rule/role, daftar di `TEAM.yam
 
 | Domain | Prompt contoh | Skill |
 |--------|---------------|--------|
-| simrs | review IGD, mapping Permenkes | `simrs-clinical-review`, `simrs-data-mapping`, … |
+| simrs | review IGD, mapping Permenkes | `simrs-clinical-review`, `simrs-data-mapping`, â€¦ |
 | hr | review CV vs JD | `hr-cv-lifecycle`, `hr-employee-ops` |
 
 Lihat `teams/<domain>/README.md` untuk tabel lengkap.
+

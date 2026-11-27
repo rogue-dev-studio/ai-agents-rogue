@@ -1,4 +1,4 @@
-# Panduan Dev Shift — Continuous Autonomous Shift
+﻿# Panduan Dev Shift â€” Continuous Autonomous Shift
 
 Panduan singkat untuk **pengguna** (bukan agent). Skill teknis agent: `skills/continuous-dev-shift/SKILL.md`.
 
@@ -9,7 +9,7 @@ Panduan singkat untuk **pengguna** (bukan agent). Skill teknis agent: `skills/co
 Mode kerja di mana **satu prompt** memicu agent untuk bekerja **berulang** (banyak *tick*) sampai waktu habis:
 
 - Auto-pick task dari backlog / audit MAINT
-- Implement → QA → review → dokumentasi
+- Implement â†’ QA â†’ review â†’ dokumentasi
 - **Tanpa** prompt baru per task
 - Antar-turn: agent arm **`/loop`** agar lanjut otomatis
 
@@ -19,10 +19,10 @@ Mode kerja di mana **satu prompt** memicu agent untuk bekerja **berulang** (bany
 
 | Item | Path / aksi |
 |------|-------------|
-| Project aktif | `PROJECT.md` atau folder `project/{id}/` |
-| Backlog index | `project/{id}/docs/tasks/backlog.md` |
-| Impact log | `project/{id}/docs/planning/impact-log.md` |
-| Folder shift | `project/{id}/docs/shift/` |
+| Project aktif | `PROJECT.md` atau folder `projects-rogue/{id}/` |
+| Backlog index | `projects-rogue/{id}/docs/tasks/backlog.md` |
+| Impact log | `projects-rogue/{id}/docs/planning/impact-log.md` |
+| Folder shift | `projects-rogue/{id}/docs/shift/` |
 | Mode e2e | `WORKMODE.md` = `e2e` (default) |
 | Catalog terpasang | `install.ps1` + gate atribusi OK |
 
@@ -32,7 +32,7 @@ Mode kerja di mana **satu prompt** memicu agent untuk bekerja **berulang** (bany
 
 ### A. Prompt (disarankan untuk maintenance)
 
-Salin dari `templates/dev-shift-prompt-template.md` § **Template maintenance aplikasi**.
+Salin dari `templates/dev-shift-prompt-template.md` Â§ **Template maintenance aplikasi**.
 
 Contoh SIJAMA sampai jam 08:00:
 
@@ -61,15 +61,15 @@ Variasi lengkap: `templates/dev-shift-command-template.md`
 ## Apa yang terjadi setelah prompt?
 
 ```text
-1. Manifest dibuat     → docs/shift/current.md (status: active)
-2. Tick 0 (maintenance)→ baseline audit → MAINT-xxx di backlog
-3. Tick 1, 2, 3…       → fix / improve → gates QA + review
-4. Backlog habis?      → idle tick (sweep, regression, planning)
-5. Thread habis?       → arm /loop 30m → lanjut tanpa prompt user
-6. ends_at tercapai    → summary → status: completed
+1. Manifest dibuat     â†’ docs/shift/current.md (status: active)
+2. Tick 0 (maintenance)â†’ baseline audit â†’ MAINT-xxx di backlog
+3. Tick 1, 2, 3â€¦       â†’ fix / improve â†’ gates QA + review
+4. Backlog habis?      â†’ idle tick (sweep, regression, planning)
+5. Thread habis?       â†’ arm /loop 30m â†’ lanjut tanpa prompt user
+6. ends_at tercapai    â†’ summary â†’ status: completed
 ```
 
-**Penting:** Selesai **satu tick** ≠ shift selesai. Shift tetap `active` sampai `ends_at`.
+**Penting:** Selesai **satu tick** â‰  shift selesai. Shift tetap `active` sampai `ends_at`.
 
 ---
 
@@ -85,7 +85,7 @@ Variasi lengkap: `templates/dev-shift-command-template.md`
 | `planning` | Generate kandidat backlog |
 | `deferred` | MAINT P2/P3 effort kecil |
 
-Detail: skill § **Idle tick**.
+Detail: skill Â§ **Idle tick**.
 
 ---
 
@@ -126,7 +126,7 @@ Detail: skill § **Idle tick**.
 ## Cara stop manual
 
 ```text
-Stop dev shift — tulis summary dan tutup manifest.
+Stop dev shift â€” tulis summary dan tutup manifest.
 ```
 
 ---
@@ -135,10 +135,10 @@ Stop dev shift — tulis summary dan tutup manifest.
 
 | Gejala | Penyebab umum | Solusi |
 |--------|---------------|--------|
-| Agent stop setelah 1–2 tick | Loop tidak di-arm / skill lama | Pastikan prompt ada klausul kontinuitas; update catalog |
+| Agent stop setelah 1â€“2 tick | Loop tidak di-arm / skill lama | Pastikan prompt ada klausul kontinuitas; update catalog |
 | Diminta prompt "lanjut" lagi | Continuation contract dilanggar | Pakai template terbaru; cek `rules/shift.md` v0.3+ |
 | `completed` sebelum ends_at | Stop rule salah dipakai | Buka manifest; lanjutkan dengan prompt resume atau `/loop` |
-| Backlog kosong, agent diam | Idle tick belum jalan | Agent harus sweep/regression/planning — cek skill § Idle tick |
+| Backlog kosong, agent diam | Idle tick belum jalan | Agent harus sweep/regression/planning â€” cek skill Â§ Idle tick |
 | Tidak ada MAINT | Belum tick 0 audit | Minta baseline audit dulu |
 
 ---
@@ -160,3 +160,4 @@ Stop dev shift — tulis summary dan tutup manifest.
 ## Attribution
 
 Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio).
+

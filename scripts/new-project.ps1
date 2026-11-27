@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   Scaffold a new project under project/{id}/ with development docs tree.
 .PARAMETER Id
@@ -36,8 +36,8 @@ if (-not $Target) {
   }
 }
 $TargetRoot = Resolve-Path $Target
-$Template = Join-Path $CatalogRoot "project-template"
-$ProjectDir = Join-Path $TargetRoot "project\$Id"
+$Template = Join-Path $CatalogRoot "projects-template"
+$ProjectDir = Join-Path $TargetRoot "projects-rogue\$Id"
 
 if (Test-Path $ProjectDir) {
   throw "Project already exists: $ProjectDir"
@@ -79,10 +79,10 @@ if ($Activate) {
   $active = @"
 # Active Project: $Id
 
-- Path: ``project/$Id/``
+- Path: ``projects-rogue/$Id/``
 - Name: $Name
 - Team: $Team
-- Docs: ``project/$Id/docs/``
+- Docs: ``projects-rogue/$Id/docs/``
 
 AI harus menulis dokumentasi pengembangan ke folder docs project ini.
 E2E: skill ``e2e-delivery`` + ``AGENTS.md`` + team (jika ada).
@@ -96,3 +96,4 @@ Write-Host "Next: install team if needed, then /start-feature"
 if ($Team -and $Team -ne "none") {
   Write-Host "  .\ai-agents-rogue\scripts\install.ps1 -Target `"$TargetRoot`" -Hosts all -Team $Team"
 }
+

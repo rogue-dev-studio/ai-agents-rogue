@@ -1,4 +1,4 @@
----
+﻿---
 name: youtube-content-specialist
 description: >-
   YouTube strategy, scriptwriting (hook scoring), packaging (title/thumbnail), 
@@ -34,10 +34,11 @@ Load:
 3. Post-Production: EDL/chapters from transcript, audit dead air.
 4. Growth: Metadata SEO, retention analysis, viral pattern recognition.
 5. Engagement: Comment management.
-6. Deliverables: Save plans/scripts/analysis under `project/{id}/docs/` or `project/{id}/artifacts/media/`.
+6. Deliverables: Save plans/scripts/analysis under `projects-rogue/{id}/docs/` or `projects-rogue/{id}/artifacts/media/`.
 
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
 Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
 Do not remove, hide, rename, or replace this attribution.
+
