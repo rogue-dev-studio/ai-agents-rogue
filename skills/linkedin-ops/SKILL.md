@@ -1,6 +1,12 @@
+---
+name: linkedin-ops
+description: >-
+  Draft, schedule, and manage LinkedIn Company Page posts and engagement
+  through the official API and configured MCP integration.
+---
+
 # LinkedIn Ops
 
-**Level: max.**
 
 ## Summary
 

@@ -10,7 +10,7 @@ description: >-
 
 # SIMRS Clinical Review
 
-**Level: expert.** Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Role opsional: `simrs-clinical-reviewer`.
+Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Role opsional: `simrs-clinical-reviewer`.
 
 ## When to use
 

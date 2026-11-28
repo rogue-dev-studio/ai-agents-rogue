@@ -2,12 +2,11 @@
 name: algorithmic-art
 description: >-
   Generative algorithmic art. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `algorithmic-art` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # algorithmic-art
 
-**Level: max** specialized skill (not merged). Category hint: `utilities`.
+specialized skill (not merged). Category hint: `utilities`.
 
 ## Summary
 

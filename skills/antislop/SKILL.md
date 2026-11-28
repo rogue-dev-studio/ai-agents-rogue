@@ -1,3 +1,10 @@
+---
+name: antislop
+description: >-
+  Reduce generic, clichéd, and robotic AI output with precise, contextual,
+  direct writing and response-quality guidelines.
+---
+
 # Anti-Slop Core (antislop)
 
 Prevent generic, clichéd, and robotic AI patterns across all outputs. This is the primary filter for AI coding agents to maintain human-like quality and precision.

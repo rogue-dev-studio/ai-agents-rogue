@@ -2,12 +2,11 @@
 name: comfyui
 description: >-
   ComfyUI image generation MCP server (GPU required). Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `comfyui` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # comfyui
 
-**Level: max** specialized skill (not merged). Category hint: `ai`.
+specialized skill (not merged). Category hint: `ai`.
 
 ## Summary
 

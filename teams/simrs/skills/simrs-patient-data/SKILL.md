@@ -9,7 +9,7 @@ description: >-
 
 # SIMRS Patient Data
 
-**Level: expert.** Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Rule: `patient-health-data`.
+Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Rule: `patient-health-data`.
 
 ## When to use
 

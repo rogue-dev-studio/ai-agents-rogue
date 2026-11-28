@@ -4,12 +4,11 @@ description: >-
   Adobe Photoshop via MCP (uvx photoshop-mcp-server). Use when the user needs
   PSD edits, layers, exports, or Photoshop automation from the agent.
   Requires mcp/photoshop wired and Photoshop desktop installed/running.
-experience_level: max
 ---
 
 # photoshop
 
-**Level: max.** Runtime package: `mcp/photoshop` (not skill-text alone).
+Runtime package: `mcp/photoshop` (not skill-text alone).
 
 ## Summary
 

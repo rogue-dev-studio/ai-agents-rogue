@@ -5,12 +5,11 @@ description: >-
   (e.g. "buat model 3D ikan", character, prop). Drive Blender via BlenderMCP
   (addon :9876 + blender-mcp). Do not offer script-only / trimesh menus first
   when Blender MCP can be used. Wire mcp/blender if missing.
-experience_level: max
 ---
 
 # blender
 
-**Level: max.** Runtime package: `mcp/blender` (not skill-text alone).
+Runtime package: `mcp/blender` (not skill-text alone).
 
 ## Summary
 

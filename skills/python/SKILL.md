@@ -2,12 +2,11 @@
 name: python
 description: >-
   Python 3.13 with uv package manager via mise. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `python` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # python
 
-**Level: max** specialized skill (not merged). Category hint: `language`.
+specialized skill (not merged). Category hint: `language`.
 
 ## Summary
 

@@ -2,12 +2,11 @@
 name: mise-config
 description: >-
   Global mise configuration and settings. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `mise-config` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # mise-config
 
-**Level: max** specialized skill (not merged). Category hint: `base`.
+specialized skill (not merged). Category hint: `base`.
 
 ## Summary
 

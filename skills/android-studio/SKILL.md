@@ -1,6 +1,12 @@
+---
+name: android-studio
+description: >-
+  Support Android development with Gradle, ADB, Android Studio, and AVD
+  build, test, and debugging workflows.
+---
+
 # Android Studio
 
-**Level: max.**
 
 ## Summary
 

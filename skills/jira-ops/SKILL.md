@@ -1,6 +1,11 @@
+---
+name: jira-ops
+description: >-
+  Manage Jira issues, sprints, and boards through configured MCP integrations.
+---
+
 # Jira Ops
 
-**Level: max.**
 
 ## Summary
 

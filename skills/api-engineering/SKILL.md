@@ -6,7 +6,6 @@ description: >-
   boundary validation. Use when defining or changing REST (or HTTP) APIs,
   DTO/request-response shapes, client integration contracts, or when reviewing
   endpoint consistency before frontend or third-party consumers bind to them.
-expertise_level: expert
 ---
 
 # API Engineering (Canonical)

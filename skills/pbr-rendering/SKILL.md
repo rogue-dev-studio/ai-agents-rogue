@@ -2,12 +2,11 @@
 name: pbr-rendering
 description: >-
   PBR material generation MCP server (GPU required). Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `pbr-rendering` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # pbr-rendering
 
-**Level: max** specialized skill (not merged). Category hint: `desktop`.
+specialized skill (not merged). Category hint: `desktop`.
 
 ## Summary
 

@@ -2,12 +2,11 @@
 name: monitoring
 description: >-
   Claude monitoring and usage tracking tools (UV, claude-monitor, claude-usage-cli). Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `monitoring` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # monitoring
 
-**Level: max** specialized skill (not merged). Category hint: `monitoring`.
+specialized skill (not merged). Category hint: `monitoring`.
 
 ## Summary
 

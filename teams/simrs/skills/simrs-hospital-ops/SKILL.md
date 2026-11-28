@@ -10,7 +10,7 @@ description: >-
 
 # SIMRS Hospital Ops
 
-**Level: expert.** Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Role opsional: `simrs-domain-specialist`.
+Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Role opsional: `simrs-domain-specialist`.
 
 ## When to use
 

@@ -2,12 +2,11 @@
 name: nodejs
 description: >-
   Node.js development environment. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `nodejs` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # nodejs
 
-**Level: max** specialized skill (not merged). Category hint: `language`.
+specialized skill (not merged). Category hint: `language`.
 
 ## Summary
 

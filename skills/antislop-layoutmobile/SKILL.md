@@ -1,3 +1,10 @@
+---
+name: antislop-layoutmobile
+description: >-
+  Create purposeful mobile layouts with ergonomic touch targets, responsive
+  reflow, and mobile-first interaction patterns.
+---
+
 # Anti-Slop Layout Mobile (antislop-layoutmobile)
 
 Stop generic "stack-everything" mobile layouts. Create purposeful, responsive reflows.

@@ -8,7 +8,7 @@ description: >-
 
 # Consistency Gate
 
-**Level: max.** Aliases: `consistency`, `character-lock`, `brand-lock`, `style-lock`.
+Aliases: `consistency`, `character-lock`, `brand-lock`, `style-lock`.
 
 ## When to use
 

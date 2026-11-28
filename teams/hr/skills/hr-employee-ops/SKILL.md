@@ -9,7 +9,7 @@ description: >-
 
 # HR Employee Ops
 
-**Level: expert.** Prompt-routed skill (sumber pack: `teams/hr`). Tidak perlu aktifkan tim. Role opsional: `hr-specialist`.
+Prompt-routed skill (sumber pack: `teams/hr`). Tidak perlu aktifkan tim. Role opsional: `hr-specialist`.
 
 ## When to use
 

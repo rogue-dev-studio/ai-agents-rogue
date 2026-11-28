@@ -1,3 +1,10 @@
+---
+name: antislop-visual
+description: >-
+  Guide image and video generation toward organic textures, natural lighting,
+  varied composition, and believable motion.
+---
+
 # Anti-Slop Visual (antislop-visual)
 
 Prevent the "AI-look" in images and videos. Ensure visual outputs are organic, textural, and avoid the uncanny perfection of generic AI generation.

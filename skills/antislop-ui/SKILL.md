@@ -1,3 +1,10 @@
+---
+name: antislop-ui
+description: >-
+  Avoid generic AI-generated interfaces with purposeful layout, contextual
+  visual choices, and meaningful interaction feedback.
+---
+
 # Anti-Slop UI & Visual (antislop-ui)
 
 Prevent "cookie-cutter" AI interfaces and generic visual patterns. Ensure UI is context-aware, varied, and purposeful.

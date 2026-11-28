@@ -7,7 +7,7 @@ description: >-
 
 # Skill Pack Managers (Canonical)
 
-**Level: max.** Aliases: `openskills`, `agent-skills-cli`, `claude-marketplace`.
+Aliases: `openskills`, `agent-skills-cli`, `claude-marketplace`.
 
 ## Procedure
 

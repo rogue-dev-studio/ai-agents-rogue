@@ -2,12 +2,11 @@
 name: pytorch-ml
 description: >-
   PyTorch deep learning framework. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `pytorch-ml` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # pytorch-ml
 
-**Level: max** specialized skill (not merged). Category hint: `ai`.
+specialized skill (not merged). Category hint: `ai`.
 
 ## Summary
 

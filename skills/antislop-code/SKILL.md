@@ -1,3 +1,10 @@
+---
+name: antislop-code
+description: >-
+  Keep generated code clear and maintainable by avoiding redundant comments,
+  over-abstraction, generic naming, and template-driven implementation.
+---
+
 # Anti-Slop Code Hygiene (antislop-code)
 
 Eliminate generic AI-generated code patterns, redundant comments, and over-abstraction.

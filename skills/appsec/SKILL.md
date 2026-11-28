@@ -5,7 +5,6 @@ description: >-
   Use for SAST, DAST, IAST, CodeQL, variant analysis, security champions,
   secrets and dependency scanning, CI security, OWASP Top 10, ASVS, or
   agentic-AI application security.
-expertise_level: expert
 ---
 
 # Application Security

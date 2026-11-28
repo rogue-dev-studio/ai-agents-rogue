@@ -10,7 +10,7 @@ description: >-
 
 # SIMRS Technical Assessment
 
-**Level: expert.** Prompt-routed skill (sumber pack: `teams/simrs`). Role opsional: `simrs-technical-assessor` / `simrs-domain-specialist` / Tech Lead. Tidak perlu aktifkan tim.
+Prompt-routed skill (sumber pack: `teams/simrs`). Role opsional: `simrs-technical-assessor` / `simrs-domain-specialist` / Tech Lead. Tidak perlu aktifkan tim.
 
 ## When to use
 

@@ -8,7 +8,7 @@ description: >-
 
 # Quality Gate
 
-**Level: max.** Aliases: `qc`, `asset-qc`, `output-gate`, `acceptance-gate`.
+Aliases: `qc`, `asset-qc`, `output-gate`, `acceptance-gate`.
 
 ## When to use
 

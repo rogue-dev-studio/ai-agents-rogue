@@ -7,7 +7,7 @@ description: >-
 
 # LLM Gateway Routing (Canonical)
 
-**Level: max.** Aliases: `claude-code-mux`, `rtk`, `zai-service`, `claudish` (routing/proxy aspect).
+Aliases: `claude-code-mux`, `rtk`, `zai-service`, `claudish` (routing/proxy aspect).
 
 ## Procedure
 

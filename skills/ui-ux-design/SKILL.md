@@ -7,7 +7,6 @@ description: >-
   docs, existing tokens/visual language). Use before or alongside frontend work
   when designing screens, reviewing mockups, or validating that proposed UI
   matches the project theme already in progress or about to ship.
-expertise_level: expert
 ---
 
 # UI/UX Design (Canonical)

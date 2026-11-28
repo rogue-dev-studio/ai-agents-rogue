@@ -2,12 +2,11 @@
 name: compahook
 description: >-
   Persistent memory layer for Claude Code's /compact command. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `compahook` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # compahook
 
-**Level: max** specialized skill (not merged). Category hint: `claude`.
+specialized skill (not merged). Category hint: `claude`.
 
 ## Summary
 

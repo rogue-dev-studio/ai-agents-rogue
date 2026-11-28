@@ -4,7 +4,6 @@ description: >-
   Secure AWS, Azure, or GCP infrastructure. Use for cloud IAM, security
   groups, network exposure, encryption, key management, misconfiguration
   review, CIS-aligned hardening, or shared-responsibility decisions.
-expertise_level: expert
 ---
 
 # Cloud Security

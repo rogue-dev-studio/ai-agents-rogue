@@ -5,7 +5,6 @@ description: >-
   pull requests, releases, changelogs, or generated public files when AI, bot,
   assistant, Copilot, agent, or automation attribution must not appear unless the
   user explicitly approves it.
-experience_level: max
 ---
 
 # Public Contribution Identity

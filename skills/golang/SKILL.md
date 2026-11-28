@@ -2,12 +2,11 @@
 name: golang
 description: >-
   Go development environment. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `golang` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # golang
 
-**Level: max** specialized skill (not merged). Category hint: `language`.
+specialized skill (not merged). Category hint: `language`.
 
 ## Summary
 

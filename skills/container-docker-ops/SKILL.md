@@ -7,7 +7,7 @@ description: >-
 
 # Container Docker Ops (Canonical)
 
-**Level: max.** Aliases: `docker`.
+Aliases: `docker`.
 
 ## Procedure
 

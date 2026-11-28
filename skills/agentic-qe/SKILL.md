@@ -8,7 +8,7 @@ description: >-
 
 # Agentic QE — Quality Engineering (Canonical)
 
-**Level: max.** Alias khusus: `shannon` (jalur pentest otonom — tetap butuh izin untuk tes agresif).
+Alias khusus: `shannon` (jalur pentest otonom — tetap butuh izin untuk tes agresif).
 
 ## When to use
 

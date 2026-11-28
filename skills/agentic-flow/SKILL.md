@@ -8,7 +8,8 @@ description: >-
 
 # Agentic Flow — Multi-Agent Orchestration (Canonical)
 
-**Level: max.** Satu skill untuk semua pola orkestrasi multi-agent.  
+Satu skill untuk semua pola orkestrasi multi-agent.
+
 Aliases: lihat `skills/ALIASES.md` (`claude-flow-*`, `ruflo`, `loki-mode`, `ralph`, …).
 
 ## When to use

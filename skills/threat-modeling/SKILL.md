@@ -4,7 +4,6 @@ description: >-
   Identify, analyze, and prioritize threats to an application, service, or
   infrastructure. Use for STRIDE, DREAD, attack trees, trust boundaries,
   asset classification, defensive PASTA workshops, and architecture risk reviews.
-expertise_level: expert
 ---
 
 # Threat Modeling

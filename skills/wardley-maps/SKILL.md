@@ -2,12 +2,11 @@
 name: wardley-maps
 description: >-
   Strategic mapping visualization. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `wardley-maps` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # wardley-maps
 
-**Level: max** specialized skill (not merged). Category hint: `utilities`.
+specialized skill (not merged). Category hint: `utilities`.
 
 ## Summary
 

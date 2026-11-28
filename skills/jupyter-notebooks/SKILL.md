@@ -2,12 +2,11 @@
 name: jupyter-notebooks
 description: >-
   Jupyter notebook execution MCP server. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `jupyter-notebooks` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # jupyter-notebooks
 
-**Level: max** specialized skill (not merged). Category hint: `dev-tools`.
+specialized skill (not merged). Category hint: `dev-tools`.
 
 ## Summary
 

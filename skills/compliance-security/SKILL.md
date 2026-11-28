@@ -4,7 +4,6 @@ description: >-
   Build security compliance programs or prepare an authorized audit. Use for
   SOC 2, ISO 27001, HIPAA, PCI DSS, control mapping, evidence collection,
   compliance automation, audit readiness, and continuous control monitoring.
-expertise_level: expert
 ---
 
 # Compliance Security
