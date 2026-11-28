@@ -35,6 +35,10 @@ id_rsa.pub
 .agents/
 .opencode/
 
+# Local OBS implementation (private / not for catalog publish)
+mcp/obs-studio/src/
+mcp/obs-studio/test/
+
 # OS / editor / build noise
 Thumbs.db
 Desktop.ini
