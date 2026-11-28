@@ -2,12 +2,11 @@
 name: openclaw
 description: >-
   OpenClaw - Multi-channel AI gateway for messaging platforms with browser Control UI. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `openclaw` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # openclaw
 
-**Level: max** specialized skill (not merged). Category hint: `ai-dev`.
+specialized skill (not merged). Category hint: `ai-dev`.
 
 ## Summary
 

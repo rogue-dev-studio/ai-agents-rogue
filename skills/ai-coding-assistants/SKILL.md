@@ -8,7 +8,7 @@ description: >-
 
 # AI Coding Assistants (Canonical)
 
-**Level: max.** Aliases: `claude-cli`, `claude-codepro`, `kilo`, `goose`, `opencode`, `ai-toolkit`, `claudeup`, `claudish` (as assistant entry).
+Aliases: `claude-cli`, `claude-codepro`, `kilo`, `goose`, `opencode`, `ai-toolkit`, `claudeup`, `claudish` (as assistant entry).
 
 ## When to use
 

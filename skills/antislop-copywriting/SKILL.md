@@ -1,3 +1,10 @@
+---
+name: antislop-copywriting
+description: >-
+  Refine AI-generated copy into direct, specific, human-centered headlines,
+  calls to action, and body text.
+---
+
 # Anti-Slop Copywriting (antislop-copywriting)
 
 Transform robotic AI prose into high-impact, human-centric communication.

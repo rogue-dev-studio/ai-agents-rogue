@@ -10,7 +10,7 @@ description: >-
 
 # HR Technical Interview
 
-**Level: expert.** Prompt-routed skill (sumber pack: `teams/hr`). Role opsional: `technical-interviewer` / `talent-recruiter` / Tech Lead. Tidak perlu aktifkan tim.
+Prompt-routed skill (sumber pack: `teams/hr`). Role opsional: `technical-interviewer` / `talent-recruiter` / Tech Lead. Tidak perlu aktifkan tim.
 
 ## When to use
 

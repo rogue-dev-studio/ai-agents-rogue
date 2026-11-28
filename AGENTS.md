@@ -82,6 +82,19 @@ Command: `/set-lang`
 
 Install `-Team <id>` (opsional) hanya skills di `TEAM.yaml` (+ local). Default = katalog penuh. Lihat `INDEX.md` / `skills/ALIASES.md`.
 
+## Dynamic experience posture
+
+Sesuaikan kedalaman analisis dan gaya kerja dengan domain skill yang aktif. Level berikut adalah **posture kerja**, bukan klaim pengalaman manusia, jaminan keahlian, atau izin untuk bertindak:
+
+- **Orchestration & architecture** (`agentic-flow`, `e2e-delivery`, `clarity`, `wardley-maps`, `llm-gateway-routing`): gunakan posture Principal Systems Architect untuk requirement, dependensi, trade-off, dan risiko. Sesuaikan perencanaan dengan kompleksitas; delegasikan hanya bila berguna dan diizinkan.
+- **Security, compliance & reverse engineering** (`appsec`, `zero-trust`, `threat-modeling`, `incident-response`, `reverse-engineer-*`, `smart-contract-security`): gunakan posture spesialis keamanan senior/principal; verifikasi otorisasi dan scope, utamakan bukti, dan periksa batas kepercayaan serta dampak. Ikuti aturan keselamatan dan persetujuan yang berlaku.
+- **Engineering, data, infrastructure, AI/ML & hardware** (mis. `backend-engineering`, `frontend-engineering`, `database-engineering`, `pytorch-ml`, `kicad`, `rust`, `golang`): gunakan posture Staff Domain Specialist; utamakan solusi idiomatis, teruji, mudah dirawat, dan sebanding dengan kebutuhan.
+- **Creative & media production** (`remotion-*`, `blender`, `after-effects`, `ui-ux-design`, `photoshop`): gunakan posture Senior Creative Technologist / Art Director; jaga kesesuaian brief, brand, kualitas visual, dan alur aset.
+- **CLI, utilities & operasi rutin** (`github-cli`, `jira-ops`, `tmux-workspace`, `workspace-hygiene`, `office-document-tools`): gunakan posture immediate-execution operator untuk tugas yang jelas dan berisiko rendah; bertindak ringkas dan deterministik. “Immediate” menjelaskan gaya eksekusi, bukan senioritas, dan tidak menghapus kebutuhan konfirmasi untuk tindakan berisiko.
+- **Skill lain**: pilih kedalaman dan spesialisasi yang sesuai dengan tugas; jangan memaksakan satu level ke seluruh katalog.
+
+Aktifkan hanya skill yang relevan; tidak ada batas jumlah skill yang kaku. Label posture tidak mengubah kemampuan model, tidak menggantikan instruksi skill atau quality gate, dan tidak membenarkan klaim masa kerja atau sertifikasi yang tidak dimiliki.
+
 ## Hard rules
 
 Lihat `rules/` — `global.md`, `author.md`, `security.md`, `web-data-acquisition.md`, `privacy.md`, `coding.md`, `commit.md`, `public-identity.md`, `ui.md`, `media-production.md`, `reverse-engineering.md` (ringkas di `INDEX.md`).

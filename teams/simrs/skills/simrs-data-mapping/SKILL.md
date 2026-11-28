@@ -10,7 +10,7 @@ description: >-
 
 # SIMRS Data Mapping
 
-**Level: expert.** Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Role opsional: `simrs-domain-specialist`, `simrs-clinical-reviewer`.
+Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Role opsional: `simrs-domain-specialist`, `simrs-clinical-reviewer`.
 
 Melengkapi `simrs-regulatory-id` (kewajiban) dan `simrs-hospital-ops` (alur) dengan **peta elemen data → aplikasi**.
 

@@ -7,7 +7,7 @@ description: >-
 
 # Vector Knowledge Tools (Canonical)
 
-**Level: max.** Aliases: `ruvector-cli`, `rvf-cli`, `gitnexus`.
+Aliases: `ruvector-cli`, `rvf-cli`, `gitnexus`.
 
 ## Procedure
 

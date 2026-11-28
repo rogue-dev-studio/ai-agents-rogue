@@ -2,12 +2,11 @@
 name: import-to-ontology
 description: >-
   Document to ontology import. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `import-to-ontology` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # import-to-ontology
 
-**Level: max** specialized skill (not merged). Category hint: `ai`.
+specialized skill (not merged). Category hint: `ai`.
 
 ## Summary
 

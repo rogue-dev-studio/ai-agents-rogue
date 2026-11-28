@@ -8,7 +8,7 @@ description: >-
 
 # Asset Analysis
 
-**Level: max.** Aliases: `asset-scan`, `asset-inspect`, `generative-audit`.
+Aliases: `asset-scan`, `asset-inspect`, `generative-audit`.
 
 ## When to use
 

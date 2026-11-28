@@ -1,3 +1,10 @@
+---
+name: antislop-audio
+description: >-
+  Improve generated speech, music, and sound effects with natural variation,
+  realistic texture, and non-template audio direction.
+---
+
 # Anti-Slop Audio (antislop-audio)
 
 Prevent robotic, monotone, and template-based audio, speech, and music generation.

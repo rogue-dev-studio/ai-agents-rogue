@@ -4,7 +4,6 @@ description: >-
   Build or improve SOC and security operations. Use for SIEM/log management,
   alert triage, detection engineering, defensive threat hunting, YARA rules,
   and security monitoring.
-expertise_level: expert
 ---
 
 # Security Operations

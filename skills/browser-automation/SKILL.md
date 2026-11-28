@@ -8,7 +8,7 @@ description: >-
 
 # Browser Automation (Canonical)
 
-**Level: max.** Aliases: `playwright`, `agent-browser`, `browser-use`, `playwright-skill`.
+Aliases: `playwright`, `agent-browser`, `browser-use`, `playwright-skill`.
 
 ## When to use
 

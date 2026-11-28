@@ -2,12 +2,11 @@
 name: kicad
 description: >-
   KiCad PCB design MCP server. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `kicad` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # kicad
 
-**Level: max** specialized skill (not merged). Category hint: `dev-tools`.
+specialized skill (not merged). Category hint: `dev-tools`.
 
 ## Summary
 

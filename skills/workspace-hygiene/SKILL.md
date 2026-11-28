@@ -11,7 +11,7 @@ description: >-
 
 # Personal Folder Hygiene
 
-**Level: expert.** Owner role: **Workspace Librarian**. Rule: `rules/workspace.md`.
+Owner role: **Workspace Librarian**. Rule: `rules/workspace.md`.
 
 Merapihkan **folder pribadi / lokal di luar repo coding** (contoh: Downloads, Desktop, folder foto). Bukan untuk menata isi dalam project aplikasi.
 

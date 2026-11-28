@@ -1,3 +1,10 @@
+---
+name: antislop-human
+description: >-
+  Design human-centered interfaces with accessible interactions, clear
+  feedback, and manageable cognitive load.
+---
+
 # Anti-Slop Human & A11y (antislop-human)
 
 Ensure interfaces are built for humans, not just for "looking good" in a screenshot. Focus on accessibility and interaction affordances.

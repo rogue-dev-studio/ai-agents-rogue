@@ -9,7 +9,7 @@ description: >-
 
 # YouTube Content Specialist (Canonical)
 
-**Level: max.** Aliases: `yt-script`, `yt-seo`, `yt-chapters`, `yt-retention`, `yt-viral`, `yt-plan`.
+Aliases: `yt-script`, `yt-seo`, `yt-chapters`, `yt-retention`, `yt-viral`, `yt-plan`.
 
 ## When to use
 

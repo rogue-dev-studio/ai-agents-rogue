@@ -6,7 +6,6 @@ description: >-
   idioms (e.g. Laravel/Node) without leaking business rules into controllers.
   Use when implementing or refactoring server-side features, services, form
   requests/DTOs, policies, queues, or integrating persistence with APIs.
-expertise_level: expert
 ---
 
 # Backend Engineering (Canonical)

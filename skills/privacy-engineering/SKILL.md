@@ -4,7 +4,6 @@ description: >-
   Design privacy-preserving systems and practices. Use for privacy by design,
   data minimization, purpose and consent management, retention, privacy
   impact assessments, anonymization, or user data rights.
-expertise_level: expert
 ---
 
 # Privacy Engineering

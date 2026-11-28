@@ -8,7 +8,7 @@ description: >-
 
 # Brand Kit
 
-**Level: max.** Aliases: `brand`, `brand-system`, `visual-identity`, `brand-guidelines`.
+Aliases: `brand`, `brand-system`, `visual-identity`, `brand-guidelines`.
 
 ## When to use
 

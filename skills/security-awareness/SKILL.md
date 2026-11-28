@@ -4,7 +4,6 @@ description: >-
   Build or evaluate human-centered security awareness programs. Use for
   role-based learning paths, phishing simulations, social engineering
   awareness, security culture, policy education, and program measurement.
-expertise_level: expert
 ---
 
 # Security Awareness

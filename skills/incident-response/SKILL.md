@@ -5,7 +5,6 @@ description: >-
   for incident playbooks, severity classification, breach handling,
   containment planning, evidence preservation, NIST incident response, and
   post-incident reviews.
-expertise_level: expert
 ---
 
 # Incident Response

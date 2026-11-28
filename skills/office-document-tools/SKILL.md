@@ -7,7 +7,7 @@ description: >-
 
 # Office Document Tools (Canonical)
 
-**Level: max.** Aliases: `docx`, `pdf`, `pptx`, `xlsx`, `latex-documents`.
+Aliases: `docx`, `pdf`, `pptx`, `xlsx`, `latex-documents`.
 
 ## Procedure
 

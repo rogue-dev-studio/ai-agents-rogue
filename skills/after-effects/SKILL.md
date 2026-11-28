@@ -1,6 +1,12 @@
+---
+name: after-effects
+description: >-
+  Automate Adobe After Effects composition editing, rendering, and workflows
+  through MCP.
+---
+
 # After Effects
 
-**Level: max.**
 
 ## Summary
 

@@ -2,12 +2,11 @@
 name: sdkman
 description: >-
   SDKMAN - The Software Development Kit Manager for JVM tools. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `sdkman` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # sdkman
 
-**Level: max** specialized skill (not merged). Category hint: `package-manager`.
+specialized skill (not merged). Category hint: `package-manager`.
 
 ## Summary
 

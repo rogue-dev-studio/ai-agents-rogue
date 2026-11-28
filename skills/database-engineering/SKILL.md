@@ -6,7 +6,6 @@ description: >-
   functions, mapping/junction tables, versioned migrations, seeders, and
   PostgreSQL/MySQL operational practice. Use for Database Engineer delivery,
   migration work, integrity constraints, and measurable read/write performance.
-expertise_level: expert
 ---
 
 # Database Engineering (Canonical)

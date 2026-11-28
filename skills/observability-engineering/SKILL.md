@@ -6,7 +6,6 @@ description: >-
   secrets or excess PII. Use when adding logging/monitoring for services,
   diagnosing production-like failures, defining health/readiness endpoints, or
   improving operational visibility in Phase 2+ quality work.
-expertise_level: expert
 ---
 
 # Observability Engineering (Canonical)

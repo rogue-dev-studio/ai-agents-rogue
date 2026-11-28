@@ -7,7 +7,6 @@ description: >-
   default-deny enforcement at every sensitive boundary, and safe audit logging.
   Use for IAM strategy, identity lifecycle, access reviews, federation, role
   matrices, policy gates, scoped multi-tenant access, or authn/authz reviews.
-expertise_level: expert
 ---
 
 # Auth & Access Control (Canonical)

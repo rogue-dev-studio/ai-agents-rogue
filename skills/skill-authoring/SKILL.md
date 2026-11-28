@@ -7,7 +7,6 @@ description: >-
 
 # Skill Authoring (Canonical)
 
-**Level: max.**
 
 ## When to use
 

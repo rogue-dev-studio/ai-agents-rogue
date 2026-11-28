@@ -7,7 +7,7 @@ description: >-
 
 # Remote Desktop Access (Canonical)
 
-**Level: max.** Aliases: `guacamole`, `xfce-ubuntu`, `vnc-desktop`.
+Aliases: `guacamole`, `xfce-ubuntu`, `vnc-desktop`.
 
 ## Procedure
 

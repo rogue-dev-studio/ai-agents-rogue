@@ -2,12 +2,11 @@
 name: ngspice
 description: >-
   NGSpice circuit simulation MCP server. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `ngspice` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # ngspice
 
-**Level: max** specialized skill (not merged). Category hint: `dev-tools`.
+specialized skill (not merged). Category hint: `dev-tools`.
 
 ## Summary
 

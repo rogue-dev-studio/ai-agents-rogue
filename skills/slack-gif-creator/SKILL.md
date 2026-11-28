@@ -2,12 +2,11 @@
 name: slack-gif-creator
 description: >-
   Slack GIF generation. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `slack-gif-creator` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # slack-gif-creator
 
-**Level: max** specialized skill (not merged). Category hint: `utilities`.
+specialized skill (not merged). Category hint: `utilities`.
 
 ## Summary
 

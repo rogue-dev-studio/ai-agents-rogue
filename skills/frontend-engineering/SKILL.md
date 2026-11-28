@@ -6,7 +6,6 @@ description: >-
   budgets, and integration with API contracts. Use when building or refining
   SPA/web screens, design-system consumption, client-side routing, or fixing
   UI reliability (loading, empty, and error states).
-expertise_level: expert
 ---
 
 # Frontend Engineering (Canonical)

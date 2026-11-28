@@ -8,7 +8,7 @@ description: >-
 
 # SVG & Vector Designer (Canonical)
 
-**Level: max.** Alises: `svg`, `vector`, `icon-generator`, `svg-animator`.
+Alises: `svg`, `vector`, `icon-generator`, `svg-animator`.
 
 ## When to use
 

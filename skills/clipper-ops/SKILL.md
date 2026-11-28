@@ -5,12 +5,11 @@ description: >-
   highlight selection, short-form cuts, captions/branding, attribution, and
   platform-safe publish handoff. Use when a creator wants clippers to promote their
   content via clips, Shorts, Reels, or compilations.
-experience_level: expert
 ---
 
 # Clipper Ops
 
-**Level: expert.** Specialized skill for **creator-approved** clipper workflows.
+Specialized skill for **creator-approved** clipper workflows.
 
 ## When to use
 

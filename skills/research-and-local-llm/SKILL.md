@@ -7,7 +7,7 @@ description: >-
 
 # Research and Local LLM (Canonical)
 
-**Level: max.** Aliases: `ollama`, `deepseek-reasoning`, `perplexity`, `web-summary`, `ruvnet-research`, `notebooklm-mcp-cli`.
+Aliases: `ollama`, `deepseek-reasoning`, `perplexity`, `web-summary`, `ruvnet-research`, `notebooklm-mcp-cli`.
 
 ## Procedure
 

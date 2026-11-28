@@ -8,7 +8,7 @@ description: >-
 
 # Content Moderation
 
-**Level: max.** Aliases: `moderation`, `content-filter`, `policy-gate`, `safety-review`.
+Aliases: `moderation`, `content-filter`, `policy-gate`, `safety-review`.
 
 ## When to use
 

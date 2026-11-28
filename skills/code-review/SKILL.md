@@ -8,7 +8,6 @@ description: >-
   identity metadata only and are out of review scope. Use when reviewing pull
   requests, developer diffs, or E2E Review phase outputs; produces approve/reject
   with actionable findings for Tech Lead and engineers.
-expertise_level: expert
 ---
 
 # Code Review (Canonical)

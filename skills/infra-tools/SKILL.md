@@ -2,12 +2,11 @@
 name: infra-tools
 description: >-
   Infrastructure and DevOps tooling (Terraform, K8s, Config Mgmt). Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `infra-tools` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # infra-tools
 
-**Level: max** specialized skill (not merged). Category hint: `infrastructure`.
+specialized skill (not merged). Category hint: `infrastructure`.
 
 ## Summary
 

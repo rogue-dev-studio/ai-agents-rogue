@@ -2,12 +2,11 @@
 name: qgis
 description: >-
   QGIS GIS operations MCP server. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `qgis` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # qgis
 
-**Level: max** specialized skill (not merged). Category hint: `desktop`.
+specialized skill (not merged). Category hint: `desktop`.
 
 ## Summary
 

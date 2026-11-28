@@ -4,7 +4,6 @@ description: >-
   Design or review security of smart contracts. Use for Solidity/EVM access
   control, invariants, upgradeability, oracle and economic risks, static
   analysis, and secure contract development.
-expertise_level: expert
 ---
 
 # Smart Contract Security

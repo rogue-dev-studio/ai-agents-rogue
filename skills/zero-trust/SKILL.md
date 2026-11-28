@@ -4,7 +4,6 @@ description: >-
   Design or evaluate identity-centric Zero Trust architecture. Use for
   least-privilege access, continuous verification, micro-segmentation,
   identity-aware proxies, device posture, and BeyondCorp-style roadmaps.
-expertise_level: expert
 ---
 
 # Zero Trust

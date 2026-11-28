@@ -8,7 +8,7 @@ description: >-
 
 # HR CV Lifecycle
 
-**Level: expert.** Prompt-routed skill (sumber pack: `teams/hr`). Tidak perlu aktifkan tim. Role opsional: `talent-recruiter` / `hr-specialist`.
+Prompt-routed skill (sumber pack: `teams/hr`). Tidak perlu aktifkan tim. Role opsional: `talent-recruiter` / `hr-specialist`.
 
 ## When to use
 

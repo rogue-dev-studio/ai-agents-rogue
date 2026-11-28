@@ -7,7 +7,7 @@ description: >-
 
 # YouTube Publishing (Manual)
 
-**Level: standard.** Paket MCP: `mcp/youtube/` · Local API: `project/code-tutorial-studio/services/youtube-api/`.
+Paket MCP: `mcp/youtube/` · Local API: `project/code-tutorial-studio/services/youtube-api/`.
 
 ## Must always
 

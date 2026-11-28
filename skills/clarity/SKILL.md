@@ -8,7 +8,7 @@ description: >-
 
 # Clarity — Spec and Requirements (Canonical)
 
-**Level: max.** Aliases: `spec-kit`, `mdflow` (untuk jalur spec/agent-from-markdown).
+Aliases: `spec-kit`, `mdflow` (untuk jalur spec/agent-from-markdown).
 
 ## When to use
 

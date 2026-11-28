@@ -2,12 +2,11 @@
 name: swift
 description: >-
   Swift programming language. Use when the project needs this capability or the user / team manifest asks for it. Use for specialized `swift` work when listed in TEAM.yaml or explicitly requested.
-experience_level: max
 ---
 
 # swift
 
-**Level: max** specialized skill (not merged). Category hint: `languages`.
+specialized skill (not merged). Category hint: `languages`.
 
 ## Summary
 

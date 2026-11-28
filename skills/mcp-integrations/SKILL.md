@@ -7,7 +7,7 @@ description: >-
 
 # MCP Integrations (Canonical)
 
-**Level: max.** Aliases: `context7-mcp`, `jira-mcp`, `linear-mcp`, `excalidraw-mcp`, `pal-mcp-server`.
+Aliases: `context7-mcp`, `jira-mcp`, `linear-mcp`, `excalidraw-mcp`, `pal-mcp-server`.
 
 Catalog packages: see [`mcp/CATALOG.md`](../../mcp/CATALOG.md) and [`mcp/README.md`](../../mcp/README.md).
 

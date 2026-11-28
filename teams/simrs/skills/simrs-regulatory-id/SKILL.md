@@ -11,7 +11,7 @@ description: >-
 
 # SIMRS Regulatory ID
 
-**Level: expert.** Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Rule: `hospital-regulatory-id`.
+Prompt-routed skill (sumber pack: `teams/simrs`). Tidak perlu aktifkan tim. Rule: `hospital-regulatory-id`.
 
 Bukan nasihat hukum. Checklist agar aplikasi SIMRS **tidak jelas-jelas bertentangan** dengan kewajiban RS di Indonesia. Vonis sah/tidak sah tetap legal counsel + kebijakan internal RS.
 

@@ -6,12 +6,11 @@ description: >-
   rubrics, and candidate practice. Not HR-specific; use for technical interview,
   technical test, mock interview, live coding, system design interview, persiapan
   tes teknis, simulasi interview engineer, take-home review rubric.
-expertise_level: expert
 ---
 
 # Engineering Technical Interview
 
-**Level: expert.** Katalog umum — hiring, internal promo, atau persiapan kandidat. Role opsional: Tech Lead / Code Reviewer. HR pipeline rekrutmen → juga `hr-technical-interview` (pack HR).
+Katalog umum — hiring, internal promo, atau persiapan kandidat. Role opsional: Tech Lead / Code Reviewer. HR pipeline rekrutmen → juga `hr-technical-interview` (pack HR).
 
 ## When to use
 

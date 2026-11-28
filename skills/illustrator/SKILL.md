@@ -4,12 +4,11 @@ description: >-
   Adobe Illustrator via MCP (npx illustrator-mcp-server). Use when the user
   needs vector art, artboards, exports, or Illustrator automation from the agent.
   Requires mcp/illustrator wired and Illustrator desktop installed/running.
-experience_level: max
 ---
 
 # illustrator
 
-**Level: max.** Runtime package: `mcp/illustrator` (not skill-text alone).
+Runtime package: `mcp/illustrator` (not skill-text alone).
 
 ## Summary
 
