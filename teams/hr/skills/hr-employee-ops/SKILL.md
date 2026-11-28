@@ -66,7 +66,6 @@ Rule `hr-people-data`. Log/artifact tanpa gaji, NIK, diagnosa, atau isi surat pe
 - [ ] Onboarding punya owner per item
 - [ ] Cuti: hasil = rekomendasi, bukan approval
 - [ ] Tidak ada secret / PII di git
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

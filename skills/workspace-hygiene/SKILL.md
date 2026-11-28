@@ -123,7 +123,6 @@ pip install -r ai-agents-rogue/scripts/organize-by-face.requirements.txt
 - [ ] Project coding dipindah utuh (bukan isinya yang disort)
 - [ ] Dry-run jelas; Apply hanya setelah izin
 - [ ] Laporan singkat ke user
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

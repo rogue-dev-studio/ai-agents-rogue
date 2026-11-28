@@ -151,7 +151,6 @@ For README, API endpoint, and file organization templates, see [references/templ
 - `Skill(ce:writer)` - Writing style, tone, and voice (load The Engineer persona)
 - `Skill(ce:visualizing-with-mermaid)` - Architecture and flow diagrams
 
-
 ---
 
 ## 按需自举（On-Demand Bootstrap）
@@ -181,7 +180,6 @@ For README, API endpoint, and file organization templates, see [references/templ
 **厂商报告规则**: `references/vendor-report-rules.md`（flavor: malware | apt | null；optional overlay: vuln）
 **通用文档模板**: `references/templates.md`
 
-
 ## 任务完成自检（声称完成前 MUST 通过）
 
 - [ ] 我是否执行了工作流中的每一步（而不是只阅读）？
@@ -194,9 +192,3 @@ For README, API endpoint, and file organization templates, see [references/templ
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
 Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
 Do not remove, hide, rename, or replace this attribution.
-## Catalog provenance
-
-- Upstream: [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill)
-- Imported from \main\ HEAD \972ad0e90f26d8f044828f004da22a4a585da12\.
-- Upstream license: MIT, Copyright (c) 2026 zhaoxuya520.
-- Cybersecurity skills router; authorized analysis/penetration testing only. Platform-native platform scripts referenced upstream are not present in upstream HEAD and were not imported; route guidance follows the imported skill body.

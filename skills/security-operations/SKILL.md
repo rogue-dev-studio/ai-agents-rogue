@@ -36,7 +36,6 @@ description: >-
 - [ ] Detections include tests, limitations, and ownership.
 - [ ] YARA rules are validated on authorized offline data or synthetic fixtures.
 - [ ] Findings are evidence-based and linked to response procedures.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

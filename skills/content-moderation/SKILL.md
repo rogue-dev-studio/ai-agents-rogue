@@ -38,7 +38,6 @@ Aliases: `moderation`, `content-filter`, `policy-gate`, `safety-review`.
 - [ ] Setiap aset dicek terhadap aturan moderasi sebelum diterbitkan
 - [ ] Keputusan moderasi (setuju/tandai/blokir) dengan alasan dicatat
 - [ ] Laporan moderasi tersimpan di `project/{id}/docs/moderation/`
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

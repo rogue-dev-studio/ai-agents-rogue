@@ -34,7 +34,6 @@ description: >-
 - [ ] Training has measurable objectives and accessible material.
 - [ ] Simulations have written scope and do not collect credentials.
 - [ ] Results are privacy-preserving and lead to actionable improvements.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

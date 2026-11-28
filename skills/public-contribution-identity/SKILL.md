@@ -48,7 +48,6 @@ description: >-
 - [ ] Required legal attribution is preserved
 - [ ] Validation passes before publication
 - [ ] Published metadata is verified after push or release
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

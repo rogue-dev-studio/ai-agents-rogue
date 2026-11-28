@@ -38,7 +38,6 @@ Aliases: `yt-script`, `yt-seo`, `yt-chapters`, `yt-retention`, `yt-viral`, `yt-p
 - [ ] Sesuai strategi konten/audiens project
 - [ ] Data-driven (sesuai analysis tool yang dipakai)
 - [ ] Artifact terdokumentasi dengan baik
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

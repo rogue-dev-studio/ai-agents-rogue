@@ -7,7 +7,6 @@ description: >-
 
 # After Effects
 
-
 ## Summary
 
 Automate Adobe After Effects via MCP.
@@ -37,7 +36,6 @@ Automate Adobe After Effects via MCP.
 - [ ] After Effects MCP connected
 - [ ] Requested tasks done
 - [ ] No tokens in git
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

@@ -102,7 +102,6 @@ Jika user memberi jawaban kandidat:
 - [ ] Skor per dimensi + alasan, bukan satu angka hire/no-hire
 - [ ] Tidak ada PII kandidat di artifact git
 - [ ] Rekomendasi = bantuan; keputusan final manusia
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

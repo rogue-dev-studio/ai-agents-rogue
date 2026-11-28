@@ -39,7 +39,6 @@ Aliases: `consistency`, `character-lock`, `brand-lock`, `style-lock`.
 - [ ] Parameter kunci (warna, tipografi, bentuk, gaya) terdefinisi
 - [ ] Setiap aset dicek terhadap parameter kunci sebelum diterbitkan
 - [ ] Hasil gate (terima/tolak) dan aset tersimpan di `project/{id}/docs/consistency/`
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

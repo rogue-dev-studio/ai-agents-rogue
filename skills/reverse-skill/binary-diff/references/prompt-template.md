@@ -113,7 +113,6 @@ def migrate_function(ref_disasm, ref_procedure, target_disasm, target_procedure,
     
     return yaml.safe_load(yaml_str)
 
-
 def apply_results(results, ida_session):
     """将解析后的 YAML 结果应用到 IDA"""
     if not results:

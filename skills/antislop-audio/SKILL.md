@@ -34,7 +34,8 @@ Audio is "Slop" if:
 - There are zero breathing sounds or natural pauses in a long sentence.
 - The music is a perfectly repetitive loop with no variation in energy.
 - The sound is "too clean" (zero environmental noise/texture).
-
 ## Attribution
+
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
-Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio).
+Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
+Do not remove, hide, rename, or replace this attribution.

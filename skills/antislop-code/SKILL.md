@@ -34,7 +34,8 @@ Code is "Slop" if:
 - It contains comments that simply repeat the line of code.
 - It uses a design pattern that adds 5 files to solve a 1-file problem.
 - It looks like a "tutorial example" rather than production software.
-
 ## Attribution
+
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
-Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio).
+Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
+Do not remove, hide, rename, or replace this attribution.

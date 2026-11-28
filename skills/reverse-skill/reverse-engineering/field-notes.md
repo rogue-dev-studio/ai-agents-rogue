@@ -434,8 +434,6 @@ Two-server phishing infrastructure impersonating a government agency. Full victi
 | {target_domain_1} | {target_ip_1} | Backend + Admin |
 | {target_domain_2} | {target_ip_2} | Frontend (phishing pages) |
 
-
-
 ---
 
 ## 分析前预判：文件伪装与名字欺骗

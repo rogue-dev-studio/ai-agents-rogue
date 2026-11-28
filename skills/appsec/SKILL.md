@@ -44,7 +44,6 @@ description: >-
 - [ ] Findings cite reproducible source or test evidence.
 - [ ] High-risk findings have owner, remediation, and verification plan.
 - [ ] No unauthorized active testing or secret exposure occurred.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

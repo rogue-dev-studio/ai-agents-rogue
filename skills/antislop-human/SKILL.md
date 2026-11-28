@@ -33,7 +33,8 @@ Design is "Slop" if:
 - It looks beautiful but is impossible to navigate with a keyboard.
 - It uses a "modern" style that sacrifices readability (e.g., tiny fonts, low contrast).
 - The user is left wondering "Did I actually click that?".
-
 ## Attribution
+
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
-Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio).
+Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
+Do not remove, hide, rename, or replace this attribution.

@@ -33,7 +33,8 @@ Layout is "Slop" if:
 - It's just a vertical list of everything that was on the desktop.
 - Buttons are too small to click comfortably.
 - The user has to scroll horizontally to see content.
-
 ## Attribution
+
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
-Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio).
+Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
+Do not remove, hide, rename, or replace this attribution.

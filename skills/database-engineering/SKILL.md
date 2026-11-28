@@ -69,7 +69,6 @@ Detail: `reference.md`.
 - [ ] Seeder (jika ada) hanya master/reference
 - [ ] Keamanan data layer dicek
 - [ ] Handoff Backend lengkap (path + risiko)
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

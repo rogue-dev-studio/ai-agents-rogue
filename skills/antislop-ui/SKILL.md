@@ -33,7 +33,8 @@ UI is "Slop" if:
 - It looks like a generic SaaS landing page from 2023.
 - It relies entirely on default component library styles without customization.
 - The visual hierarchy is flat and predictable.
-
 ## Attribution
+
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
-Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio).
+Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
+Do not remove, hide, rename, or replace this attribution.

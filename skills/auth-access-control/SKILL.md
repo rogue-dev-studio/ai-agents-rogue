@@ -49,7 +49,6 @@ Detail: `reference.md`.
 - [ ] Permission + scope teruji (positif & negatif)
 - [ ] Tidak ada secret di log/repo
 - [ ] Review trigger `security` dipenuhi bila relevan
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

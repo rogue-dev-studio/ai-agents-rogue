@@ -76,7 +76,6 @@ Submission review: hiring-relevant summary → handoff `code-review` untuk detai
 - [ ] Rubrik per dimensi + threshold pass
 - [ ] Mode interviewer vs candidate prep jelas
 - [ ] Rekomendasi = bantuan; keputusan manusia
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

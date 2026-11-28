@@ -44,7 +44,6 @@ Aligns with role **Code Reviewer** (`roles/quality/reviewer.md`) and hard rule `
 - [ ] Tidak ada major architecture violation tanpa escalate
 - [ ] Verdict dan path laporan jelas
 - [ ] Developer mendapat rekomendasi yang dapat ditindaklanjuti
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

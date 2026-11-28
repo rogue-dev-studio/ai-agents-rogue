@@ -157,7 +157,6 @@
 | Dynamic 单步无进展 | ~200 条指令 | 回 Static 字符串/交叉引用重锚 |
 | 任一路径重复失败 | 记 Evidence 后换工具或旁路 | 禁止同一失败手法空转 |
 
-
 ### 3.3 反调试 / 混淆旁路速查（Issue #65 补丁 A–T · 高频）
 
 完整索引与动作细节见 `reverse-engineering/anti-analysis.md`「Agent 响应菜谱 A–T」。此处只列 **P0 必查 + 常见转场**。默认 **授权隔离 lab**；patch/改标志位不是未授权生产动作。
@@ -201,7 +200,6 @@
 
 **约束**：不另起「非 PE 六阶段」；与 §3.3 A–T 分工（PE 反调试 vs 多格式）。授权 lab；格机/BYOVD/反射 = 检测取证表述。
 
-
 ## 4. Synthesis（IOC / 攻击链 / 报告）
 
 ### Decision quality overlay (Issue #77)
@@ -209,8 +207,6 @@
 Before closing Synthesis, apply [analysis-decision-framework.md](../../ops/analysis-decision-framework.md) **P0 checklist**: R41 grounded claims, R4* validated sufficiency, R1 confidence->dynamic, R2 hypothesis exit, R43 deadlock replan (under feasibility gate), R8/R23 no default malice/IOC. Multi-module -> R50; anti-analysis effort -> R51 + A-T cookbook.
 
 Blindspots (Rust/Go/VMP/injection/OLE/PDF/agent-meta): [analysis-blindspot-cookbook.md](../../ops/analysis-blindspot-cookbook.md) R52-R81 — detection-oriented; not a parallel master flow.
-
-
 
 ```text
 □ Finding：算法/校验逻辑/可利用点 / 行为结论

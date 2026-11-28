@@ -163,7 +163,6 @@ cosign verify --key cosign.pub myimage:tag
 - `references/sbom-sca-methodology.md` — SBOM + SCA 方法论
 - `references/cicd-pipeline-security.md` — CI/CD 管道安全审计
 
-
 ## 任务完成自检（声称完成前 MUST 通过）
 
 - [ ] 我是否执行了工作流中的每一步（而不是只阅读）？
@@ -175,9 +174,3 @@ cosign verify --key cosign.pub myimage:tag
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
 Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
 Do not remove, hide, rename, or replace this attribution.
-## Catalog provenance
-
-- Upstream: [zhaoxuya520/reverse-skill](https://github.com/zhaoxuya520/reverse-skill)
-- Imported from \main\ HEAD \972ad0e90f26d8f044828f004da22a4a585da12\.
-- Upstream license: MIT, Copyright (c) 2026 zhaoxuya520.
-- Cybersecurity skills router; authorized analysis/penetration testing only. Platform-native platform scripts referenced upstream are not present in upstream HEAD and were not imported; route guidance follows the imported skill body.

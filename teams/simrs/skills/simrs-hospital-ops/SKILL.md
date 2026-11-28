@@ -74,7 +74,6 @@ Lihat `reference.md` § risiko khas: order yatim, pulang tanpa billing, resep ta
 - [ ] Rantai RM → kunjungan → ruangan tidak putus
 - [ ] AC membedakan dokter vs perawat vs administrasi
 - [ ] PHI tidak tertulis di artifact
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

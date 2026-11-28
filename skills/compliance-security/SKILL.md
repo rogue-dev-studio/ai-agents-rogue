@@ -35,7 +35,6 @@ description: >-
 - [ ] Every claim links to dated evidence or is labeled unverified.
 - [ ] Gaps have accountable remediation and verification.
 - [ ] Sensitive evidence is minimized and access-controlled.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

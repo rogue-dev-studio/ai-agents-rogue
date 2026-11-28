@@ -7,7 +7,6 @@ description: >-
 
 # Skill Authoring (Canonical)
 
-
 ## When to use
 
 - Membuat/mengubah skill portable baru di `skills/` atau `teams/*/skills/`

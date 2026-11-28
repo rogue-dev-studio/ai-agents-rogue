@@ -41,7 +41,6 @@ Aliases: `brand`, `brand-system`, `visual-identity`, `brand-guidelines`.
 - [ ] Varian brand (gelap/terang, full/ikonik) tersedia
 - [ ] Brand guidelines tersimpan di `project/{id}/docs/brand/`
 - [ ] Semua aset tersimpan di `project/{id}/artifacts/brand/`
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

@@ -36,7 +36,6 @@ description: >-
 - [ ] Minimization and privacy controls are tested.
 - [ ] Retention, deletion, and rights workflows have evidence.
 - [ ] Residual re-identification risk and approvals are recorded.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

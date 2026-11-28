@@ -104,11 +104,8 @@ The command installs missing packages, saves assets to `public/`, writes an `.el
 - This skill was added upstream after tag `v4.0.546`, so its exact source commit is pinned separately.
 - Upstream license: MIT, as declared by the official Remotion Agent Plugin.
 - Remotion itself has separate usage terms; consult `remotion-license` before commercial use.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
 Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
 Do not remove, hide, rename, or replace this attribution.
-
-

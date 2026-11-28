@@ -45,7 +45,6 @@ Detail: `reference.md`.
 - [ ] Tidak ada breaking change diam-diam
 - [ ] Validasi + authz di boundary
 - [ ] Evidence smoke atau blocker eksplisit
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

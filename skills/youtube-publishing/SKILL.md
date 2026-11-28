@@ -38,7 +38,6 @@ Paket MCP: `mcp/youtube/` · Local API: `project/code-tutorial-studio/services/y
 - [ ] OAuth channel terhubung
 - [ ] Upload hanya via permintaan user
 - [ ] Token tidak di git
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

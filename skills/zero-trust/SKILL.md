@@ -36,7 +36,6 @@ description: >-
 - [ ] Policies are least-privilege and tested for both allow and deny cases.
 - [ ] Break-glass, monitoring, rollout, and rollback are defined.
 - [ ] Exceptions have owners and expiration/review dates.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

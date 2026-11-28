@@ -49,7 +49,6 @@ Simpan laporan E2E di `project/{id}/docs/review/` (redaksi PHI).
 - [ ] Setiap P0: dampak “siapa tidak bisa kerja / data apa rusak”
 - [ ] Verdict jelas
 - [ ] Tidak ada NIK/diagnosa/RM nyata di laporan
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

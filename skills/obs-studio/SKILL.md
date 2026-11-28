@@ -39,7 +39,6 @@ description: Operate OBS Studio for scenes, sources, audio, recording, and strea
 - [ ] Recording/streaming actions were explicitly approved and confirmed.
 - [ ] Credentials remain outside the repository and logs.
 - [ ] The user received the resulting state or the exact error.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

@@ -36,7 +36,6 @@ description: >-
 - [ ] Threats are ranked and linked to concrete controls.
 - [ ] Owners and verification criteria exist for high-priority mitigations.
 - [ ] Residual risks and review date are recorded.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

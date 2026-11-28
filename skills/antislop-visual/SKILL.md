@@ -34,7 +34,8 @@ Visual is "Slop" if:
 - The colors look like a generic "digital art" filter.
 - The composition is too perfectly centered and symmetrical.
 - The lighting is "magical" without a physical source.
-
 ## Attribution
+
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
-Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio).
+Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
+Do not remove, hide, rename, or replace this attribution.

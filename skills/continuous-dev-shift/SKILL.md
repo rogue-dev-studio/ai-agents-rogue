@@ -387,7 +387,6 @@ Jangan klaim shift berdurama selesai jika hanya satu batch tick tanpa loop sampa
 - Templates: `templates/dev-shift-*.md`, `templates/impact-log-template.md`, `templates/maintenance-audit-template.md`
 - Delivery variants: `core/delivery-flow.md` §5.5
 - Task lifecycle: `core/task-system.md`
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

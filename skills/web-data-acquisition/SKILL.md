@@ -55,7 +55,6 @@ Stop collection at authentication or authorization barriers, paywalls, CAPTCHA, 
 - [ ] The chosen method respects source policy and stops safely on restrictions.
 - [ ] Output is schema-validated, minimized, and traceable to sources.
 - [ ] Errors, omissions, and limitations are reported; no hidden third-party runtime is assumed.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

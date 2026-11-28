@@ -104,7 +104,6 @@ Review submission → ringkas hiring-relevant, handoff `code-review` untuk detai
 - [ ] Tidak ada PHI nyata di output git
 - [ ] Gap regulasi dilabel, bukan vonis hukum
 - [ ] Keputusan final manusia
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
