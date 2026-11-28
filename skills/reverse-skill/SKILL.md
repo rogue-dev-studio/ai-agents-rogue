@@ -195,7 +195,6 @@ bash <package-root>/kali/scripts/bootstrap-reverse.sh 工具名 --start-services
 - Imported from `main` HEAD `b972ad0e90f26d8f044828f004da22a4a585da12`.
 - Upstream license: MIT, Copyright (c) 2026 zhaoxuya520.
 - Cybersecurity router skill: authorized analysis/penetration testing only. Platform-native scripts referenced upstream (`scripts/master-route.ps1`, `config/routing.json`, `tool-index.md`, `ops/scope-contract.md`, `ops/IDENTITY.md`, bootstrap scripts) are not present in the upstream tree at HEAD and were not imported; route guidance follows the imported SKILL.md body.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

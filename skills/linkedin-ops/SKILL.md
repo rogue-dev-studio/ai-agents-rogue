@@ -7,7 +7,6 @@ description: >-
 
 # LinkedIn Ops
 
-
 ## Summary
 
 Manage LinkedIn Company Page posts and engagement via official API/MCP.
@@ -41,7 +40,6 @@ Manage LinkedIn Company Page posts and engagement via official API/MCP.
 - [ ] Posts published/scheduled and verified
 - [ ] Anti-slop check passed for content
 - [ ] No tokens in git
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

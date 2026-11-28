@@ -15,7 +15,6 @@ Skill ini **digantikan** oleh `simrs-hospital-ops` (pack `teams/simrs`). Routing
 3. Untuk PHI, `simrs-patient-data` + rule `patient-health-data`.
 
 Jangan kembangkan checklist di file alias ini.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

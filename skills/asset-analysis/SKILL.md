@@ -39,7 +39,6 @@ Aliases: `asset-scan`, `asset-inspect`, `generative-audit`.
 - [ ] Analisis struktural dan komposisi selesai
 - [ ] Masalah atau artefak teridentifikasi dan dicatat
 - [ ] Laporan analisis tersimpan di `project/{id}/docs/analysis/`
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

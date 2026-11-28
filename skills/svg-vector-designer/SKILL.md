@@ -40,7 +40,6 @@ Alises: `svg`, `vector`, `icon-generator`, `svg-animator`.
 - [ ] Path bersih dan viewBox proporsional
 - [ ] Kualitas aset produksi (tidak ada artefak/slop)
 - [ ] Artifact tersimpan di folder project
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

@@ -115,7 +115,6 @@ The review is read-only and checks scope fields, Evidence records, work item and
 | UI 审阅队列 | 报告 + next-step 菜单 + journal |
 | ATT&CK 深度绑定 | 可选标签，不强制 UI |
 
-
 ## Validated sufficiency (Issue #77 / R4*)
 
 Global bind rule remains: every Finding references **>=1** Evidence.

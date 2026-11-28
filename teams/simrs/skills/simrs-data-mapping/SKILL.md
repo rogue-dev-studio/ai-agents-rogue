@@ -76,7 +76,6 @@ Tulis dampak operasional + `REG-*` jika relevan. Bukan “tidak sah secara hukum
 - [ ] Path app dikonfirmasi di kode atau ditandai VERIFY
 - [ ] RM + kunjungan disebut untuk data klinis
 - [ ] Tidak ada NIK/diagnosa nyata di artifact
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

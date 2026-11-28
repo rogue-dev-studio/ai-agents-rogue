@@ -33,7 +33,8 @@ Output is "Slop" if:
 - It sounds like a marketing brochure.
 - It uses more than two "AI cliché" words.
 - It follows a predictable 3-paragraph structure (Intro $\rightarrow$ List $\rightarrow$ Conclusion).
-
 ## Attribution
+
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
-Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio).
+Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
+Do not remove, hide, rename, or replace this attribution.

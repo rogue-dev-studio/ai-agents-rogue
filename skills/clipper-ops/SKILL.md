@@ -113,7 +113,6 @@ Output: `project/{id}/artifacts/media/clips/{slug}/`
 - [ ] Creator review (jika required) sebelum publish
 
 Detail checklist: `reference.md`.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

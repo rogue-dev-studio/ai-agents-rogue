@@ -50,7 +50,6 @@ Aligns with role **UI/UX Designer**. Tokens/components ownership: Design System 
 - [ ] A11y dasar terpenuhi
 - [ ] Tidak ada pola AI-slop yang bertentangan dengan brand project
 - [ ] Spec/handoff siap untuk `frontend-engineering`
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

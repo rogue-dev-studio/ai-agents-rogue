@@ -38,7 +38,6 @@ Aliases: `qc`, `asset-qc`, `output-gate`, `acceptance-gate`.
 - [ ] Setiap aset dicek visual dan teknis sebelum diterima
 - [ ] Keputusan QC (terima/revisi/tolak) dengan alasan dicatat
 - [ ] Aset yang lolos tersimpan di `project/{id}/docs/qc/` atau `project/{id}/artifacts/`
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

@@ -38,7 +38,6 @@ Langsung dari prompt user (tanpa setup tim):
 - [ ] Checklist rule `patient-health-data` lulus
 - [ ] Seed tidak berisi pasien nyata
 - [ ] Export massal punya gerbang otorisasi
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

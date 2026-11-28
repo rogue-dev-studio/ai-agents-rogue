@@ -41,7 +41,6 @@ description: >-
 - [ ] Findings map to observed resource identifiers and current state.
 - [ ] Proposed changes include impact, owner, verification, and rollback.
 - [ ] No secrets or unauthorized resources were accessed.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

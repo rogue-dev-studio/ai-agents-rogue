@@ -338,7 +338,6 @@ Web Pentest + BurpSuite MCP Path:
   docs-generator/ → generate pentest report
 ```
 
-
 ## 任务完成自检（声称完成前 MUST 通过）
 
 - [ ] 我是否完成了路由三轴匹配（目标类型 + 用户意图 + 工具链）？

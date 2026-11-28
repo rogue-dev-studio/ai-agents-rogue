@@ -32,7 +32,8 @@ Text is "Slop" if:
 - It reads like a LinkedIn "Thought Leader" post.
 - It uses more than one word from the Ban-List.
 - It feels overly polite or formal without a specific reason.
-
 ## Attribution
+
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
-Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio).
+Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
+Do not remove, hide, rename, or replace this attribution.

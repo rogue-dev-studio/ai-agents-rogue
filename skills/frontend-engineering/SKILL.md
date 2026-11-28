@@ -45,7 +45,6 @@ Detail: `reference.md`.
 - [ ] Modal tidak merusak layout/performa
 - [ ] Tidak ada dead UI / handler kosong
 - [ ] Evidence smoke atau blocker
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

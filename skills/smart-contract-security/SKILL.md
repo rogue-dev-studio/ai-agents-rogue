@@ -36,7 +36,6 @@ description: >-
 - [ ] Findings map to code and stated invariants.
 - [ ] Fixes have regression tests and independent owner review.
 - [ ] Deployment and economic risks are explicitly stated.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

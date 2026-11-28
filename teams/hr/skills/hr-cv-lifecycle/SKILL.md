@@ -67,7 +67,6 @@ Jangan skor berdasarkan usia, gender, foto, agama, status pernikahan, atau nama.
 - [ ] Review punya temuan konkret + saran rewrite (bukan “bagus saja”)
 - [ ] Screening memisahkan must-have vs nice-to-have
 - [ ] PII berlebih tidak disimpan ke repo
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

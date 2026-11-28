@@ -776,7 +776,6 @@ Many CTF challenges stack multiple checks:
 | CPUID hypervisor | Both | Patch CPUID result, bare metal |
 | Thread hiding | Windows | Hook NtSetInformationThread |
 
-
 ---
 
 ## Agent 响应菜谱 A–T（Issue #65）

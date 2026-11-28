@@ -45,7 +45,6 @@ Detail: `reference.md`.
 - [ ] Tidak ada secret/PII berlebih di log
 - [ ] Healthcheck bermakna untuk dependensi P0
 - [ ] Cara membaca sinyal tertulis singkat (docs/handoff)
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

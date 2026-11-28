@@ -7,7 +7,6 @@ description: >-
 
 # Android Studio
 
-
 ## Summary
 
 Android development tools including Gradle, ADB, and AVD management.
@@ -29,7 +28,6 @@ Android development tools including Gradle, ADB, and AVD management.
 - [ ] Android SDK available
 - [ ] Build/Test successful
 - [ ] No secrets in git
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

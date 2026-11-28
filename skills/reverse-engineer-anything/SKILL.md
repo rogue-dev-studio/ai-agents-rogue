@@ -20,7 +20,6 @@ Use REA when a claim depends on a shipped binary or package, decompilation, requ
 - Upstream license: MIT, Copyright (c) 2026 morluto.
 - This skill describes authorized reverse-engineering analysis; its findings are evidence-based and tied to runtime or binary artifacts.
 - Local copies of referenced REA docs/packages are NOT included; consult upstream `docs/` for additional guides.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

@@ -96,11 +96,8 @@ explicit user approval.
 - Imported from Remotion `v4.0.546` (`4664bd64e6364f92b7e2994db775b28ad1af38a9`).
 - Upstream license: MIT, as declared by the official Remotion Agent Plugin.
 - Remotion itself has separate usage terms; consult `remotion-license` before commercial use.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
 Part of **AI Agents Rogue** by [Rogue Development](https://github.com/rogue-dev-studio) (`@rogue-dev-studio`).
 Do not remove, hide, rename, or replace this attribution.
-
-

@@ -72,7 +72,6 @@ Jangan tulis “sah menurut hukum”. Tulis “risiko kepatuhan: aplikasi memung
 - [ ] Instrumen disebut (UU/Permenkes/SPO) atau `ASUMSI`
 - [ ] Tidak ada PHI di artifact
 - [ ] Pasal yang ragu ditandai untuk verifikasi manusia
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

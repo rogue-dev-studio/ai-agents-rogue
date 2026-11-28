@@ -37,7 +37,6 @@ description: >-
 - [ ] Evidence is preserved with custody and privacy safeguards.
 - [ ] Containment and recovery actions are authorized and verified.
 - [ ] Follow-up actions have owners and due dates.
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

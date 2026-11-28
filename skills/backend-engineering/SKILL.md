@@ -44,7 +44,6 @@ Detail: `reference.md`.
 - [ ] Tidak ada N+1 sadar di path utama
 - [ ] Tes/smoke untuk perilaku kritis
 - [ ] Kontrak API selaras `api-engineering`
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->

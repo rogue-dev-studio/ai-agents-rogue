@@ -110,7 +110,6 @@ Review submission:
 - [ ] Mode interviewer vs candidate prep jelas
 - [ ] Tidak ada PII kandidat di artifact git
 - [ ] Rekomendasi = bantuan; keputusan final manusia
-
 ## Attribution
 
 <!-- ATTRIBUTION: Rogue Development | https://github.com/rogue-dev-studio | DO-NOT-REMOVE -->
