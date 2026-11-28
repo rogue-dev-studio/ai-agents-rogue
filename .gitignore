@@ -35,6 +35,10 @@ id_rsa.pub
 .agents/
 .opencode/
 
+# Local MCP implementation (private / not for catalog publish)
+mcp/**/src/
+mcp/**/test/
+
 # OS / editor / build noise
 Thumbs.db
 Desktop.ini
